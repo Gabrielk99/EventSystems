@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-def generateJson(name,cordinates,id,vacina,T_default=0,T_med=0,T_max=0):
+def generateJson(name,cordinates,id,vacina,T_default=0,T_med=0,T_max=0,time_max=0,time_increment=0):
     if not vacina:
         Path(f'Gestores/Gestor{id}').mkdir(parents=True,exist_ok=True);
 
@@ -13,8 +13,10 @@ def generateJson(name,cordinates,id,vacina,T_default=0,T_med=0,T_max=0):
 
         file = open(f'Vacinas/Vacina_{name}/configure.json','w')
 
-        file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"cordinates":{cordinates}\n{"}"}\n')
-
+        if(time_increment!=0):
+            file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"cordinates":{cordinates},\n\t"time_max":{time_max},\n\t"time_increment":{time_increment}\n{"}"}\n')
+        else:
+            file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"cordinates":{cordinates},\n\t"time_max":{time_max}\n{"}"}\n')
 
 
 
@@ -37,17 +39,23 @@ def main (args):
     if(len(args)<5):
         print("\n\nplease execute the program with 3 parameters,\n the first is name of object, the second is the id,\n, third is the local_path to cordinates.txt\n and four is the option if the object is vacine or gestor, False or True\n\n")
         sys.exit()
-    elif(vacine and len(args)<8):
+    elif(vacine and len(args)<9):
         print("your object is vacine, please insert the temperatures like")
         print("the fifth argument is default temperature")
         print("the sixth argument is median temperature")
         print("the seventh argument is max temperature")
+        print("the eighth argument is max time after max temperature")
+        print("the nineth argument is time of wait increment is optional")
         sys.exit()
     cordinates = open(args[3])
     list_of_cordinates = readCordinates(cordinates);
     if(vacine):
-        generateJson(args[1],list_of_cordinates,args[2],vacine,float(args[5]),float(args[6]),float(args[7]));
-
+        if(len(args)==10):
+            generateJson(args[1],list_of_cordinates,args[2],vacine,float(args[5]),float(args[6]),float(args[7]),float(args[8]),float(args[9]));
+        else:
+            generateJson(args[1],list_of_cordinates,args[2],vacine,float(args[5]),float(args[6]),float(args[7]),float(args[8]));
+    else:
+        generateJson(args[1],list_of_cordinates,args[2],vacine)
 
 
 if __name__=="__main__":
