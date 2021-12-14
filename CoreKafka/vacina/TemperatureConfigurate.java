@@ -106,6 +106,8 @@ public class TemperatureConfigurate {
         
     }
 
+    //TODO::VERIFICAR SE PASSOU 1s para atualizar
+    // a temperatura
     public float getTemperatureCurrent(){
         return this.t_current;
     }
@@ -151,6 +153,7 @@ public class TemperatureConfigurate {
         return this.current_timestamp;
     }
     
+
     public Date getCurrentDate(){
         return this.current_date;
     }
