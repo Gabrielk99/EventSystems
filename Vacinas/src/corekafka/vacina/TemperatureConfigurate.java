@@ -1,10 +1,11 @@
-package vacina;
+package corekafka.vacina;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Calendar;
 import java.time.Duration;
 import java.util.Date;
+
 // TODO::COMENTAR O CÓDIGO
 
 public class TemperatureConfigurate {
@@ -21,10 +22,11 @@ public class TemperatureConfigurate {
     private float inc;
     private int chuncks=5;
 
-    private float time_to_increment;
+    private long time_to_increment;
     private Date current_date;
     private long current_timestamp;
-
+    private long initial_timestamp;
+    
     public TemperatureConfigurate(float t_i,float t_m_l,float t_max_l,
                            float time_max_lim,float time_w_max,int chunks){
 
@@ -41,8 +43,7 @@ public class TemperatureConfigurate {
         this.t_init=t_i;
         this.t_midle_limit=t_m_l;
         this.t_max_limite=t_max_l;
-        this.t_current=t_i;
-        
+
         this.time_wait_max = time_w_max;
         this.time_max_limit_T=time_max_lim;
 
@@ -56,8 +57,7 @@ public class TemperatureConfigurate {
         this.t_init=t_i;
         this.t_midle_limit=t_m_l;
         this.t_max_limite=t_max_l;
-        this.t_current=t_i;
-     
+
         this.time_max_limit_T=time_max_lim;
 
         this.chuncks=chuncks;
@@ -70,7 +70,6 @@ public class TemperatureConfigurate {
         this.t_init=t_i;
         this.t_midle_limit=t_m_l;
         this.t_max_limite=t_max_l;
-        this.t_current=t_i;
         
         this.time_wait_max = time_w_max;
         this.time_max_limit_T=time_max_lim;
@@ -84,8 +83,7 @@ public class TemperatureConfigurate {
         this.t_init=t_i;
         this.t_midle_limit=t_m_l;
         this.t_max_limite=t_max_l;
-        this.t_current=t_i;
-        
+
         this.time_max_limit_T=time_max_lim;
         configureValues();
     }
@@ -106,9 +104,13 @@ public class TemperatureConfigurate {
         
     }
 
-    //TODO::VERIFICAR SE PASSOU 1s para atualizar
-    // a temperatura
     public float getTemperatureCurrent(){
+        long time_difference = this.computeDifferenceTime();
+        if(time_difference>1){
+            this.t_current+=this.inc;
+            this.current_timestamp+=1;
+        }
+        this.current_date = Calendar.getInstance().getTime();
         return this.t_current;
     }
     
@@ -144,7 +146,7 @@ public class TemperatureConfigurate {
         return this.chuncks;
     }
 
-    public float getTimeToIncrement(){
+    public long getTimeToIncrement(){
         return this.time_to_increment;
     }
 
@@ -158,29 +160,33 @@ public class TemperatureConfigurate {
         return this.current_date;
     }
 
+    public long getInitialTimeStamp(){
+        return this.initial_timestamp;
+    }
+
     public void generateTimeToIncrement(){
         Random random = new Random();
 
         int index_random = random.nextInt(this.list_of_chuncks_times.size());
 
-        this.time_to_increment = this.list_of_chuncks_times.get(index_random);
+        this.time_to_increment = this.list_of_chuncks_times.get(index_random).longValue();
     }
 
     public void start(){
         generateTimeToIncrement();
+        this.t_current=this.t_init;
         this.current_date = Calendar.getInstance().getTime();
-        this.current_timestamp = Calendar.getInstance().get(Calendar.SECOND);
+        this.initial_timestamp = current_date.getTime()/1000;
+        this.current_timestamp = this.current_date.getTime()/1000;
     }
     
     public long computeDifferenceTime(){
-        long now = Calendar.getInstance().get(Calendar.SECOND);
 
+        long now = Calendar.getInstance().getTime().getTime()/1000;
         long difference = now-this.current_timestamp;
 
         return difference;
         
     }
 
-
-    //TODO::NEXT
 }
