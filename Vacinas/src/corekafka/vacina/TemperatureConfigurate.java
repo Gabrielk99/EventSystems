@@ -1,4 +1,4 @@
-package corekafka.vacina;
+package src.corekafka.vacina;
 
 import java.util.ArrayList;
 import java.util.Random;

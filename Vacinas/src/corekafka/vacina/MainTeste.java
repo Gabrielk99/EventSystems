@@ -1,4 +1,4 @@
-package corekafka.vacina;
+package src.corekafka.vacina;
 import java.util.concurrent.TimeUnit;
 
 public class MainTeste{
@@ -15,7 +15,7 @@ public class MainTeste{
         // System.out.println(teste.getTimeToIncrement());
       
       
-        Vaccine vacina = new Vaccine("/home/gabriel/Desktop/My_tasks/ufes/2021.2/sys.regras/EventSystems/Vacinas/src/Dados/Vacinas/Vacina_Pfizer/configure.json");
+        Vaccine vacina = new Vaccine("./src/Dados/Vacinas/Vacina_Pfizer/configure.json");
       
         // while(true){
 
