@@ -1,4 +1,4 @@
-package types;
+package src.types;
 
 public class Coordinates{
     

@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import com.google.gson.*;
 import java.util.ArrayList;
-import types.*;
+import src.types.*;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
