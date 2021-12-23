@@ -8,19 +8,21 @@ import src.types.*;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+
 public class Vaccine{
 
-    private float _t_init;
-    private float _t_midle_limite;
-    private float _t_max_limite;
 
-    private ArrayList<Coordinates> _coordinates = new  ArrayList<Coordinates>();
+    private float _t_init; //Temperatura inicial (padrão da vacina)
+    private float _t_midle_limite; //Temperatura metade do maximo do limite (usado para sinalizar a todos)
+    private float _t_max_limite; //Temperatura maxima que a vacina pode suportar
 
-    private int _id;
+    private ArrayList<Coordinates> _coordinates = new  ArrayList<Coordinates>(); //Coordenadas de percurso da vacina
+
+    private int _id; //identificador da vacina
     
-    private float _time_long;
+    private float _time_long; //tempo que a vacina aguenta depois de atingir o maximo de temperatura
 
-    private String _name;
+    private String _name; //nome da empresa da vacina
 
     public Vaccine(String path_to_json){
         
@@ -50,15 +52,15 @@ public class Vaccine{
             // Pegando o tempo maximo que o lote aguenta apos limite de temp
             this._time_long=Float.parseFloat(vaccine.get("time_max").getAsString());
 
-            //TODO finalizar conversão da string de coordenadas para lista de coordenadas
-            String[] coordinates = vaccine.get("cordinates").toString().split("\\s*\\],\\s*");
-
-            System.out.println(coordinates[0]);
+            
+            // Pegando as coordenadas do arquivo json de configuração
+            this._coordinates = Coordinates.parseListCoordinates(vaccine.get("coordinates").toString());
 
         }
 
         catch(IOException e){
-            System.out.println(e);
+            System.out.printf("error arquivo %s de configuração não encontrado.!",e.getMessage());
+            System.exit(1);
         }
 
     }

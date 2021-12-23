@@ -6,7 +6,7 @@ def generateJson(name,cordinates,id,vacina,T_default=0,T_med=0,T_max=0,time_max=
 
         file = open(f'Gestores/Gestor{id}/rota.json','w');
 
-        file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"cordinates":{cordinates}\n{"}"}\n')
+        file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"coordinates":{cordinates}\n{"}"}\n')
 
     else:
         Path(f'Vacinas/Vacina_{name}').mkdir(parents=True,exist_ok=True);
@@ -14,9 +14,9 @@ def generateJson(name,cordinates,id,vacina,T_default=0,T_med=0,T_max=0,time_max=
         file = open(f'Vacinas/Vacina_{name}/configure.json','w')
 
         if(time_increment!=0):
-            file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"cordinates":{cordinates},\n\t"time_max":{time_max},\n\t"time_increment":{time_increment}\n{"}"}\n')
+            file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"coordinates":{cordinates},\n\t"time_max":{time_max},\n\t"time_increment":{time_increment}\n{"}"}\n')
         else:
-            file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"cordinates":{cordinates},\n\t"time_max":{time_max}\n{"}"}\n')
+            file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"t_init":{T_default},\n\t"t_med":{T_med},\n\t"t_max":{T_max},\n\t"coordinates":{cordinates},\n\t"time_max":{time_max}\n{"}"}\n')
 
 
 
