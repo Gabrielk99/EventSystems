@@ -79,7 +79,8 @@ public class VaccineProducer{
         String message = this.generateMessage(this._vaccine.getCurrentLocation(),
                                              this._vaccine.getCurrentTemperature());
         
-        ProducerRecord<String, String> record = new ProducerRecord <String,String>("vacina",message);
+        // (topico,key,mensagem)
+        ProducerRecord<String, String> record = new ProducerRecord <String,String>("vacina",""+this._vaccine.getId(),message);
 
         this.producer.send(record);
 

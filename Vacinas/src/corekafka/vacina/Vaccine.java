@@ -72,7 +72,7 @@ public class Vaccine{
             // Pegando as coordenadas do arquivo json de configuração
             ArrayList<Coordinates> coordinates = Coordinates.parseListCoordinates(vaccine.get("coordinates").toString());
             // Instanciado o simulador de posicao
-            this._coord_controller = new PositionControlOnMap(coordinates);
+            this._coord_controller = new PositionControlOnMap(coordinates,2.5);
 
         }
 

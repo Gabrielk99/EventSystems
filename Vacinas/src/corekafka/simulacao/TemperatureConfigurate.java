@@ -308,10 +308,14 @@ public class TemperatureConfigurate {
         if(this.getCurrentTimeStamp()>=this.getTimeToIncrement()+this.getInitialTimeStamp() && !reset){
            this.inc = -this.inc;
            this.reset=true;
+           System.out.println(this.getCurrentTimeStamp());
+
         }
-        if(this.reset && this.getCurrentTemperature()<=this.getTemperatureInit()){
+        if(this.reset && this.getCurrentTimeStamp()>=(2*this.getTimeToIncrement()+this.getInitialTimeStamp())){
+            this.inc=-this.inc;
             this.start();
             this.reset = false;
+            System.out.println(this.getCurrentTimeStamp());
         }
     }
 

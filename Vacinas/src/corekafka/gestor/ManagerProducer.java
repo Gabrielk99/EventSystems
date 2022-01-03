@@ -4,10 +4,12 @@ import src.corekafka.simulacao.PositionControlOnMap;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.Callback;
+import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-//import org.slf4j.spi.LoggerFactoryBinder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.spi.LoggerFactoryBinder;
 import src.types.*;
 import com.google.gson.*;
 
@@ -20,7 +22,7 @@ import java.util.Properties;
 public class ManagerProducer {
     private Manager manager;
     KafkaProducer<String, String> producer;
-//    Logger logger;
+   Logger logger;
 
     /**
      * Função que gera uma string a partir de um json gerado com a localização e id do gestor
@@ -39,28 +41,28 @@ public class ManagerProducer {
         return jsonMessage.toString();
     }
 
-//    /**
-//     * Função callback de log do envio de uma mensagem pelo produtor
-//     * @return callback que printa os metadaos recebidos
-//     */
-//    private CallBack callBackLogger() {
-//        return new Callback() {
-//            @Override
-//            public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-//                //executes a record if success or exception is thrown
-//                if (e == null) {
-//                    logger.info("Metadados recebidos \n " +
-//                            "Topic " + recordMetadata.topic() + "\n " +
-//                            "Partition: " + recordMetadata.partition() + "\n" +
-//                            "Offset: " + recordMetadata.offset() + "\n" +
-//                            "Timestamp: " + recordMetadata.timestamp());
-//                } else {
-//                    logger.error("Algo deu errado");
-//                }
-//                ;
-//            }
-//        };
-//    }
+   /**
+    * Função callback de log do envio de uma mensagem pelo produtor
+    * @return callback que printa os metadaos recebidos
+    */
+   private Callback callBackLogger() {
+       return new Callback() {
+           @Override
+           public void onCompletion(RecordMetadata recordMetadata, Exception e) {
+               //executes a record if success or exception is thrown
+               if (e == null) {
+                   logger.info("Metadados recebidos \n " +
+                           "Topic " + recordMetadata.topic() + "\n " +
+                           "Partition: " + recordMetadata.partition() + "\n" +
+                           "Offset: " + recordMetadata.offset() + "\n" +
+                           "Timestamp: " + recordMetadata.timestamp());
+               } else {
+                   logger.error("Algo deu errado");
+               }
+               ;
+           }
+       };
+   }
 
     /**
      * Construtor da classe de produtor kafka de gestor
