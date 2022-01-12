@@ -14,17 +14,11 @@ public class Main{
 
         PositionControlOnMap controller = new PositionControlOnMap(cords);
 
-//        for (int i = 0; i<10; i++) {
-//            Coordinates c = controller.getCurrentPosition();
-//            System.out.println(c.getLatitude() + " " + c.getLongitude());
-//            try {
-//                TimeUnit.SECONDS.sleep(5);
-//            } catch (Exception e){
-//                System.out.println("a");
-//            }
-//        }
+        for (int i = 0; i<10; i++) {
+            ManagerProducer gestor = new ManagerProducer("localhost:9092", "./src/Dados/Gestores/Gestor0/rota.json");
+            gestor.sendLocation();
 
-        ManagerProducer gestor = new ManagerProducer("localhost:9092", "./src/Dados/Gestores/Gestor0/rota.json");
+        }
 
     }
 

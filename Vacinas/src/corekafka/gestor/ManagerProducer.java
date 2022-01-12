@@ -22,47 +22,7 @@ import java.util.Properties;
 public class ManagerProducer {
     private Manager manager;
     KafkaProducer<String, String> producer;
-   Logger logger;
-
-    /**
-     * Função que gera uma string a partir de um json gerado com a localização e id do gestor
-     * @param currentLocation localização atual do gestor
-     * @return string gerada a partir do json
-     */
-    private String generateJsonMessage(Coordinates currentLocation) {
-        JsonObject jsonLocation = new JsonObject();
-        jsonLocation.addProperty("latitude", currentLocation.getLatitude());
-        jsonLocation.addProperty("longitude", currentLocation.getLongitude());
-
-        JsonObject jsonMessage = new JsonObject();
-        jsonMessage.addProperty("id", manager.getId());
-        jsonMessage.add("localizacao", jsonLocation);
-
-        return jsonMessage.toString();
-    }
-
-   /**
-    * Função callback de log do envio de uma mensagem pelo produtor
-    * @return callback que printa os metadaos recebidos
-    */
-   private Callback callBackLogger() {
-       return new Callback() {
-           @Override
-           public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-               //executes a record if success or exception is thrown
-               if (e == null) {
-                   logger.info("Metadados recebidos \n " +
-                           "Topic " + recordMetadata.topic() + "\n " +
-                           "Partition: " + recordMetadata.partition() + "\n" +
-                           "Offset: " + recordMetadata.offset() + "\n" +
-                           "Timestamp: " + recordMetadata.timestamp());
-               } else {
-                   logger.error("Algo deu errado");
-               }
-               ;
-           }
-       };
-   }
+    Logger logger;
 
     /**
      * Construtor da classe de produtor kafka de gestor
@@ -81,6 +41,46 @@ public class ManagerProducer {
 
         // Cria um produtor <chave, valor>
         producer = new KafkaProducer<String, String>(prop);
+    }
+
+    /**
+     * Função que gera uma string a partir de um json gerado com a localização e id do gestor
+     * @param currentLocation localização atual do gestor
+     * @return string gerada a partir do json
+     */
+    private String generateJsonMessage(Coordinates currentLocation) {
+        JsonObject jsonLocation = new JsonObject();
+        jsonLocation.addProperty("latitude", currentLocation.getLatitude());
+        jsonLocation.addProperty("longitude", currentLocation.getLongitude());
+
+        JsonObject jsonMessage = new JsonObject();
+        jsonMessage.addProperty("id", manager.getId());
+        jsonMessage.add("localizacao", jsonLocation);
+
+        return jsonMessage.toString();
+    }
+
+    /**
+     * Função callback de log do envio de uma mensagem pelo produtor
+     * @return callback que printa os metadaos recebidos
+     */
+    private Callback callBackLogger() {
+        return new Callback() {
+            @Override
+            public void onCompletion(RecordMetadata recordMetadata, Exception e) {
+                //executes a record if success or exception is thrown
+                if (e == null) {
+                    logger.info("Metadados recebidos \n " +
+                            "Topic " + recordMetadata.topic() + "\n " +
+                            "Partition: " + recordMetadata.partition() + "\n" +
+                            "Offset: " + recordMetadata.offset() + "\n" +
+                            "Timestamp: " + recordMetadata.timestamp());
+                } else {
+                    logger.error("Algo deu errado");
+                }
+                ;
+            }
+        };
     }
 
     /**

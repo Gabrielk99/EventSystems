@@ -31,13 +31,12 @@ class Manager {
 
             this.id = Integer.parseInt(manager.get("id").getAsString());
             this.name = manager.get("name").getAsString();
-            ArrayList<Coordinates> cords = Coordinates.parseListCoordinates(manager.get("coordinates").getAsString());
+            ArrayList<Coordinates> cords = Coordinates.parseListCoordinates(manager.get("coordinates").toString());
             this.mapController = new PositionControlOnMap(cords);
 
         } catch (Exception e) {
-                System.out.println(e);
-//            System.out.printf("Erro: Arquivo %s de configuração não encontrado!\n", e.getMessage());
-//            System.exit(1);
+            System.out.printf("Erro: Arquivo %s de configuração não encontrado!\n", e.getMessage());
+            System.exit(1);
         }
     }
 

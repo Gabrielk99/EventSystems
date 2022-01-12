@@ -17,16 +17,6 @@ public class PositionControlOnMap {
     private double upperbound = 5.0;
 
     /**
-     * Função que gera o tempo que a entidade deve esperar para passar para a próxima coordenada
-     * @param factor fator que multiplica o tempo gerado aleatoriamente
-     * @return um double aleatório num intervalo de 0 a 5*factor
-     */
-    private double generateTimeToNextCoord(double factor) {
-        Random rand = new Random();
-        return rand.nextDouble()*upperbound*factor;
-    }
-
-    /**
      * Construtor da classe que leva em consideração um fator de multiplicação do tempo
      * @param coordinates coordenadas em que a entidade irá caminhar
      * @param fator que será usado para gerar o tempo aleatório de espera para a próxima coordenada
@@ -43,6 +33,16 @@ public class PositionControlOnMap {
     public PositionControlOnMap(ArrayList<Coordinates> coordinates) {
         this.coordinates = coordinates;
         this.timeToNextCoord = generateTimeToNextCoord(1.0);
+    }
+
+    /**
+     * Função que gera o tempo que a entidade deve esperar para passar para a próxima coordenada
+     * @param factor fator que multiplica o tempo gerado aleatoriamente
+     * @return um double aleatório num intervalo de 0 a 5*factor
+     */
+    private double generateTimeToNextCoord(double factor) {
+        Random rand = new Random();
+        return rand.nextDouble()*upperbound*factor;
     }
 
     /**
