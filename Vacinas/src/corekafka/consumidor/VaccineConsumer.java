@@ -8,6 +8,8 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,6 +19,7 @@ import org.slf4j.spi.LoggerFactoryBinder;
 import com.google.gson.*;
 
 import java.util.Properties;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.time.Duration;
 import java.util.Calendar;
@@ -29,6 +32,7 @@ public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
     private HashMap<Integer, Float> timeWhenReachedMaxTemp;
     private KafkaConsumer<String, String> consumer;
+    private HashMap<Integer,ArrayList<JsonObject>> dataOfAllVaccine = new HashMap<Integer,ArrayList<JsonObject>>(); 
     Logger logger;
 
     /**
@@ -86,16 +90,58 @@ public class VaccineConsumer extends Consumer {
      * @param temperatura   temperatura atual da vacina
      * @param location  localização atual da vacina
      */
-    private void generateAndSaveJSON(String id, Integer status, String temperatura, JsonElement location) {
+    private void generateAndSaveJSON(Integer id, Integer status, String temperatura, JsonElement location, String date) {
         // Gera objeto json com as informações a serem consumidas pela aplicação
         JsonObject jsonMessage = new JsonObject();
-        jsonMessage.addProperty("id", id);
         jsonMessage.addProperty("status", status);
         jsonMessage.addProperty("temperature", temperatura);
+        jsonMessage.addProperty("date", date);
         jsonMessage.add("location", location);
 
-        // TODO: Salvar em arquivo
+        if(dataOfAllVaccine.containsKey(id)){
+            
+            ArrayList<JsonObject> listOfdata = dataOfAllVaccine.get(id);
+           
+            //se ja tiver 100 elementos descarta o mais antigo para adicionar o novo 
+            if(dataOfAllVaccine.get(id).size()==100){
+                listOfdata.remove(0);
+            }
+           
+            listOfdata.add(jsonMessage);
+            
+            dataOfAllVaccine.replace(id, listOfdata);
+            
+        }
+        else{
+            ArrayList<JsonObject> listOfdata = new ArrayList<JsonObject>();
+            listOfdata.add(jsonMessage);
+            dataOfAllVaccine.put(id,listOfdata);
+        }
+    
+        String path = Paths.get("./src/Dados/vacinaSavedData").toString();
 
+        // cria pasta pra salvar os dados
+        if(!Files.exists(Paths.get(path))){
+          File folder = new File(path);
+          if(!folder.mkdir()){
+            System.out.println("erro ao criar pasta "+path);
+            System.exit(1);
+          }
+        }
+
+        // caminha pelos lotes e suas mensagens salvando num .json
+        for(Integer identifier:dataOfAllVaccine.keySet()){
+            try{
+                FileWriter writer = new FileWriter(path+"/"+identifier.toString()+".json");
+                writer.write("{\n\"data\": "+dataOfAllVaccine.get(identifier).toString()+","+
+                "\n\"size\": "+dataOfAllVaccine.get(identifier).size()+"\n}");
+                writer.close();
+            }
+            catch(IOException e){
+                System.out.printf("erro %s",e.getMessage());
+                System.exit(e.hashCode());
+            }
+        }
     }
 
     /**
@@ -141,10 +187,11 @@ public class VaccineConsumer extends Consumer {
             );
 
             generateAndSaveJSON(
-                    vaccineMessage.get("id").getAsString(),
+                    vaccineMessage.get("id").getAsInt(),
                     status.ordinal(),
                     vaccineMessage.get("temperatura").getAsString(),        // Gera o Json com, principalemente, id e status da vacina num arquivo
-                    vaccineMessage.get("location")
+                    vaccineMessage.get("location"),
+                    vaccineMessage.get("data").getAsString()
                     );
 
             System.out.println("[VaccineConsumer] Info received: " +
