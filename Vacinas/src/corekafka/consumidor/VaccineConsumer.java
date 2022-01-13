@@ -43,6 +43,8 @@ public class VaccineConsumer extends Consumer {
      * @param pathToVaccinesFolder  pasta onde se encontram os arquivos de configuração das vacinas
      */
     public VaccineConsumer (String BootstrapServer, String consumerGroupName, String topicToConsume, String pathToVaccinesFolder) {
+        super(BootstrapServer,consumerGroupName,topicToConsume);
+
         this.timeWhenReachedMaxTemp = new HashMap<Integer, Float>();
         this.vacinas = searchForVaccines(pathToVaccinesFolder);
 //        this.logger = LoggerFactory.getLogger(ProducerDemoCallBack.class);

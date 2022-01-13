@@ -90,11 +90,10 @@ public class ManagerProducer {
         // Pega localização atual e cria string do json
         Coordinates currentLocation = manager.getCurrentPosition();
         String message = generateJsonMessage(currentLocation);
-
+        String id = Integer.toString(manager.getId());
         //Cria um producer record e envia
-        ProducerRecord<String, String> record = new ProducerRecord<String, String>("gestor", message);
+        ProducerRecord<String, String> record = new ProducerRecord<String, String>("gestor",id, message);
         producer.send(record);
-//                , this.callBackLogger());
 
         producer.flush();
     }

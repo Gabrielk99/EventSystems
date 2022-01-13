@@ -1,12 +1,12 @@
 import sys
 from pathlib import Path
-def generateJson(name,cordinates,id,vacina,T_default=0,T_med=0,T_max=0,time_max=0,time_increment=0):
+def generateJson(name,cordinates,id,vacina,email="",celular="",T_default=0,T_med=0,T_max=0,time_max=0,time_increment=0):
     if not vacina:
         Path(f'Gestores/Gestor{id}').mkdir(parents=True,exist_ok=True);
 
         file = open(f'Gestores/Gestor{id}/rota.json','w');
 
-        file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"coordinates":{cordinates}\n{"}"}\n')
+        file.write(f'{"{"}\n\t"name":"{name}",\n\t"id":{id},\n\t"coordinates":{cordinates}\n"email":{email},\n"celular":{celular}\n{"}"}\n')
 
     else:
         Path(f'Vacinas/Vacina_{name}').mkdir(parents=True,exist_ok=True);
@@ -36,16 +36,22 @@ def readCordinates(cordinates):
     return save_cordinates
 def main (args):
     vacine = args[4]=="True";
-    if(len(args)<5):
-        print("\n\nplease execute the program with 3 parameters,\n the first is name of object, the second is the id,\n, third is the local_path to cordinates.txt\n and four is the option if the object is vacine or gestor, False or True\n\n")
+    if(len(args)<7):
+        print("""
+            \n\nplease execute the program with 6 parameters,
+            \n-- first is name of object, the second is the id,\n,
+            -- third is the local_path to cordinates.txt\n
+            -- fourth is the option if the object is vacine or gestor, False or True 
+            -- fifth is the email for the manager\n
+            -- sixth is the cellnumber for the manager (+55 DDD 9XXXX-XXXX) \n\n """)
         sys.exit()
     elif(vacine and len(args)<9):
         print("your object is vacine, please insert the temperatures like")
-        print("the fifth argument is default temperature")
-        print("the sixth argument is median temperature")
-        print("the seventh argument is max temperature")
-        print("the eighth argument is max time after max temperature")
-        print("the nineth argument is time of wait increment is optional")
+        print("-- fifth argument is default temperature")
+        print("-- sixth argument is median temperature")
+        print("-- seventh argument is max temperature")
+        print("-- eighth argument is max time after max temperature")
+        print("-- nineth argument is time of wait increment is optional")
         sys.exit()
     cordinates = open(args[3])
     list_of_cordinates = readCordinates(cordinates);
