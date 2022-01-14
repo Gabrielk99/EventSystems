@@ -24,63 +24,45 @@ public class Vaccine{
 
     private int _id; //identificador da vacina
 
-    private String _name; //nome da empresa da vacina
-
     /**
      * Construtor da classe Vacina
      * @param path_to_json caminho para o arquivo de configuração da vacina
      * 
      */
-    public Vaccine(String path_to_json){
+    public Vaccine(JsonObject vaccine){
         
-        try{
+       
+        // Pegando a temperatura inicial (default)
+        float t_init=Float.parseFloat(vaccine.get("t_init").getAsString());
+        // Pegando a temperatura media do limite
+        float t_midle_limite=Float.parseFloat(vaccine.get("t_med").getAsString());
+        // Pegando a temperatura maxima do limite
+        float t_max_limite=Float.parseFloat(vaccine.get("t_max").getAsString());
+        // Pegando o tempo maximo que o lote aguenta apos limite de temp
+        float time_long=Float.parseFloat(vaccine.get("time_max").getAsString());
 
-            // lendo o conteudo json
-            String content = String.join("",Files.readAllLines(Paths.get(path_to_json)));
-            
-            // pegando o json da string como um objeto json
-            JsonObject vaccine = new JsonParser().parse(content).getAsJsonObject();
-
-            // Pegando a temperatura inicial (default)
-            float t_init=Float.parseFloat(vaccine.get("t_init").getAsString());
-            // Pegando a temperatura media do limite
-            float t_midle_limite=Float.parseFloat(vaccine.get("t_med").getAsString());
-            // Pegando a temperatura maxima do limite
-            float t_max_limite=Float.parseFloat(vaccine.get("t_max").getAsString());
-            // Pegando o tempo maximo que o lote aguenta apos limite de temp
-            float time_long=Float.parseFloat(vaccine.get("time_max").getAsString());
-
-            // Instanciando o simulador de temperatura
-            if(vaccine.has("time_increment")){
-                this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
-                                                ,t_max_limite,time_long,vaccine.get("time_increment").getAsFloat());
-            }
-            else {
-                this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
-                ,t_max_limite,time_long);
-            }
-
-            // Pegando o nome da vacina
-            this._name=vaccine.get("name").getAsString();
-
-            // Pegando o id do lote de vacina
-            this._id=Integer.parseInt(vaccine.get("id").getAsString());
-
-          
-
-            
-            // Pegando as coordenadas do arquivo json de configuração
-            ArrayList<Coordinates> coordinates = Coordinates.parseListCoordinates(vaccine.get("coordinates").toString());
-            // Instanciado o simulador de posicao
-            this._coord_controller = new PositionControlOnMap(coordinates,2.5);
-
+        // Instanciando o simulador de temperatura
+        if(vaccine.has("time_increment")){
+            this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
+                                            ,t_max_limite,time_long,vaccine.get("time_increment").getAsFloat());
+        }
+        else {
+            this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
+            ,t_max_limite,time_long);
         }
 
-        catch(IOException e){
-            System.out.printf("error arquivo %s de configuração não encontrado.!",e.getMessage());
-            System.exit(1);
-        }
+        // Pegando o id do lote de vacina
+        this._id=Integer.parseInt(vaccine.get("id").getAsString());
 
+        
+
+        
+        // Pegando as coordenadas do arquivo json de configuração
+        ArrayList<Coordinates> coordinates = Coordinates.parseListCoordinates(vaccine.get("coordinates").toString());
+        // Instanciado o simulador de posicao
+        this._coord_controller = new PositionControlOnMap(coordinates,2.5);
+
+        
     }
 
     /**
@@ -121,14 +103,6 @@ public class Vaccine{
      */
     public float getTimeWaitMax(){
         return this._temp_controller.getTimeMaxTemperatureLim();
-    }
-
-    /**
-     * 
-     * @return o nome da empresa fabricante
-     */
-    public String getName(){
-        return this._name;
     }
 
     /**

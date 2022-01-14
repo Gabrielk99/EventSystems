@@ -25,6 +25,7 @@ import java.time.Duration;
 import java.util.Calendar;
 import java.util.stream.Stream;
 
+import src.types.SavedMessage;
 /**
  * Classe que representa o consumidor das informações que os produtores de vacina enviam
  */
@@ -32,7 +33,7 @@ public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
     private HashMap<Integer, Float> timeWhenReachedMaxTemp;
     private KafkaConsumer<String, String> consumer;
-    private HashMap<Integer,ArrayList<JsonObject>> dataOfAllVaccine = new HashMap<Integer,ArrayList<JsonObject>>(); 
+    private HashMap<Integer,SavedMessage> dataOfAllVaccine = new HashMap<Integer,SavedMessage>(); 
     Logger logger;
 
     /**
@@ -42,7 +43,7 @@ public class VaccineConsumer extends Consumer {
      * @param topicToConsume    tópico que vai consumir as mensagens
      * @param pathToVaccinesFolder  pasta onde se encontram os arquivos de configuração das vacinas
      */
-    public VaccineConsumer (String BootstrapServer, String consumerGroupName, String topicToConsume, String pathToVaccinesFolder) {
+    public VaccineConsumer (String BootstrapServer, String consumerGroupName, String topicToConsume, Path pathToVaccinesFolder) {
         super(BootstrapServer,consumerGroupName,topicToConsume);
 
         this.timeWhenReachedMaxTemp = new HashMap<Integer, Float>();
@@ -69,18 +70,33 @@ public class VaccineConsumer extends Consumer {
      * @param path  caminho até a pasta onde se encontram os arquivos de configuração das vacinas
      * @return  Um hashmap com as informações das vacinas
      */
-    private HashMap<Integer, Vaccine> searchForVaccines(String path) {
+    private HashMap<Integer, Vaccine> searchForVaccines(Path path) {
         HashMap<Integer, Vaccine> vaccinesFound = new HashMap<Integer, Vaccine>();
 
-        Path allDirVaccines = Paths.get(path);
-        try (Stream<Path> paths = Files.walk(allDirVaccines)) {
-            paths.filter(file -> file.toString().endsWith(".json")).forEach( vaccineConfig -> {
-                Vaccine vaccine = new Vaccine(vaccineConfig.toString());
-                vaccinesFound.put(vaccine.getId(), vaccine);
+        try {
+           
+            // lendo o conteudo json
+            String content = String.join("",Files.readAllLines(path));
+        
+            // pegando o json da string como um objeto json
+            JsonObject vaccinesData = new JsonParser().parse(content).getAsJsonObject();
+            JsonArray vaccinesDataList = vaccinesData.get("vacinas").getAsJsonArray();
+
+            for(JsonElement vaccine_json:vaccinesDataList){
+                Vaccine vaccine = new Vaccine(vaccine_json.getAsJsonObject());
+                vaccinesFound.put(vaccine.getId(),vaccine);
                 this.timeWhenReachedMaxTemp.put(vaccine.getId(), (float) 0.0);
-            });
+            }
+           
+           
+            // paths.filter(file -> file.toString().endsWith(".json")).forEach( vaccineConfig -> {
+            //     Vaccine vaccine = new Vaccine(vaccineConfig.toString());
+            //     vaccinesFound.put(vaccine.getId(), vaccine);
+            //     
+            // });
         }catch (Exception e) {
-            System.out.println(e);
+            System.out.printf("error %s ",e.getMessage());
+            System.exit(e.hashCode());
         }
         return vaccinesFound;
     }
@@ -102,25 +118,16 @@ public class VaccineConsumer extends Consumer {
 
         if(dataOfAllVaccine.containsKey(id)){
             
-            ArrayList<JsonObject> listOfdata = dataOfAllVaccine.get(id);
-           
-            //se ja tiver 100 elementos descarta o mais antigo para adicionar o novo 
-            if(dataOfAllVaccine.get(id).size()==100){
-                listOfdata.remove(0);
-            }
-           
-            listOfdata.add(jsonMessage);
-            
-            dataOfAllVaccine.replace(id, listOfdata);
+           dataOfAllVaccine.get(id).updateMessage(jsonMessage);
             
         }
         else{
-            ArrayList<JsonObject> listOfdata = new ArrayList<JsonObject>();
-            listOfdata.add(jsonMessage);
-            dataOfAllVaccine.put(id,listOfdata);
+            SavedMessage message = new SavedMessage(id,new ArrayList<JsonObject>());
+            message.updateMessage(jsonMessage);
+            dataOfAllVaccine.put(id,message);
         }
     
-        String path = Paths.get("./src/Dados/vacinaSavedData").toString();
+        String path = Paths.get("../Database/data_for_kafka/Gestores").toString();
 
         // cria pasta pra salvar os dados
         if(!Files.exists(Paths.get(path))){
@@ -131,19 +138,19 @@ public class VaccineConsumer extends Consumer {
           }
         }
 
-        // caminha pelos lotes e suas mensagens salvando num .json
-        for(Integer identifier:dataOfAllVaccine.keySet()){
-            try{
-                FileWriter writer = new FileWriter(path+"/"+identifier.toString()+".json");
-                writer.write("{\n\"data\": "+dataOfAllVaccine.get(identifier).toString()+","+
-                "\n\"size\": "+dataOfAllVaccine.get(identifier).size()+"\n}");
-                writer.close();
-            }
-            catch(IOException e){
-                System.out.printf("erro %s",e.getMessage());
-                System.exit(e.hashCode());
-            }
+        try{
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            FileWriter writer = new FileWriter(path+"/datasSimulation.json");
+    
+            gson.toJson(dataOfAllVaccine.values(), writer);
+            writer.flush();
+            writer.close();
         }
+        catch(IOException e){
+            System.out.printf("erro %s",e.getMessage());
+            System.exit(e.hashCode());
+        }
+
     }
 
     /**

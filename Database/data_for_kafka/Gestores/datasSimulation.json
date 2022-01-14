@@ -1,0 +1,508 @@
+[
+  {
+    "id": 1,
+    "size": 100,
+    "datasSaved": [
+      {
+        "status": 0,
+        "temperature": "2.9333324",
+        "date": "Thu Jan 13 23:39:23 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.999999",
+        "date": "Thu Jan 13 23:39:24 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.0666656",
+        "date": "Thu Jan 13 23:39:25 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1333323",
+        "date": "Thu Jan 13 23:39:26 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1999989",
+        "date": "Thu Jan 13 23:39:27 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.2666655",
+        "date": "Thu Jan 13 23:39:28 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.333332",
+        "date": "Thu Jan 13 23:39:29 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.3999987",
+        "date": "Thu Jan 13 23:39:30 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.4666653",
+        "date": "Thu Jan 13 23:39:31 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.5333319",
+        "date": "Thu Jan 13 23:39:32 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.5999985",
+        "date": "Thu Jan 13 23:39:33 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.666665",
+        "date": "Thu Jan 13 23:39:34 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.7333317",
+        "date": "Thu Jan 13 23:39:35 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.7999983",
+        "date": "Thu Jan 13 23:39:36 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.866665",
+        "date": "Thu Jan 13 23:39:37 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.9333315",
+        "date": "Thu Jan 13 23:39:38 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.999998",
+        "date": "Thu Jan 13 23:39:39 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.0666647",
+        "date": "Thu Jan 13 23:39:40 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.1333313",
+        "date": "Thu Jan 13 23:39:41 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.199998",
+        "date": "Thu Jan 13 23:39:42 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.2666645",
+        "date": "Thu Jan 13 23:39:43 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.333331",
+        "date": "Thu Jan 13 23:39:44 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.3999977",
+        "date": "Thu Jan 13 23:39:45 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.333331",
+        "date": "Thu Jan 13 23:39:46 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.2666645",
+        "date": "Thu Jan 13 23:39:47 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.199998",
+        "date": "Thu Jan 13 23:39:48 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.1333313",
+        "date": "Thu Jan 13 23:39:49 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "4.0666647",
+        "date": "Thu Jan 13 23:39:50 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.999998",
+        "date": "Thu Jan 13 23:39:51 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.9333315",
+        "date": "Thu Jan 13 23:39:52 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.866665",
+        "date": "Thu Jan 13 23:39:53 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.7999983",
+        "date": "Thu Jan 13 23:39:54 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.7333317",
+        "date": "Thu Jan 13 23:39:55 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.666665",
+        "date": "Thu Jan 13 23:39:56 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.5999985",
+        "date": "Thu Jan 13 23:39:57 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.5333319",
+        "date": "Thu Jan 13 23:39:58 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.4666653",
+        "date": "Thu Jan 13 23:39:59 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.3999987",
+        "date": "Thu Jan 13 23:40:00 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.333332",
+        "date": "Thu Jan 13 23:40:01 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.2666655",
+        "date": "Thu Jan 13 23:40:02 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1999989",
+        "date": "Thu Jan 13 23:40:03 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1333323",
+        "date": "Thu Jan 13 23:40:04 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.0666656",
+        "date": "Thu Jan 13 23:40:05 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.999999",
+        "date": "Thu Jan 13 23:40:06 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.9333324",
+        "date": "Thu Jan 13 23:40:07 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.8666658",
+        "date": "Thu Jan 13 23:40:08 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.7999992",
+        "date": "Thu Jan 13 23:40:09 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.7333326",
+        "date": "Thu Jan 13 23:40:10 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.666666",
+        "date": "Thu Jan 13 23:40:11 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.5999994",
+        "date": "Thu Jan 13 23:40:12 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.5333328",
+        "date": "Thu Jan 13 23:40:14 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.4666662",
+        "date": "Thu Jan 13 23:40:15 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.3999996",
+        "date": "Thu Jan 13 23:40:16 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.333333",
+        "date": "Thu Jan 13 23:40:17 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.2666664",
+        "date": "Thu Jan 13 23:40:18 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.1999998",
+        "date": "Thu Jan 13 23:40:19 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.1333332",
+        "date": "Thu Jan 13 23:40:20 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:40:21 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "1.9999999",
+        "date": "Thu Jan 13 23:40:22 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:40:23 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:40:24 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:40:25 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.1333332",
+        "date": "Thu Jan 13 23:40:26 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.1999998",
+        "date": "Thu Jan 13 23:40:27 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.2666664",
+        "date": "Thu Jan 13 23:40:28 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.333333",
+        "date": "Thu Jan 13 23:40:29 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.3999996",
+        "date": "Thu Jan 13 23:40:30 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.4666662",
+        "date": "Thu Jan 13 23:40:31 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.5333328",
+        "date": "Thu Jan 13 23:40:32 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.5999994",
+        "date": "Thu Jan 13 23:40:33 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.666666",
+        "date": "Thu Jan 13 23:40:34 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.7333326",
+        "date": "Thu Jan 13 23:40:35 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.7999992",
+        "date": "Thu Jan 13 23:40:36 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.8666658",
+        "date": "Thu Jan 13 23:40:37 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.9333324",
+        "date": "Thu Jan 13 23:40:38 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.999999",
+        "date": "Thu Jan 13 23:40:39 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.0666656",
+        "date": "Thu Jan 13 23:40:40 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1333323",
+        "date": "Thu Jan 13 23:40:41 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1999989",
+        "date": "Thu Jan 13 23:40:42 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.1333323",
+        "date": "Thu Jan 13 23:40:43 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "3.0666656",
+        "date": "Thu Jan 13 23:40:44 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.999999",
+        "date": "Thu Jan 13 23:40:45 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.9333324",
+        "date": "Thu Jan 13 23:40:46 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.8666658",
+        "date": "Thu Jan 13 23:40:47 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.7999992",
+        "date": "Thu Jan 13 23:40:48 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.7333326",
+        "date": "Thu Jan 13 23:40:49 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.666666",
+        "date": "Thu Jan 13 23:40:50 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.5999994",
+        "date": "Thu Jan 13 23:40:51 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.5333328",
+        "date": "Thu Jan 13 23:40:52 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.4666662",
+        "date": "Thu Jan 13 23:40:53 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.3999996",
+        "date": "Thu Jan 13 23:40:54 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.333333",
+        "date": "Thu Jan 13 23:40:55 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.2666664",
+        "date": "Thu Jan 13 23:40:56 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.1999998",
+        "date": "Thu Jan 13 23:40:57 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.1333332",
+        "date": "Thu Jan 13 23:40:58 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:40:59 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "1.9999999",
+        "date": "Thu Jan 13 23:41:00 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:41:01 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:41:02 BRT 2022"
+      },
+      {
+        "status": 0,
+        "temperature": "2.0666666",
+        "date": "Thu Jan 13 23:41:03 BRT 2022"
+      }
+    ]
+  }
+]

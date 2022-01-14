@@ -1,0 +1,21 @@
+{
+    "vacinas":[
+        {
+            "name":"Pfizer",
+            "id":0
+        },
+        {
+            "name":"Janssen",
+            "id":3
+        },
+        {
+            "name":"Coronavac",
+            "id":2
+        },
+        {
+            "name":"Astrazeneca",
+            "id":1
+        }
+        
+    ]
+}

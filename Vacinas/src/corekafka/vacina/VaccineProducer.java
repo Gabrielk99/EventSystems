@@ -29,10 +29,10 @@ public class VaccineProducer{
      * @param BootstrapServer servidor no qual o kafka vai rodar
      * @param pathToJson    caminho para o arquivo de configuração do lote
      */
-    public VaccineProducer(String BootstrapServer, String pathToJson){
+    public VaccineProducer(String BootstrapServer, JsonObject vaccine){
 
         // Instanciando o lote de vacina
-        this._vaccine = new Vaccine(pathToJson);
+        this._vaccine = new Vaccine(vaccine);
 
         // Definindo as propriedades
         Properties prop = new Properties();
