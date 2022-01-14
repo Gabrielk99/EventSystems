@@ -145,7 +145,7 @@ public class TemperatureConfigurate {
 
         //o incremento é a diferença da temperatura max menos a inicial
         // sobre o tempo total max de simulacao
-        this.inc = (this.t_max_limite-this.t_init)/totalTime;
+        this.inc = (this.t_max_limite-this.t_init)/this.time_wait_max;
         
     }
 
@@ -308,14 +308,12 @@ public class TemperatureConfigurate {
         if(this.getCurrentTimeStamp()>=this.getTimeToIncrement()+this.getInitialTimeStamp() && !reset){
            this.inc = -this.inc;
            this.reset=true;
-           System.out.println(this.getCurrentTimeStamp());
-
+           System.out.println(this.getTimeToIncrement());
         }
         if(this.reset && this.getCurrentTimeStamp()>=(2*this.getTimeToIncrement()+this.getInitialTimeStamp())){
             this.inc=-this.inc;
             this.start();
             this.reset = false;
-            System.out.println(this.getCurrentTimeStamp());
         }
     }
 

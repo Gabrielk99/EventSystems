@@ -42,9 +42,18 @@ public class Vaccine{
         float time_long=Float.parseFloat(vaccine.get("time_max").getAsString());
 
         // Instanciando o simulador de temperatura
-        if(vaccine.has("time_increment")){
+        if(vaccine.has("time_increment")  && !vaccine.has("chunks")){
             this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
                                             ,t_max_limite,time_long,vaccine.get("time_increment").getAsFloat());
+        }
+        else if(vaccine.has("time_increment") && vaccine.has("chunks")){
+            this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
+                                            ,t_max_limite,time_long,vaccine.get("time_increment").getAsFloat()
+                                            ,vaccine.get("chunks").getAsInt());
+        }
+        else if(vaccine.has("chunks") && !vaccine.has("time_increment")){
+            this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite
+            ,t_max_limite,time_long,vaccine.get("chunks").getAsInt());
         }
         else {
             this._temp_controller = new TemperatureConfigurate(t_init,t_midle_limite

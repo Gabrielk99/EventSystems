@@ -24,12 +24,13 @@ import com.google.gson.*;
 import java.util.Properties;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+
+import src.types.SavedMessageManager;
 import java.time.Duration;
-import java.util.Calendar;
-import java.util.stream.Stream;
 
 public class ManagerConsumer extends Consumer {
-
+    private HashMap<Integer,SavedMessageManager> dataOffAllManeger = new HashMap <Integer,SavedMessageManager>();
     public ManagerConsumer(String BootstrapServer, String consumerGroupName,String topicToConsume){
 
         super(BootstrapServer,consumerGroupName,topicToConsume);
@@ -38,11 +39,17 @@ public class ManagerConsumer extends Consumer {
 
     private void generateAndSaveJSON(Integer id, JsonElement location){
         JsonObject message = new JsonObject();
-
-        message.addProperty("id", id);
         message.add("location",location);
 
-        String path = Paths.get("./src/Dados/managerSavedData").toString();
+        if(dataOffAllManeger.containsKey(id)){
+            dataOffAllManeger.get(id).updateMessage(message);
+        }
+        else{
+            SavedMessageManager savedMessage = new SavedMessageManager(id,message);
+            dataOffAllManeger.put(id,savedMessage);
+        }
+
+        String path = Paths.get("../Database/data_for_kafka/Gestores").toString();
 
         // cria pasta pra salvar os dados
         if(!Files.exists(Paths.get(path))){
@@ -54,8 +61,10 @@ public class ManagerConsumer extends Consumer {
         }
 
         try{
-            FileWriter writer = new FileWriter(path+"/"+id.toString()+".json");
-            writer.write(message.toString());
+            FileWriter writer = new FileWriter(path+"/datasSimulation.json");
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            gson.toJson(dataOffAllManeger.values(),writer);
+            writer.flush();
             writer.close();
         }
         catch(IOException e){

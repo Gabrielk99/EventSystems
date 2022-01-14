@@ -25,7 +25,7 @@ import java.time.Duration;
 import java.util.Calendar;
 import java.util.stream.Stream;
 
-import src.types.SavedMessage;
+import src.types.SavedMessageVaccine;
 /**
  * Classe que representa o consumidor das informações que os produtores de vacina enviam
  */
@@ -33,7 +33,7 @@ public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
     private HashMap<Integer, Float> timeWhenReachedMaxTemp;
     private KafkaConsumer<String, String> consumer;
-    private HashMap<Integer,SavedMessage> dataOfAllVaccine = new HashMap<Integer,SavedMessage>(); 
+    private HashMap<Integer,SavedMessageVaccine> dataOfAllVaccine = new HashMap<Integer,SavedMessageVaccine>(); 
     Logger logger;
 
     /**
@@ -117,17 +117,15 @@ public class VaccineConsumer extends Consumer {
         jsonMessage.add("location", location);
 
         if(dataOfAllVaccine.containsKey(id)){
-            
-           dataOfAllVaccine.get(id).updateMessage(jsonMessage);
-            
+           dataOfAllVaccine.get(id).updateMessages(jsonMessage);
         }
         else{
-            SavedMessage message = new SavedMessage(id,new ArrayList<JsonObject>());
-            message.updateMessage(jsonMessage);
+            SavedMessageVaccine message = new SavedMessageVaccine(id,new ArrayList<JsonObject>());
+            message.updateMessages(jsonMessage);
             dataOfAllVaccine.put(id,message);
         }
     
-        String path = Paths.get("../Database/data_for_kafka/Gestores").toString();
+        String path = Paths.get("../Database/data_for_kafka/Vacinas").toString();
 
         // cria pasta pra salvar os dados
         if(!Files.exists(Paths.get(path))){
@@ -199,7 +197,7 @@ public class VaccineConsumer extends Consumer {
                     vaccineMessage.get("id").getAsInt(),
                     status.ordinal(),
                     vaccineMessage.get("temperatura").getAsString(),        // Gera o Json com, principalemente, id e status da vacina num arquivo
-                    vaccineMessage.get("location"),
+                    vaccineMessage.get("localizacao"),
                     vaccineMessage.get("data").getAsString()
                     );
 

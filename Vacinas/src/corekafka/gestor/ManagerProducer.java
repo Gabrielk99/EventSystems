@@ -29,8 +29,8 @@ public class ManagerProducer {
      * @param BootstrapServer server onde o kafka está rodando
      * @param pathToJson      caminho até as informações do gestor contidas num json
      */
-    public ManagerProducer(String BootstrapServer, String pathToJson) {
-        this.manager = new Manager(pathToJson);
+    public ManagerProducer(String BootstrapServer, JsonObject manager) {
+        this.manager = new Manager(manager);
 //        this.logger = LoggerFactory.getLogger(ProducerDemoCallBack.class);
 
         // Cria e define as propriedades

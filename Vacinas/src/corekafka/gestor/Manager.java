@@ -16,7 +16,6 @@ import src.corekafka.simulacao.PositionControlOnMap;
 
 class Manager {
     private int id;
-    private String name;
     private PositionControlOnMap mapController;
 
     /**
@@ -24,20 +23,12 @@ class Manager {
      *
      * @param path_to_json caminho até o arquivo json com as informações do gestor
      */
-    public Manager(String path_to_json){
-        try {
-            String content = String.join("", Files.readAllLines(Paths.get(path_to_json))); // le json e passa para string
-            JsonObject manager = new JsonParser().parse(content).getAsJsonObject();       // parse da string para um objeto json
+    public Manager(JsonObject manager){
+       
+        this.id = Integer.parseInt(manager.get("id").getAsString());
+        ArrayList<Coordinates> cords = Coordinates.parseListCoordinates(manager.get("coordinates").toString());
+        this.mapController = new PositionControlOnMap(cords);
 
-            this.id = Integer.parseInt(manager.get("id").getAsString());
-            this.name = manager.get("name").getAsString();
-            ArrayList<Coordinates> cords = Coordinates.parseListCoordinates(manager.get("coordinates").toString());
-            this.mapController = new PositionControlOnMap(cords);
-
-        } catch (Exception e) {
-            System.out.printf("Erro: Arquivo %s de configuração não encontrado!\n", e.getMessage());
-            System.exit(1);
-        }
     }
 
     /**
