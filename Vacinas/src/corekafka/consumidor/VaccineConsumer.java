@@ -31,7 +31,7 @@ import src.types.SavedMessageVaccine;
  */
 public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
-    private HashMap<Integer, Float> timeWhenReachedMaxTemp;
+    private HashMap<Integer, Double> timeWhenReachedMaxTemp;
     private KafkaConsumer<String, String> consumer;
     private HashMap<Integer,SavedMessageVaccine> dataOfAllVaccine = new HashMap<Integer,SavedMessageVaccine>(); 
     Logger logger;
@@ -46,7 +46,7 @@ public class VaccineConsumer extends Consumer {
     public VaccineConsumer (String BootstrapServer, String consumerGroupName, String topicToConsume, Path pathToVaccinesFolder) {
         super(BootstrapServer,consumerGroupName,topicToConsume);
 
-        this.timeWhenReachedMaxTemp = new HashMap<Integer, Float>();
+        this.timeWhenReachedMaxTemp = new HashMap<Integer, Double>();
         this.vacinas = searchForVaccines(pathToVaccinesFolder);
 //        this.logger = LoggerFactory.getLogger(ProducerDemoCallBack.class);
 
@@ -74,7 +74,6 @@ public class VaccineConsumer extends Consumer {
         HashMap<Integer, Vaccine> vaccinesFound = new HashMap<Integer, Vaccine>();
 
         try {
-           
             // lendo o conteudo json
             String content = String.join("",Files.readAllLines(path));
         
@@ -85,7 +84,7 @@ public class VaccineConsumer extends Consumer {
             for(JsonElement vaccine_json:vaccinesDataList){
                 Vaccine vaccine = new Vaccine(vaccine_json.getAsJsonObject());
                 vaccinesFound.put(vaccine.getId(),vaccine);
-                this.timeWhenReachedMaxTemp.put(vaccine.getId(), (float) 0.0);
+                this.timeWhenReachedMaxTemp.put(vaccine.getId(), (double) 0.0);
             }
            
            
@@ -116,10 +115,10 @@ public class VaccineConsumer extends Consumer {
         jsonMessage.addProperty("date", date);
         jsonMessage.add("location", location);
 
-        if(dataOfAllVaccine.containsKey(id)){
+        if(dataOfAllVaccine.containsKey(id)) {
            dataOfAllVaccine.get(id).updateMessages(jsonMessage);
         }
-        else{
+        else {
             SavedMessageVaccine message = new SavedMessageVaccine(id,new ArrayList<JsonObject>());
             message.updateMessages(jsonMessage);
             dataOfAllVaccine.put(id,message);
@@ -158,16 +157,19 @@ public class VaccineConsumer extends Consumer {
      * @param temperature
      * @return
      */
-    private VaccineStatus checkVaccineStatus(Integer id, float currentTime, float temperature) {
+    private VaccineStatus checkVaccineStatus(Integer id, double currentTime, float temperature) {
         Vaccine vacina = vacinas.get(id);
-        Float timeMaxTemp = timeWhenReachedMaxTemp.get(id);
+        Double timeMaxTemp = timeWhenReachedMaxTemp.get(id);
         float maxTemperatureLim = vacina.getMaxTemperatureLim();
 
         // Se a temperatura está abaixo do limite, seta o marcador de quando a vacina
         // atingiu o max para o tempo atual para que currentTime - timeMaxTemp seja igual a 0.
-        if (temperature < maxTemperatureLim)
+        if (temperature <= maxTemperatureLim) {
             timeMaxTemp = currentTime;
+            timeWhenReachedMaxTemp.put(id, timeMaxTemp);
+        }
 
+        System.out.println("Time que passou: " + (currentTime - timeMaxTemp) + " -> " + vacina.getTimeWaitMax());
         return VaccineStatus.checkStatus(
             temperature,
             vacina.getMidleTemperatureLim(),
@@ -183,7 +185,7 @@ public class VaccineConsumer extends Consumer {
     @Override
     public void consumeMessages() {
         ConsumerRecords<String, String> records= consumer.poll(Duration.ofMillis(100)); // Consome mensagens dos produtores
-        float now = Calendar.getInstance().getTime().getTime()/1000; // Pega tempo atual
+        double now = Calendar.getInstance().getTime().getTime()/1000; // Pega tempo atual
 
         for (ConsumerRecord<String, String> record : records) {
             JsonObject vaccineMessage = new JsonParser().parse(record.value()).getAsJsonObject(); // Faz o parse do record recebido para objeto Json
@@ -196,7 +198,7 @@ public class VaccineConsumer extends Consumer {
             generateAndSaveJSON(
                     vaccineMessage.get("id").getAsInt(),
                     status.ordinal(),
-                    vaccineMessage.get("temperatura").getAsString(),        // Gera o Json com, principalemente, id e status da vacina num arquivo
+                    vaccineMessage.get("temperatura").getAsString(),        // Gera o Json com, principalmente, id e status da vacina num arquivo
                     vaccineMessage.get("localizacao"),
                     vaccineMessage.get("data").getAsString()
                     );
