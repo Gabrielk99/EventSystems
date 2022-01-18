@@ -7,11 +7,14 @@ public enum VaccineStatus {
     OK {
         public String toString() { return "OK"; }
     },
-    WARNING{
+    WARNING {
         public String toString() { return "WARNING"; }
     },
-    DANGER{
+    DANGER {
         public String toString() { return "DANGER"; }
+    },
+    GAMEOVER {
+        public String toString() { return "GAME OVER"; }
     };
 
     /**
@@ -27,7 +30,7 @@ public enum VaccineStatus {
             float currentTemperature,
             float averageTemperature,
             float maxTemperature,
-            float timePassedSinceMaxTemp,
+            double timePassedSinceMaxTemp,
             float maxTimeAboveMaxTemp) {
         // Checa se a temperatura está abaixo da temperatura que começa a preocupar
         if (currentTemperature < averageTemperature) {
@@ -37,9 +40,9 @@ public enum VaccineStatus {
             return WARNING;
         }else if (currentTemperature >= maxTemperature) { // Se a temperatura está acima do valor tolerável
             if (timePassedSinceMaxTemp < maxTimeAboveMaxTemp) { // E não passou o tempo máximo que ela pode ficar
-                return WARNING;                                 // Então o status é de alerta
+                return DANGER;                                 // Então o status é de perigo
             } else {
-                return DANGER;                                  // Se já excedeu o tempo máximo, as vacinas podem ter estragado
+                return GAMEOVER;                                  // Se já excedeu o tempo máximo, as vacinas estragaram
             }
         }
         return null;
