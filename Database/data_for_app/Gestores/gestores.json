@@ -4,20 +4,22 @@
             "name":"Patricia",
             "id":0,
             "email":"patriciadockhorncosta@gmail.com",
-            "celular":"+55 27 99238-7870"
-            
+            "celular":"+55 27 99238-7870",
+            "img":"patricia.jpeg"
         },
         {
             "name":"Mikaella",
             "id":1,
             "email":"mikaella.silva@edu.ufes.br",
-            "celular":"+55 27 99253-8333"
+            "celular":"+55 27 99253-8333",
+            "img":"mikagay.jpeg"
         },
         {
             "name":"Geraldo",
             "id":2,
             "email":"gabriel.s.xavier@edu.ufes.br",
-            "celular":"+55 27 99662-8655"
+            "celular":"+55 27 99662-8655",
+            "img":"geraldo.jpeg"
         }
         
         

@@ -1,0 +1,28 @@
+.cnt-symbol{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.img-symbol img{
+    border-radius: 9999px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.name-symbol{
+    width: auto;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:3px;
+    padding-right: 3px;
+    font-size: 0.55rem;
+    background-color: rgba(51, 28, 71, 0.63);
+    text-align: center;
+    color: white;
+    border-radius: 99px;
+}
