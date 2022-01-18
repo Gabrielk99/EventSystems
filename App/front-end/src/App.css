@@ -1,0 +1,15 @@
+.App{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+.data-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
