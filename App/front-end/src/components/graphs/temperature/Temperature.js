@@ -5,9 +5,9 @@ import "./Temperature.css"
 function TemperatureGraph(){
 
     return (
-        <div className="graph-container">
+        <div id="graph" className="graph-container">
             <h2>Temperatura dos lotes</h2>
-            <Plot
+            <Plot divId="graph"
                 data={[
                         {   x: [1, 2, 3,4,6],
                             y: [2, 6, 3,5,7],
@@ -17,7 +17,9 @@ function TemperatureGraph(){
                         }
                     ]}
                 useResizeHandler={true}
-                style={{width:"90%",height:"95%",position:"absolute",top:"3%",zIndex:4}}
+                layout={{showlegend:true,scrollZoom:true,paper_bgcolor:"transparent",plot_bgcolor:"white"}}
+                config={{scrollZoom:true}}
+                style={{width:"100%",height:"100%",position:"absolute",top:"5%"}}
             />
         </div>
     )
