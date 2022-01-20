@@ -49,7 +49,7 @@ public class ManagerConsumer extends Consumer {
             dataOffAllManeger.put(id,savedMessage);
         }
 
-        String path = Paths.get("../Database/data_for_kafka/Gestores").toString();
+        String path = Paths.get("../Database/data_for_app/Gestores").toString();
 
         // cria pasta pra salvar os dados
         if(!Files.exists(Paths.get(path))){
