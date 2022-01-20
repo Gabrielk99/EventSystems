@@ -124,7 +124,7 @@ public class VaccineConsumer extends Consumer {
             dataOfAllVaccine.put(id,message);
         }
     
-        String path = Paths.get("../Database/data_for_kafka/Vacinas").toString();
+        String path = Paths.get("../Database/data_for_app/Vacinas").toString();
 
         // cria pasta pra salvar os dados
         if(!Files.exists(Paths.get(path))){
