@@ -3,14 +3,20 @@ package src.corekafka.vacina;
 import src.types.*;
 import com.google.gson.*;
 
+
 import src.corekafka.simulacao.PositionControlOnMap;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.RecordMetadata;
+import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.common.serialization.StringSerializer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
+import java.util.concurrent.Callable;
 
 /**
  * Classe criada para representar de forma generica um produtor de lotes de vacina
@@ -83,7 +89,23 @@ public class VaccineProducer{
         // (topico,key,mensagem)
         ProducerRecord<String, String> record = new ProducerRecord <String,String>("vacina",""+this._vaccine.getId(),message);
 
-        this.producer.send(record);
+        Logger logger = LoggerFactory.getLogger(VaccineProducer.class);
+
+        this.producer.send(record, new Callback() {
+            
+            @Override
+            public void onCompletion(RecordMetadata recordMetadata, Exception e){
+                // if(e==null){
+                //     logger.info("\n key:" + record.key()+"\n");
+                //     logger.info("topic: "+recordMetadata.topic()+"\n"+
+                //     "partition: "+recordMetadata.partition()+"\n"+
+                //     "offset: "+recordMetadata.offset()+"\n"
+                //     );
+
+                // }
+            }
+            
+        });
 
         this.producer.flush();
 

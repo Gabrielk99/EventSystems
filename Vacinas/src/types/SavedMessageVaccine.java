@@ -1,6 +1,7 @@
 package src.types;
 
 import com.google.gson.JsonObject;
+import com.google.gson.JsonArray;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +17,7 @@ public class SavedMessageVaccine extends SavedMessage {
      * @param datas mensagens a ser salva
      */
 
-    public SavedMessageVaccine(int id,ArrayList<JsonObject>datas){
+    public SavedMessageVaccine(int id,JsonArray datas){
         super(id,datas);
         this.size = datas.size();
     }
