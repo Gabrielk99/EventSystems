@@ -15,7 +15,7 @@ class VaccineController {
     }
 
     getVaccineStatus(id: number) {
-        return status.find(statusVacina => statusVacina.id == id)
+        return status.filter(statusVacina => statusVacina.id == id)
     }
 }
 
