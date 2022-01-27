@@ -26,7 +26,7 @@ class Manager {
     public Manager(JsonObject manager){
        
         this.id = Integer.parseInt(manager.get("id").getAsString());
-        ArrayList<Coordinates> cords = Coordinates.parseListCoordinates(manager.get("coordinates").toString());
+        ArrayList<Coordinates> cords = Coordinates.parseListCoordinates(manager.get("coordinates").getAsJsonArray());
         this.mapController = new PositionControlOnMap(cords);
 
     }

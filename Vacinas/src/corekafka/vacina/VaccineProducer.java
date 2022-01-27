@@ -72,7 +72,7 @@ public class VaccineProducer{
         //adiciona suas propriedades
         jsonMessage.addProperty("id", this._vaccine.getId());
         jsonMessage.addProperty("temperatura", current_temperature);
-        jsonMessage.addProperty("data", this._vaccine.getCurrentDate().toString());
+        jsonMessage.addProperty("data", this._vaccine.getCurrentDate());
         jsonMessage.add("localizacao", jsonLocation);
 
         return jsonMessage.toString();

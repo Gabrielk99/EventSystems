@@ -67,7 +67,7 @@ public class Vaccine{
 
         
         // Pegando as coordenadas do arquivo json de configuração
-        ArrayList<Coordinates> coordinates = Coordinates.parseListCoordinates(vaccine.get("coordinates").toString());
+        ArrayList<Coordinates> coordinates = Coordinates.parseListCoordinates(vaccine.get("coordinates").getAsJsonArray());
         // Instanciado o simulador de posicao
         
         this._coord_controller = new PositionControlOnMap(coordinates,vaccine.get("time_to_move").getAsInt());
@@ -133,7 +133,7 @@ public class Vaccine{
      * 
      * @return data corrente da ultima atualizacao de temperatura
      */
-    public Date getCurrentDate(){
+    public String getCurrentDate(){
         return this._temp_controller.getCurrentDate();
     }
 }

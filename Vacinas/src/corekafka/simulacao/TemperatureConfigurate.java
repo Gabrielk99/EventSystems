@@ -3,6 +3,8 @@ package src.corekafka.simulacao;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Calendar;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
@@ -249,8 +251,11 @@ public class TemperatureConfigurate {
      * 
      * @return a data atual da ultima medicao
      */
-    public Date getCurrentDate(){
-        return this.current_date;
+    public String getCurrentDate(){
+        String pattern =  "MM/dd/yyyy HH:mm:ss";
+        DateFormat df = new SimpleDateFormat(pattern);
+
+        return df.format(this.current_date);
     }
     /**
      * 
