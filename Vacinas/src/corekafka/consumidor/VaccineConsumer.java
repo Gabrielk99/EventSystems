@@ -33,7 +33,6 @@ public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
     private HashMap<Integer, Double> timeWhenReachedMaxTemp;
     private KafkaConsumer<String, String> consumer;
-    private HashMap<Integer,SavedMessageVaccine> dataOfAllVaccine = new HashMap<Integer,SavedMessageVaccine>(); 
     Logger logger;
 
     /**
@@ -87,12 +86,6 @@ public class VaccineConsumer extends Consumer {
                 this.timeWhenReachedMaxTemp.put(vaccine.getId(), (double) 0.0);
             }
            
-           
-            // paths.filter(file -> file.toString().endsWith(".json")).forEach( vaccineConfig -> {
-            //     Vaccine vaccine = new Vaccine(vaccineConfig.toString());
-            //     vaccinesFound.put(vaccine.getId(), vaccine);
-            //     
-            // });
         }catch (Exception e) {
             System.out.printf("error %s ",e.getMessage());
             System.exit(e.hashCode());
@@ -115,15 +108,6 @@ public class VaccineConsumer extends Consumer {
         jsonMessage.addProperty("date", date);
         jsonMessage.add("location", location);
 
-        if(dataOfAllVaccine.containsKey(id)) {
-           dataOfAllVaccine.get(id).updateMessages(jsonMessage);
-        }
-        else {
-            SavedMessageVaccine message = new SavedMessageVaccine(id,new ArrayList<JsonObject>());
-            message.updateMessages(jsonMessage);
-            dataOfAllVaccine.put(id,message);
-        }
-    
         String path = Paths.get("../Database/data_for_app/Vacinas").toString();
 
         // cria pasta pra salvar os dados
@@ -135,11 +119,42 @@ public class VaccineConsumer extends Consumer {
           }
         }
 
+        //check if json file exist
+        if(!(new File(path+"/datasSimulation.json")).isFile()){
+          try{
+              FileWriter writer = new FileWriter(path+"/datasSimulation.json");
+              writer.write("[ ]");
+              writer.close();
+          }
+          catch(IOException err){
+              System.out.printf("erro %s",err.getMessage());
+              System.exit(err.hashCode());
+          }
+        }
+
         try{
+            String content = String.join("",Files.readAllLines(Paths.get(path+"/datasSimulation.json")));
+            JsonArray allMessages = new JsonParser().parse(content).getAsJsonArray();
+            HashMap<Integer,SavedMessageVaccine> messages = new HashMap<Integer,SavedMessageVaccine>();
+            
+            for(JsonElement message:allMessages){
+                JsonObject messageObj = message.getAsJsonObject();
+                int idMessage = messageObj.get("id").getAsInt();
+                messages.put(idMessage,new SavedMessageVaccine(idMessage,messageObj.get("datasSaved").getAsJsonArray()));
+                
+                if(idMessage==id){
+                    messages.get(id).updateMessages(jsonMessage);
+                }
+            }
+            if(!messages.containsKey(id)){
+                messages.put(id,new SavedMessageVaccine(id,new JsonArray()));
+                messages.get(id).updateMessages(jsonMessage);
+            }
+
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             FileWriter writer = new FileWriter(path+"/datasSimulation.json");
     
-            gson.toJson(dataOfAllVaccine.values(), writer);
+            gson.toJson(messages.values(), writer);
             writer.flush();
             writer.close();
         }
@@ -169,7 +184,7 @@ public class VaccineConsumer extends Consumer {
             timeWhenReachedMaxTemp.put(id, timeMaxTemp);
         }
 
-        System.out.println("Time que passou: " + (currentTime - timeMaxTemp) + " -> " + vacina.getTimeWaitMax());
+        // System.out.println("Time que passou: " + (currentTime - timeMaxTemp) + " -> " + vacina.getTimeWaitMax());
         return VaccineStatus.checkStatus(
             temperature,
             vacina.getMidleTemperatureLim(),
@@ -186,7 +201,6 @@ public class VaccineConsumer extends Consumer {
     public void consumeMessages() {
         ConsumerRecords<String, String> records= consumer.poll(Duration.ofMillis(100)); // Consome mensagens dos produtores
         double now = Calendar.getInstance().getTime().getTime()/1000; // Pega tempo atual
-
         for (ConsumerRecord<String, String> record : records) {
             JsonObject vaccineMessage = new JsonParser().parse(record.value()).getAsJsonObject(); // Faz o parse do record recebido para objeto Json
             VaccineStatus status = this.checkVaccineStatus(   // Checa o status da vacina
@@ -203,10 +217,10 @@ public class VaccineConsumer extends Consumer {
                     vaccineMessage.get("data").getAsString()
                     );
 
-            System.out.println("[VaccineConsumer] Info received: " +
-                    " vaccine Id: " + vaccineMessage.get("id") +
-                    " temperature: " + vaccineMessage.get("temperatura") +
-                    " status: " + status.toString());
+            // System.out.println("[VaccineConsumer] Info received: " +
+            //         " vaccine Id: " + vaccineMessage.get("id") +
+            //         " temperature: " + vaccineMessage.get("temperatura") +
+            //         " status: " + status.toString());
         }
     }
 }

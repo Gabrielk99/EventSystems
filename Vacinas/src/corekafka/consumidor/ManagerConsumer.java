@@ -38,16 +38,16 @@ public class ManagerConsumer extends Consumer {
     }
 
     private void generateAndSaveJSON(Integer id, JsonElement location){
-        JsonObject message = new JsonObject();
-        message.add("location",location);
+        JsonObject jsonMessage = new JsonObject();
+        jsonMessage.add("location",location);
 
-        if(dataOffAllManeger.containsKey(id)){
-            dataOffAllManeger.get(id).updateMessage(message);
-        }
-        else{
-            SavedMessageManager savedMessage = new SavedMessageManager(id,message);
-            dataOffAllManeger.put(id,savedMessage);
-        }
+        // if(dataOffAllManeger.containsKey(id)){
+        //     dataOffAllManeger.get(id).updateMessage(message);
+        // }
+        // else{
+        //     SavedMessageManager savedMessage = new SavedMessageManager(id,message);
+        //     dataOffAllManeger.put(id,savedMessage);
+        // }
 
         String path = Paths.get("../Database/data_for_app/Gestores").toString();
 
@@ -61,9 +61,26 @@ public class ManagerConsumer extends Consumer {
         }
 
         try{
+            String content = String.join("",Files.readAllLines(Paths.get(path+"/datasSimulation.json")));
+            JsonArray allMessages = new JsonParser().parse(content).getAsJsonArray();
+            HashMap<Integer,SavedMessageManager> messages = new HashMap<Integer,SavedMessageManager>();
+            
+            for(JsonElement message:allMessages){
+                JsonObject messageObj = message.getAsJsonObject();
+                int idMessage = messageObj.get("id").getAsInt();
+                messages.put(idMessage,new SavedMessageManager(idMessage,messageObj.get("dataSaved").getAsJsonObject()));
+                
+                if(idMessage==id){
+                    messages.get(id).updateMessage(jsonMessage);
+                }
+            }
+            if(!messages.containsKey(id)){
+                messages.put(id,new SavedMessageManager(id,jsonMessage));
+            }
+
             FileWriter writer = new FileWriter(path+"/datasSimulation.json");
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            gson.toJson(dataOffAllManeger.values(),writer);
+            gson.toJson(messages.values(),writer);
             writer.flush();
             writer.close();
         }

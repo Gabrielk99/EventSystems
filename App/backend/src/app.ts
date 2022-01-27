@@ -2,7 +2,11 @@ import dotenv from 'dotenv';
 import express from 'express';
 import { Request, Response, NextFunction } from 'express';
 import MasterRouter from './routers/MasterRouter';
+import bodyParser from 'body-parser';
 import ErrorHandler from './models/ErrorHandler';
+
+
+const cors = require('cors');
 
 // load the environment variables from the .env file
 dotenv.config({
@@ -20,6 +24,12 @@ class Server {
 
 // initialize server app
 const server = new Server();
+
+//ativando o reconhecimento do proxy
+server.app.use(bodyParser.json());
+
+//ativando o reconhecimento do proxy
+server.app.use(cors());
 
 // handle any router started with /api
 server.app.use('/api', server.router);
