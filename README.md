@@ -21,3 +21,12 @@ Executar:
 ```
 java -cp .:gson-2.8.2.jar:kafka-clients-3.0.0.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar src.main.Main
 ```
+Info do topico:
+
+```
+kafka-topics.sh --bootstrap-server=localhost:9092 --describe --topic vacina
+```
+Info dos consumidores:
+```
+kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group consumerGestor --describe
+```

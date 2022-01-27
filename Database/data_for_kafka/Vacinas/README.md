@@ -6,4 +6,4 @@
 <div align='justify'>
 OBs: chunks é pedaços, os pedaços de tempo faz parte da simulação, quando o simulador vai incrementar o lote na sua temperatura ele decide quanto tempo esse incremento acontece por meio de um sorteio, o sorteio é em cima de uma lista de pedaços de tempo, a quantidade de pedaços é definida por chunks, o tempo de incremento é definido por time_increment + o tempo maximo que a vacina aguenta depois da temperatura limite ser atingida + erro 20%.
 
-  </div>
+</div>

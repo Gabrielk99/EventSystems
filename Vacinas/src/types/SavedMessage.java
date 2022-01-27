@@ -22,9 +22,14 @@ public class SavedMessage {
      * @param id id do lote
      * @param datas lista de mensagens da vacina
      */
-    public SavedMessage(int id, ArrayList<JsonObject> datas){
+    public SavedMessage(int id, JsonArray datas){
         this.id=id;
-        this.datasSaved=datas;
+
+        ArrayList<JsonObject> datasSaved= new ArrayList<JsonObject>();
+        for(JsonElement data:datas){
+            datasSaved.add(data.getAsJsonObject());
+        }
+        this.datasSaved = datasSaved;
     }
     /**
      * Construtor de mensagens pra gestor
