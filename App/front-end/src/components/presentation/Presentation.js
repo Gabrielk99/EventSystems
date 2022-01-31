@@ -1,10 +1,11 @@
 import React from "react";
-import "./Presentation.css"
+import "./Presentation.css";
+import { useEffect } from 'react'
 
+import { checkAndSendNotification } from '../../logic/VaccineStatusChecker';
+import { getStatusVaccineByID } from '../../controllers/vacinas/vacinaController';
 
 function Presentation (){
-
-
     return (
         <div className="pst-container">
             <h1>Bem vindo a sua mesa de comando</h1>
