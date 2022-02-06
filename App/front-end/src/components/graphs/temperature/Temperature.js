@@ -8,29 +8,20 @@ function TemperatureGraph(props){
     const [datas,setDatas] = useState([]);
     const [listOfDatasValue,setListOfDatasValue] = useState([]);
     const [vaccines,setVaccines] = useState({})
-    const [timeOut,setTimeOut] = useState(false);
-    const [colors,setColors] = useState({});
 
-    useEffect( async ()=>{
-       getTemperatureOfAllVaccineInformation();
-       setTimeout(()=>{setTimeOut(true)},500);
-    },[])
+    const layout={showlegend:true,scrollZoom:true,paper_bgcolor:"transparent",
+    plot_bgcolor:"white",xaxis:{tickangle:45,tickfont:{size:13},automargin:true,autorange: true},uirevision:true,
+    yaxis: {autorange: true}}
 
-    useEffect(async ()=>{
-        if(timeOut){
-            console.log(datas)
-            getTemperatureOfAllVaccineInformation();
-            setTimeOut(false);
-            // setTimeout(()=>{setTimeOut(true)},500);
-        }
-    },[timeOut])
+    const style = {width:"100%",height:"100%",position:"absolute",top:"5%"};
+    useEffect( ()=>{
+        setDatas(props.datas);
+    },[props.datas])
+
     useEffect(()=>{
-        console.log(colors);
-        props.updateColorVaccine(colors);
-    },[colors])
-    useEffect(()=>{
-        console.log(listOfDatasValue)
-    },[listOfDatasValue])
+        setVaccines(props.vaccines)
+    },[props.vaccines])
+   
     useEffect(()=>{
         let lotesInformation = [];
         datas.map(loteVaccine=>{
@@ -45,14 +36,12 @@ function TemperatureGraph(props){
             data.y = y;
             data.type = 'scatter';
             data.mode="lines";
-            if(typeof colors[loteVaccine.id]!=='undefined'){
-                data.marker = {color:colors[loteVaccine.id]};
+            if(localStorage.getItem(`color${loteVaccine.id}`)){
+                data.marker = {color:localStorage.getItem(`color${loteVaccine.id}`)};
             }
             else {
                 data.marker = {color: randomColor(1)};
-                const colorInfo = {}
-                colorInfo[loteVaccine.id]=data.marker.color;
-                setColors({...colors,...colorInfo});
+                localStorage.setItem(`color${loteVaccine.id}`,data.marker.color);
             }
             data.name = vaccines[loteVaccine.id]+"_"+loteVaccine.id;
             lotesInformation = [...lotesInformation,data];
@@ -60,18 +49,7 @@ function TemperatureGraph(props){
         })
         setListOfDatasValue(lotesInformation);  
     },[datas,vaccines])
-
-    
-    const getTemperatureOfAllVaccineInformation = ()=>{
-        getAllStatusVaccines().then(data=>setDatas(data));
-        getAllVaccineInformation().then(vaccinesInfo=>{
-            vaccinesInfo.map(vaccine=>{
-                const vaccineInfo = vaccines
-                vaccineInfo[vaccine.id] = vaccine.name
-                setVaccines({...vaccineInfo});
-            })
-        })
-    }
+   
     return (
         <div id="graph" className="graph-container">
             <h2>Temperatura dos lotes</h2>
@@ -79,11 +57,21 @@ function TemperatureGraph(props){
                 data={listOfDatasValue}
                 useResizeHandler={true}
                 layout={{showlegend:true,scrollZoom:true,paper_bgcolor:"transparent",
-                        plot_bgcolor:"white",xaxis:{tickangle:45,tickfont:{size:13},automargin:true}}}
-                config={{scrollZoom:true,staticPlot:true}}
+                        plot_bgcolor:"white",xaxis:{tickangle:45,tickfont:{size:13},automargin:true,autorange: true},uirevision:true,
+                        yaxis: {autorange: true}}}
+                // config={{scrollZoom:true}}
+               
                 style={{width:"100%",height:"100%",position:"absolute",top:"5%"}}
+                onUpdate={(fig,div)=>{
+                    fig.data=[]
+                    fig.layout.xaxis.autorange=true
+                    
+                    fig.layout.yaxis.autorange=true
+                    fig.layout.uirevision=true
+                }}
             />
         </div>
+       
     )
 }
 

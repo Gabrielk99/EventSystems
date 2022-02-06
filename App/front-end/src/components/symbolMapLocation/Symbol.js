@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import "./Symbol.css"
 function Symbol(props){
-    useEffect(()=>{
-        console.log(props.color)
-    },[props.color])
 
     return (
         <div className='cnt-symbol'>

@@ -4,6 +4,7 @@ import { Request, Response, NextFunction } from 'express';
 import MasterRouter from './routers/MasterRouter';
 import bodyParser from 'body-parser';
 import ErrorHandler from './models/ErrorHandler';
+import { webSocketConnection } from './models/webSocket';
 
 
 const cors = require('cors');
@@ -41,7 +42,7 @@ server.app.use(function(req, res, next) {
 server.app.use('/api', server.router);
 
 // error handling
-server.app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+server.app.use((err: ErrorHandler, req: Request, res: Response, next: NextFunction) => {
   res.status(err.statusCode || 500).json({
     status: 'error',
     statusCode: err.statusCode,
@@ -49,7 +50,11 @@ server.app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
+let application:any = null;
 // make server listen on some port
 ((port = process.env.APP_PORT || 5000) => {
-  server.app.listen(port, () => console.log(`> Listening on port ${port}`));
+  application= server.app.listen(port, () => console.log(`> Listening on port ${port}`));
 })();
+
+webSocketConnection(application);
+
