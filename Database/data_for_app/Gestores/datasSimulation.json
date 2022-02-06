@@ -1,19 +1,10 @@
 [
   {
-    "id": 0,
-    "dataSaved": {
-      "location": {
-        "latitude": -20.28495,
-        "longitude": -40.30296
-      }
-    }
-  },
-  {
     "id": 1,
     "dataSaved": {
       "location": {
-        "latitude": -20.28521,
-        "longitude": -40.3002
+        "latitude": -20.28212,
+        "longitude": -40.30238
       }
     }
   },
@@ -21,8 +12,8 @@
     "id": 2,
     "dataSaved": {
       "location": {
-        "latitude": -20.29963,
-        "longitude": -40.3151
+        "latitude": -20.29937,
+        "longitude": -40.29537
       }
     }
   }

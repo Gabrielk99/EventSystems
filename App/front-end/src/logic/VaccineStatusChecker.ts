@@ -4,48 +4,70 @@ import { calculateDistance } from './Location'
 import { getManagerInformationByID, getAllManagerInformation, getAllManagerLocation } from '../controllers/gestores/gestorController'
 import { ManagerLocation, Manager } from '../models/Manager'
 import { sendEmail } from '../controllers/email/emailController'
-
+import {getAddressFromLatLong} from './Geocoding'
 const subject = "Monitoramento de Vacinas"
 
 export const checkAndSendNotification = async (vacina: VaccineStatus) => {
     switch (vacina.status) {
     case Status.ok:
-        return;
+        localStorage.setItem(`vaccineWarning${vacina.id}`,'true');
+        localStorage.setItem(`vaccineDanger${vacina.id}`,'true');
+        return {status:Status.ok, message:"lote em estado normal"};
     case Status.warning:
-        processWarningStatus(vacina.location)
-        break;
+        var itsSend:any = localStorage.getItem(`vaccineWarning${vacina.id}`)
+        itsSend = itsSend===null?true:itsSend==='false'?false:true;
+        if(itsSend){
+            await processWarningStatus(vacina)
+            localStorage.setItem(`vaccineWarning${vacina.id}`,'false')
+        }
+        return {status:Status.warning,message:`lote em perigo, todos gestores avisados`};
     case Status.danger:
-        processDangerStatus(vacina.location)
-        break;
+        var itsSendDanger:any = (localStorage.getItem(`vaccineDanger${vacina.id}`))
+        itsSendDanger = itsSendDanger===null?true:itsSendDanger==='false'?false:true;
+        if(itsSendDanger){
+            localStorage.setItem(`vaccineDanger${vacina.id}`,'false')
+            return await processDangerStatus(vacina)
+        }
+        return {status:Status.danger, message:"lote em perigo o gestor mais próximo ja foi avisado."}
     case Status.gameover:
-        console.log("Game over, seu gerente de merda")
+        return {status:Status.gameover,message:'descarte do lote de vacina urgente.'}
     }
 }
 
-const generateMessage = (manager: Manager, vaccineLocation: Location) => {
+const generateMessage = async (manager: Manager, vaccine:VaccineStatus) => {
     return {
         to: manager.email,
         from: process.env.REACT_APP_EMAIL_SENDER,
         subject: subject,
         text: "Casa caiu cleitinho",
-        html: generateEmailBody(manager.name, vaccineLocation), // passar as infos que precisa aqui, tipo vaccineLocation
+        html: generateEmailBody(manager.name, vaccine), // passar as infos que precisa aqui, tipo vaccineLocation
+        vaccine:vaccine,
+        address:await getAddressFromLatLong(vaccine.location.latitude,vaccine.location.longitude),
+        manager:manager.name
     }
 }
 
-const processWarningStatus = async (vaccineLocation: Location) => {
+const processWarningStatus = async (vaccine:VaccineStatus) => {
     const managers: [Manager] = await getAllManagerInformation()
 
-    managers.forEach( (manager) => {
-        const message = generateMessage(manager, vaccineLocation)
-        sendEmail(message)
+    managers.forEach( async (manager) => {
+        const message = await generateMessage(manager, vaccine)
+        var send:any = process.env.REACT_APP_SEND_EMAIL==='true'?true:false;
+ 
+        if(send)
+            var res = await sendEmail(message);
     })
 }
 
-const processDangerStatus = async (vaccineLocation: Location) => {
-    const manager: Manager = await getNearestManager(vaccineLocation)
+const processDangerStatus = async (vaccine:VaccineStatus) => {
+    const manager: Manager = await getNearestManager(vaccine.location)
 
-    const message = generateMessage(manager, vaccineLocation)
-    sendEmail(message)
+    const message = await generateMessage(manager, vaccine)
+    const send = process.env.REACT_APP_SEND_EMAIL==='true'?true:false
+
+    if(send)
+        var res = await sendEmail(message);
+    return {status:Status.danger,message:"lote em perigo o gestor mais perto foi avisado", manager:manager}
 }
 
 export const getNearestManager = async (location: Location) => {
@@ -65,6 +87,6 @@ export const getNearestManager = async (location: Location) => {
  }
 
  // TODO: Gerar corpo da mensagem aqui (sugestao de local apenas, nao tenho certeza)
-const generateEmailBody = (name: String, vaccineLocation: Location) => {
+const generateEmailBody = (name: String, vaccine:VaccineStatus) => {
      return ""
  }

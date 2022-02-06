@@ -23,8 +23,16 @@ class VaccineController {
 
     getAllVaccinesStatus() {
         let data = fs.readFileSync(pathToStatus)
-        let status : [VaccineListStatus] = JSON.parse(data)
-        return status
+        try{
+            let status : [VaccineListStatus] = JSON.parse(data)
+            return status
+        }
+        catch (err:any){
+            return {
+                status:'error',
+                message:err.message
+            }
+        }
     }
 
     getVaccineStatus(id: number) {

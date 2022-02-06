@@ -1,23 +1,37 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-var datasSimulation_json_1 = __importDefault(require("../../../../Database/data_for_app/Vacinas/datasSimulation.json"));
-var vacinas_json_1 = __importDefault(require("../../../../Database/data_for_app/Vacinas/vacinas.json"));
+var fs = require('fs');
+var pathToStatus = __dirname.replace("App/backend/src/controllers", "Database/data_for_app/Vacinas/datasSimulation.json");
+var pathToVacinasInfo = __dirname.replace("App/backend/src/controllers", "Database/data_for_app/Vacinas/vacinas.json");
 var VaccineController = /** @class */ (function () {
     function VaccineController() {
     }
     VaccineController.prototype.getVaccines = function () {
-        return vacinas_json_1.default.vacinas;
+        var data = fs.readFileSync(pathToVacinasInfo);
+        var vacinasInfo = JSON.parse(data).vacinas;
+        return vacinasInfo;
     };
     VaccineController.prototype.getVaccine = function (id) {
-        return vacinas_json_1.default.vacinas.find(function (vacina) { return vacina.id == id; });
+        var data = fs.readFileSync(pathToVacinasInfo);
+        var vacinasInfo = JSON.parse(data).vacinas;
+        return vacinasInfo.find(function (vacina) { return vacina.id == id; });
     };
     VaccineController.prototype.getAllVaccinesStatus = function () {
-        return datasSimulation_json_1.default;
+        var data = fs.readFileSync(pathToStatus);
+        try {
+            var status_1 = JSON.parse(data);
+            return status_1;
+        }
+        catch (err) {
+            return {
+                status: 'error',
+                message: err.message
+            };
+        }
     };
     VaccineController.prototype.getVaccineStatus = function (id) {
-        return datasSimulation_json_1.default.filter(function (statusVacina) { return statusVacina.id == id; });
+        var data = fs.readFileSync(pathToStatus);
+        var status = JSON.parse(data);
+        return status.find(function (statusVacina) { return statusVacina.id == id; });
     };
     return VaccineController;
 }());
