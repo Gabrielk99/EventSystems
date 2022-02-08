@@ -1,6 +1,6 @@
 package src.main;
-import src.corekafka.gestor.*;
-import src.corekafka.vacina.*;
+import src.corekafka.produtor.gestor.*;
+import src.corekafka.produtor.vacina.*;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;

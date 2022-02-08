@@ -14,12 +14,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import src.corekafka.vacina.*;
+import src.corekafka.produtor.vacina.*;
 import java.util.HashMap;
 import org.slf4j.spi.LoggerFactoryBinder;
 import com.google.gson.*;
-
-
 
 import java.util.Properties;
 import java.util.ArrayList;

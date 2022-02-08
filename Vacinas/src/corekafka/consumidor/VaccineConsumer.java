@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import src.corekafka.vacina.*;
+import src.corekafka.produtor.vacina.*;
 import java.util.HashMap;
 import org.slf4j.spi.LoggerFactoryBinder;
 import com.google.gson.*;
@@ -32,8 +32,6 @@ import src.types.SavedMessageVaccine;
 public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
     private HashMap<Integer, Double> timeWhenReachedMaxTemp;
-    private KafkaConsumer<String, String> consumer;
-    Logger logger;
 
     /**
      * Construtor da classe
@@ -47,21 +45,6 @@ public class VaccineConsumer extends Consumer {
 
         this.timeWhenReachedMaxTemp = new HashMap<Integer, Double>();
         this.vacinas = searchForVaccines(pathToVaccinesFolder);
-//        this.logger = LoggerFactory.getLogger(ProducerDemoCallBack.class);
-
-        // Cria e define as propriedades
-        Properties prop = new Properties();
-        prop.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BootstrapServer);
-        prop.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        prop.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        prop.setProperty(ConsumerConfig.GROUP_ID_CONFIG, consumerGroupName);
-        prop.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
-        // Cria consumidor
-        this.consumer = new KafkaConsumer<String, String>(prop);
-
-        // Subscribe no tópico
-        consumer.subscribe(Arrays.asList(topicToConsume));
     }
 
     /**
@@ -199,7 +182,7 @@ public class VaccineConsumer extends Consumer {
      */
     @Override
     public void consumeMessages() {
-        ConsumerRecords<String, String> records= consumer.poll(Duration.ofMillis(100)); // Consome mensagens dos produtores
+        ConsumerRecords<String, String> records= super.getConsumer().poll(Duration.ofMillis(100)); // Consome mensagens dos produtores
         double now = Calendar.getInstance().getTime().getTime()/1000; // Pega tempo atual
         for (ConsumerRecord<String, String> record : records) {
             JsonObject vaccineMessage = new JsonParser().parse(record.value()).getAsJsonObject(); // Faz o parse do record recebido para objeto Json

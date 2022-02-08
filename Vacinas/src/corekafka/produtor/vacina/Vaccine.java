@@ -1,4 +1,4 @@
-package src.corekafka.vacina;
+package src.corekafka.produtor.vacina;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;

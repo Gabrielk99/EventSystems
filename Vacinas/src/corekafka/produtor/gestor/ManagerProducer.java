@@ -1,4 +1,4 @@
-package src.corekafka.gestor;
+package src.corekafka.produtor.gestor;
 
 import src.corekafka.simulacao.PositionControlOnMap;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -15,32 +15,24 @@ import com.google.gson.*;
 
 import java.util.Properties;
 
+import src.corekafka.produtor.Producer;
+
 /**
  * Classe que representa um produtor kafka do tipo gestor
  * @author Mikaella
  */
-public class ManagerProducer {
+public class ManagerProducer extends Producer {
     private Manager manager;
-    KafkaProducer<String, String> producer;
-    Logger logger;
 
     /**
-     * Construtor da classe de produtor kafka de gestor
+     * Construtor da classe de produtor kafka
      * @param BootstrapServer server onde o kafka está rodando
      * @param pathToJson      caminho até as informações do gestor contidas num json
      */
     public ManagerProducer(String BootstrapServer, JsonObject manager) {
+        super(BootstrapServer);
+
         this.manager = new Manager(manager);
-//        this.logger = LoggerFactory.getLogger(ProducerDemoCallBack.class);
-
-        // Cria e define as propriedades
-        Properties prop = new Properties();
-        prop.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BootstrapServer);
-        prop.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        prop.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-
-        // Cria um produtor <chave, valor>
-        producer = new KafkaProducer<String, String>(prop);
     }
 
     /**
@@ -61,29 +53,6 @@ public class ManagerProducer {
     }
 
     /**
-     * Função callback de log do envio de uma mensagem pelo produtor
-     * @return callback que printa os metadaos recebidos
-     */
-    private Callback callBackLogger() {
-        return new Callback() {
-            @Override
-            public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-                //executes a record if success or exception is thrown
-                if (e == null) {
-                    logger.info("Metadados recebidos \n " +
-                            "Topic " + recordMetadata.topic() + "\n " +
-                            "Partition: " + recordMetadata.partition() + "\n" +
-                            "Offset: " + recordMetadata.offset() + "\n" +
-                            "Timestamp: " + recordMetadata.timestamp());
-                } else {
-                    logger.error("Algo deu errado");
-                }
-                ;
-            }
-        };
-    }
-
-    /**
      * Função que envia a localização atual do gestor para o tópico "gestor"
      */
     public void sendLocation() {
@@ -91,11 +60,12 @@ public class ManagerProducer {
         Coordinates currentLocation = manager.getCurrentPosition();
         String message = generateJsonMessage(currentLocation);
         String id = Integer.toString(manager.getId());
+
         //Cria um producer record e envia
         ProducerRecord<String, String> record = new ProducerRecord<String, String>("gestor",id, message);
-        producer.send(record);
+        super.getProducer().send(record);
 
-        producer.flush();
+        super.getProducer().flush();
     }
 
 }

@@ -1,4 +1,4 @@
-package src.corekafka.gestor;
+package src.corekafka.produtor.gestor;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
