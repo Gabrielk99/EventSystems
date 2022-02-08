@@ -14,7 +14,7 @@ public class PositionControlOnMap {
     private int currentPosition = -1;
     private double lastTime = 0.0;
     private double timeToNextCoord;
-    private double upperbound = 5.0;
+    private double upperbound = 1.5;
 
     /**
      * Construtor da classe que leva em consideração um fator de multiplicação do tempo

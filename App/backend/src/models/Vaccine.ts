@@ -5,11 +5,21 @@ export interface Vaccine {
     id: number;
 }
 
+export enum Status {
+    ok,
+    warning,
+    danger,
+    gameover,
+}
+
+
 export interface VaccineStatus {
     status: number;
     temperature: number;
     date: String;
-    location: Location
+    location: Location,
+    id:number,
+    name:string
 }
 
 export interface VaccineListStatus {
