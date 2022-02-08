@@ -11,11 +11,10 @@ import com.google.gson.*;
 import java.util.Properties;
 import java.util.Arrays;
 /**
- * Classe abstrata do consumidor
+ * Classe do consumidor kafka
  */
 public class Consumer {
     private KafkaConsumer<String, String> consumer;
-    private Logger logger;
 
     public Consumer (String BootstrapServer, String consumerGroupName,String topicToConsume){
         

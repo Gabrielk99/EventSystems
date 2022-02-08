@@ -1,4 +1,4 @@
-package src.corekafka.vacina;
+package src.corekafka.produtor.vacina;
 
 import src.types.*;
 import com.google.gson.*;
@@ -18,17 +18,17 @@ import org.slf4j.LoggerFactory;
 import java.util.Properties;
 import java.util.concurrent.Callable;
 
+import src.corekafka.produtor.Producer;
+
 /**
  * Classe criada para representar de forma generica um produtor de lotes de vacina
  * 
  * @author Gabriel Xavier
  */
-public class VaccineProducer{
+public class VaccineProducer extends Producer {
     
     // instancia do lote
     private Vaccine _vaccine;
-    // produtor kafka para as informações
-    KafkaProducer<String, String> producer;
 
     /**
      * 
@@ -36,19 +36,10 @@ public class VaccineProducer{
      * @param pathToJson    caminho para o arquivo de configuração do lote
      */
     public VaccineProducer(String BootstrapServer, JsonObject vaccine){
+        super(BootstrapServer);
 
         // Instanciando o lote de vacina
         this._vaccine = new Vaccine(vaccine);
-
-        // Definindo as propriedades
-        Properties prop = new Properties();
-        prop.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BootstrapServer);
-        prop.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        prop.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-
-        // Criando o produtor <chave:String,valor:String>
-        producer = new KafkaProducer<String, String>(prop);
-
     }
 
     /**
@@ -91,7 +82,7 @@ public class VaccineProducer{
 
         Logger logger = LoggerFactory.getLogger(VaccineProducer.class);
 
-        this.producer.send(record, new Callback() {
+        super.getProducer().send(record, new Callback() {
             
             @Override
             public void onCompletion(RecordMetadata recordMetadata, Exception e){
@@ -107,7 +98,7 @@ public class VaccineProducer{
             
         });
 
-        this.producer.flush();
+        super.getProducer().flush();
 
 
     }
