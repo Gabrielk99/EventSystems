@@ -47,19 +47,23 @@ dotenv_1.default.config({
 });
 var axios = require('axios');
 var emailSendUrl = 'https://api.sendgrid.com/v3/mail/send';
-var sendgridApiKey = process.env.SENDGRID_API_KEY;
 var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, function () {
-    var message, res, err_1;
+    var sendgridApiKey, dangerId, warningId, message, res, err_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
+                sendgridApiKey = email.key === 0 ? process.env.SENDGRID_API_KEY : process.env.SENDGRID_API_KEY2;
+                dangerId = email.key === 0 ? "d-5e77f1ed29fd4e16a0f39e3b5853eb9e" : 'd-7896e840032c4c2b8e6c57c2119ced2c';
+                warningId = email.key === 0 ? "d-6463b62cb655495ebf3fff00eefc7ebf" : "d-537ac74b7c2048d1ad122d08e96273dd";
+                _a.label = 1;
+            case 1:
+                _a.trys.push([1, 3, , 4]);
                 message = {
                     'personalizations': [
                         {
                             'to': [
                                 {
-                                    'email': email.to
+                                    'email': 'gabsreivax@gmail.com'
                                 }
                             ],
                             'subject': email.subject,
@@ -75,13 +79,13 @@ var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, func
                     'from': {
                         'email': email.from
                     },
-                    "template_id": email.vaccine.status === Vaccine_1.Status.warning ? "d-6463b62cb655495ebf3fff00eefc7ebf"
-                        : "d-5e77f1ed29fd4e16a0f39e3b5853eb9e"
+                    "template_id": email.vaccine.status === Vaccine_1.Status.warning ? warningId
+                        : dangerId
                     // 'content': [
                     //     {
                     //         'type': 'text/html',
-                    //         'value': email.html
-                    //     },
+                    //         'value': email.text
+                    //     }
                     // ]
                 };
                 return [4 /*yield*/, axios({
@@ -92,14 +96,14 @@ var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, func
                         },
                         data: message,
                     })];
-            case 1:
+            case 2:
                 res = _a.sent();
                 return [2 /*return*/, res];
-            case 2:
+            case 3:
                 err_1 = _a.sent();
                 console.log(err_1);
                 return [2 /*return*/, { status: 'error', message: "limite de email batido" }];
-            case 3: return [2 /*return*/];
+            case 4: return [2 /*return*/];
         }
     });
 }); };
