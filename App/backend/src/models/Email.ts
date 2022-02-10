@@ -8,5 +8,6 @@ export interface EmailMessage {
     html: String,
     vaccine:VaccineStatus,
     manager:string,
-    address:string
+    address:string,
+    key:number
 }

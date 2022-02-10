@@ -5,902 +5,902 @@
     "datasSaved": [
       {
         "status": 0,
+        "temperature": "-89.0",
+        "date": "02/10/2022 19:52:42",
+        "location": {
+          "latitude": -20.28682,
+          "longitude": -40.3043
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.5",
+        "date": "02/10/2022 19:52:44",
+        "location": {
+          "latitude": -20.28711,
+          "longitude": -40.30432
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-90.0",
+        "date": "02/10/2022 19:52:45",
+        "location": {
+          "latitude": -20.28711,
+          "longitude": -40.30432
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.5",
+        "date": "02/10/2022 19:52:46",
+        "location": {
+          "latitude": -20.28739,
+          "longitude": -40.3043
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.5",
+        "date": "02/10/2022 19:52:47",
+        "location": {
+          "latitude": -20.28739,
+          "longitude": -40.3043
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.0",
+        "date": "02/10/2022 19:52:49",
+        "location": {
+          "latitude": -20.28742,
+          "longitude": -40.3043
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-88.5",
+        "date": "02/10/2022 19:52:50",
+        "location": {
+          "latitude": -20.28742,
+          "longitude": -40.3043
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-88.0",
+        "date": "02/10/2022 19:52:51",
+        "location": {
+          "latitude": -20.28756,
+          "longitude": -40.30427
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-87.5",
+        "date": "02/10/2022 19:52:52",
+        "location": {
+          "latitude": -20.28756,
+          "longitude": -40.30427
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-87.0",
+        "date": "02/10/2022 19:52:54",
+        "location": {
+          "latitude": -20.28774,
+          "longitude": -40.30425
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-86.5",
+        "date": "02/10/2022 19:52:55",
+        "location": {
+          "latitude": -20.28774,
+          "longitude": -40.30425
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-86.0",
+        "date": "02/10/2022 19:52:56",
+        "location": {
+          "latitude": -20.28807,
+          "longitude": -40.30414
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-85.5",
+        "date": "02/10/2022 19:52:57",
+        "location": {
+          "latitude": -20.28807,
+          "longitude": -40.30414
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-85.0",
+        "date": "02/10/2022 19:52:59",
+        "location": {
+          "latitude": -20.28875,
+          "longitude": -40.30389
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-84.5",
+        "date": "02/10/2022 19:53:00",
+        "location": {
+          "latitude": -20.28875,
+          "longitude": -40.30389
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-84.0",
+        "date": "02/10/2022 19:53:01",
+        "location": {
+          "latitude": -20.28977,
+          "longitude": -40.30345
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-83.5",
+        "date": "02/10/2022 19:53:02",
+        "location": {
+          "latitude": -20.28977,
+          "longitude": -40.30345
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-83.0",
+        "date": "02/10/2022 19:53:04",
+        "location": {
+          "latitude": -20.28988,
+          "longitude": -40.3034
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-82.5",
+        "date": "02/10/2022 19:53:05",
+        "location": {
+          "latitude": -20.28988,
+          "longitude": -40.3034
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-82.0",
+        "date": "02/10/2022 19:53:06",
+        "location": {
+          "latitude": -20.29104,
+          "longitude": -40.30291
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-81.5",
+        "date": "02/10/2022 19:53:07",
+        "location": {
+          "latitude": -20.29104,
+          "longitude": -40.30291
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-81.0",
+        "date": "02/10/2022 19:53:09",
+        "location": {
+          "latitude": -20.29116,
+          "longitude": -40.30286
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-81.5",
+        "date": "02/10/2022 19:53:10",
+        "location": {
+          "latitude": -20.29116,
+          "longitude": -40.30286
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-82.0",
+        "date": "02/10/2022 19:53:11",
+        "location": {
+          "latitude": -20.29128,
+          "longitude": -40.30281
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-82.5",
+        "date": "02/10/2022 19:53:12",
+        "location": {
+          "latitude": -20.29128,
+          "longitude": -40.30281
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-83.0",
+        "date": "02/10/2022 19:53:13",
+        "location": {
+          "latitude": -20.29178,
+          "longitude": -40.3026
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-83.5",
+        "date": "02/10/2022 19:53:15",
+        "location": {
+          "latitude": -20.29192,
+          "longitude": -40.30253
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-84.0",
+        "date": "02/10/2022 19:53:16",
+        "location": {
+          "latitude": -20.29192,
+          "longitude": -40.30253
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-84.5",
+        "date": "02/10/2022 19:53:17",
+        "location": {
+          "latitude": -20.29227,
+          "longitude": -40.30239
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-85.0",
+        "date": "02/10/2022 19:53:18",
+        "location": {
+          "latitude": -20.29227,
+          "longitude": -40.30239
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-85.5",
+        "date": "02/10/2022 19:53:20",
+        "location": {
+          "latitude": -20.29286,
+          "longitude": -40.30214
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-86.0",
+        "date": "02/10/2022 19:53:21",
+        "location": {
+          "latitude": -20.29286,
+          "longitude": -40.30214
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-86.5",
+        "date": "02/10/2022 19:53:22",
+        "location": {
+          "latitude": -20.29344,
+          "longitude": -40.30189
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-87.0",
+        "date": "02/10/2022 19:53:23",
+        "location": {
+          "latitude": -20.29344,
+          "longitude": -40.30189
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-87.5",
+        "date": "02/10/2022 19:53:25",
+        "location": {
+          "latitude": -20.29376,
+          "longitude": -40.30176
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-88.0",
+        "date": "02/10/2022 19:53:26",
+        "location": {
+          "latitude": -20.29376,
+          "longitude": -40.30176
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-88.5",
+        "date": "02/10/2022 19:53:27",
+        "location": {
+          "latitude": -20.29408,
+          "longitude": -40.30163
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.0",
+        "date": "02/10/2022 19:53:28",
+        "location": {
+          "latitude": -20.29408,
+          "longitude": -40.30163
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.5",
+        "date": "02/10/2022 19:53:30",
+        "location": {
+          "latitude": -20.29434,
+          "longitude": -40.30153
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-90.0",
+        "date": "02/10/2022 19:53:31",
+        "location": {
+          "latitude": -20.29434,
+          "longitude": -40.30153
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.5",
+        "date": "02/10/2022 19:53:32",
+        "location": {
+          "latitude": -20.2946,
+          "longitude": -40.30143
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.5",
+        "date": "02/10/2022 19:53:33",
+        "location": {
+          "latitude": -20.2946,
+          "longitude": -40.30143
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-89.0",
+        "date": "02/10/2022 19:53:35",
+        "location": {
+          "latitude": -20.29525,
+          "longitude": -40.30116
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-88.5",
+        "date": "02/10/2022 19:53:36",
+        "location": {
+          "latitude": -20.29525,
+          "longitude": -40.30116
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-88.0",
+        "date": "02/10/2022 19:53:37",
+        "location": {
+          "latitude": -20.29596,
+          "longitude": -40.30088
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-87.5",
+        "date": "02/10/2022 19:53:38",
+        "location": {
+          "latitude": -20.29596,
+          "longitude": -40.30088
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-87.0",
+        "date": "02/10/2022 19:53:40",
+        "location": {
+          "latitude": -20.29673,
+          "longitude": -40.3006
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-86.5",
+        "date": "02/10/2022 19:53:41",
+        "location": {
+          "latitude": -20.29673,
+          "longitude": -40.3006
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-86.0",
+        "date": "02/10/2022 19:53:42",
+        "location": {
+          "latitude": -20.29726,
+          "longitude": -40.30037
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-85.5",
+        "date": "02/10/2022 19:53:43",
+        "location": {
+          "latitude": -20.29726,
+          "longitude": -40.30037
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-85.0",
+        "date": "02/10/2022 19:53:44",
+        "location": {
+          "latitude": -20.29761,
+          "longitude": -40.30021
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-84.5",
+        "date": "02/10/2022 19:53:46",
+        "location": {
+          "latitude": -20.29822,
+          "longitude": -40.29998
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-84.0",
+        "date": "02/10/2022 19:53:47",
+        "location": {
+          "latitude": -20.29822,
+          "longitude": -40.29998
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-83.5",
+        "date": "02/10/2022 19:53:48",
+        "location": {
+          "latitude": -20.29881,
+          "longitude": -40.29973
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-83.0",
+        "date": "02/10/2022 19:53:49",
+        "location": {
+          "latitude": -20.29881,
+          "longitude": -40.29973
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-82.5",
+        "date": "02/10/2022 19:53:51",
+        "location": {
+          "latitude": -20.30038,
+          "longitude": -40.29908
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-82.0",
+        "date": "02/10/2022 19:53:52",
+        "location": {
+          "latitude": -20.30038,
+          "longitude": -40.29908
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-81.5",
+        "date": "02/10/2022 19:53:53",
+        "location": {
+          "latitude": -20.30098,
+          "longitude": -40.29951
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-81.0",
+        "date": "02/10/2022 19:53:54",
+        "location": {
+          "latitude": -20.30098,
+          "longitude": -40.29951
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-80.5",
+        "date": "02/10/2022 19:53:55",
+        "location": {
+          "latitude": -20.30161,
+          "longitude": -40.29995
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-80.0",
+        "date": "02/10/2022 19:53:57",
+        "location": {
+          "latitude": -20.30164,
+          "longitude": -40.29997
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-79.5",
+        "date": "02/10/2022 19:53:58",
+        "location": {
+          "latitude": -20.30164,
+          "longitude": -40.29997
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-79.0",
+        "date": "02/10/2022 19:53:59",
+        "location": {
+          "latitude": -20.30167,
+          "longitude": -40.3
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-78.5",
+        "date": "02/10/2022 19:54:00",
+        "location": {
+          "latitude": -20.30167,
+          "longitude": -40.3
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-78.0",
+        "date": "02/10/2022 19:54:02",
+        "location": {
+          "latitude": -20.30193,
+          "longitude": -40.29961
+        }
+      },
+      {
+        "status": 0,
         "temperature": "-77.5",
-        "date": "02/10/2022 12:57:52",
+        "date": "02/10/2022 19:54:03",
+        "location": {
+          "latitude": -20.30193,
+          "longitude": -40.29961
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-77.0",
+        "date": "02/10/2022 19:54:04",
+        "location": {
+          "latitude": -20.30194,
+          "longitude": -40.29959
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-76.5",
+        "date": "02/10/2022 19:54:05",
+        "location": {
+          "latitude": -20.30194,
+          "longitude": -40.29959
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-76.0",
+        "date": "02/10/2022 19:54:07",
+        "location": {
+          "latitude": -20.30222,
+          "longitude": -40.29919
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "-75.5",
+        "date": "02/10/2022 19:54:08",
+        "location": {
+          "latitude": -20.30222,
+          "longitude": -40.29919
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-75.0",
+        "date": "02/10/2022 19:54:09",
+        "location": {
+          "latitude": -20.30225,
+          "longitude": -40.29915
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-74.5",
+        "date": "02/10/2022 19:54:10",
+        "location": {
+          "latitude": -20.30225,
+          "longitude": -40.29915
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-74.0",
+        "date": "02/10/2022 19:54:12",
+        "location": {
+          "latitude": -20.30227,
+          "longitude": -40.29911
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-73.5",
+        "date": "02/10/2022 19:54:13",
+        "location": {
+          "latitude": -20.30227,
+          "longitude": -40.29911
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-73.0",
+        "date": "02/10/2022 19:54:14",
+        "location": {
+          "latitude": -20.30224,
+          "longitude": -40.29908
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-72.5",
+        "date": "02/10/2022 19:54:15",
+        "location": {
+          "latitude": -20.30224,
+          "longitude": -40.29908
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-72.0",
+        "date": "02/10/2022 19:54:16",
+        "location": {
+          "latitude": -20.3022,
+          "longitude": -40.29906
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-71.5",
+        "date": "02/10/2022 19:54:18",
+        "location": {
+          "latitude": -20.30199,
+          "longitude": -40.2989
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-71.0",
+        "date": "02/10/2022 19:54:19",
+        "location": {
+          "latitude": -20.30199,
+          "longitude": -40.2989
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-70.5",
+        "date": "02/10/2022 19:54:20",
+        "location": {
+          "latitude": -20.30178,
+          "longitude": -40.29874
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-70.0",
+        "date": "02/10/2022 19:54:21",
+        "location": {
+          "latitude": -20.30178,
+          "longitude": -40.29874
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-69.5",
+        "date": "02/10/2022 19:54:23",
+        "location": {
+          "latitude": -20.3017,
+          "longitude": -40.29852
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-69.0",
+        "date": "02/10/2022 19:54:24",
+        "location": {
+          "latitude": -20.3017,
+          "longitude": -40.29852
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-68.5",
+        "date": "02/10/2022 19:54:25",
+        "location": {
+          "latitude": -20.30167,
+          "longitude": -40.29843
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-68.0",
+        "date": "02/10/2022 19:54:26",
+        "location": {
+          "latitude": -20.30167,
+          "longitude": -40.29843
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-67.5",
+        "date": "02/10/2022 19:54:28",
+        "location": {
+          "latitude": -20.30164,
+          "longitude": -40.29836
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-68.0",
+        "date": "02/10/2022 19:54:29",
+        "location": {
+          "latitude": -20.30164,
+          "longitude": -40.29836
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-68.5",
+        "date": "02/10/2022 19:54:30",
+        "location": {
+          "latitude": -20.30162,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-69.0",
+        "date": "02/10/2022 19:54:31",
+        "location": {
+          "latitude": -20.30162,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-69.5",
+        "date": "02/10/2022 19:54:33",
+        "location": {
+          "latitude": -20.30157,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-70.0",
+        "date": "02/10/2022 19:54:34",
+        "location": {
+          "latitude": -20.30157,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-70.5",
+        "date": "02/10/2022 19:54:35",
         "location": {
           "latitude": -20.3015,
           "longitude": -40.29832
         }
       },
       {
-        "status": 0,
-        "temperature": "-78.0",
-        "date": "02/10/2022 12:57:54",
+        "status": 1,
+        "temperature": "-71.0",
+        "date": "02/10/2022 19:54:36",
+        "location": {
+          "latitude": -20.3015,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-71.5",
+        "date": "02/10/2022 19:54:37",
         "location": {
           "latitude": -20.30146,
           "longitude": -40.29833
         }
       },
       {
-        "status": 0,
-        "temperature": "-78.5",
-        "date": "02/10/2022 12:57:55",
+        "status": 1,
+        "temperature": "-72.0",
+        "date": "02/10/2022 19:54:39",
         "location": {
           "latitude": -20.30141,
           "longitude": -40.29833
         }
       },
       {
-        "status": 0,
-        "temperature": "-79.0",
-        "date": "02/10/2022 12:57:56",
+        "status": 1,
+        "temperature": "-72.5",
+        "date": "02/10/2022 19:54:40",
+        "location": {
+          "latitude": -20.30141,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-73.0",
+        "date": "02/10/2022 19:54:41",
         "location": {
           "latitude": -20.30135,
           "longitude": -40.29833
         }
       },
       {
-        "status": 0,
-        "temperature": "-79.5",
-        "date": "02/10/2022 12:57:57",
+        "status": 1,
+        "temperature": "-73.5",
+        "date": "02/10/2022 19:54:42",
+        "location": {
+          "latitude": -20.30135,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "-74.0",
+        "date": "02/10/2022 19:54:44",
         "location": {
           "latitude": -20.3013,
           "longitude": -40.29833
         }
       },
       {
-        "status": 0,
-        "temperature": "-80.0",
-        "date": "02/10/2022 12:57:58",
+        "status": 1,
+        "temperature": "-74.5",
+        "date": "02/10/2022 19:54:45",
         "location": {
-          "latitude": -20.30126,
+          "latitude": -20.3013,
           "longitude": -40.29833
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.5",
-        "date": "02/10/2022 12:58:00",
-        "location": {
-          "latitude": -20.30122,
-          "longitude": -40.29831
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.0",
-        "date": "02/10/2022 12:58:01",
-        "location": {
-          "latitude": -20.301,
-          "longitude": -40.29814
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.5",
-        "date": "02/10/2022 12:58:02",
-        "location": {
-          "latitude": -20.30079,
-          "longitude": -40.29798
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.0",
-        "date": "02/10/2022 12:58:03",
-        "location": {
-          "latitude": -20.30028,
-          "longitude": -40.2976
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.5",
-        "date": "02/10/2022 12:58:05",
-        "location": {
-          "latitude": -20.30027,
-          "longitude": -40.2976
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.0",
-        "date": "02/10/2022 12:58:06",
-        "location": {
-          "latitude": -20.29975,
-          "longitude": -40.29723
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.5",
-        "date": "02/10/2022 12:58:07",
-        "location": {
-          "latitude": -20.2992,
-          "longitude": -40.29685
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.0",
-        "date": "02/10/2022 12:58:08",
-        "location": {
-          "latitude": -20.29866,
-          "longitude": -40.29647
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.5",
-        "date": "02/10/2022 12:58:10",
-        "location": {
-          "latitude": -20.29787,
-          "longitude": -40.29589
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.0",
-        "date": "02/10/2022 12:58:11",
-        "location": {
-          "latitude": -20.29773,
-          "longitude": -40.2958
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.5",
-        "date": "02/10/2022 12:58:12",
-        "location": {
-          "latitude": -20.29764,
-          "longitude": -40.2957
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.0",
-        "date": "02/10/2022 12:58:13",
-        "location": {
-          "latitude": -20.29713,
-          "longitude": -40.29536
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.5",
-        "date": "02/10/2022 12:58:15",
-        "location": {
-          "latitude": -20.29661,
-          "longitude": -40.29501
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.0",
-        "date": "02/10/2022 12:58:16",
-        "location": {
-          "latitude": -20.29694,
-          "longitude": -40.29449
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.5",
-        "date": "02/10/2022 12:58:17",
-        "location": {
-          "latitude": -20.29721,
-          "longitude": -40.294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.0",
-        "date": "02/10/2022 12:58:18",
-        "location": {
-          "latitude": -20.29721,
-          "longitude": -40.29401
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.5",
-        "date": "02/10/2022 12:58:19",
-        "location": {
-          "latitude": -20.29722,
-          "longitude": -40.29401
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.0",
-        "date": "02/10/2022 12:58:21",
-        "location": {
-          "latitude": -20.29722,
-          "longitude": -40.29402
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.5",
-        "date": "02/10/2022 12:58:22",
-        "location": {
-          "latitude": -20.29723,
-          "longitude": -40.29402
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-90.0",
-        "date": "02/10/2022 12:58:23",
-        "location": {
-          "latitude": -20.29724,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.5",
-        "date": "02/10/2022 12:58:24",
-        "location": {
-          "latitude": -20.29725,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.5",
-        "date": "02/10/2022 12:58:26",
-        "location": {
-          "latitude": -20.29726,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.0",
-        "date": "02/10/2022 12:58:27",
-        "location": {
-          "latitude": -20.29727,
-          "longitude": -40.29404
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.5",
-        "date": "02/10/2022 12:58:28",
-        "location": {
-          "latitude": -20.29728,
-          "longitude": -40.29404
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.0",
-        "date": "02/10/2022 12:58:29",
-        "location": {
-          "latitude": -20.29729,
-          "longitude": -40.29404
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.5",
-        "date": "02/10/2022 12:58:31",
-        "location": {
-          "latitude": -20.2973,
-          "longitude": -40.29404
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.0",
-        "date": "02/10/2022 12:58:32",
-        "location": {
-          "latitude": -20.2973,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.5",
-        "date": "02/10/2022 12:58:33",
-        "location": {
-          "latitude": -20.29731,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.0",
-        "date": "02/10/2022 12:58:34",
-        "location": {
-          "latitude": -20.29732,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.5",
-        "date": "02/10/2022 12:58:36",
-        "location": {
-          "latitude": -20.29733,
-          "longitude": -40.29403
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.0",
-        "date": "02/10/2022 12:58:37",
-        "location": {
-          "latitude": -20.29733,
-          "longitude": -40.29402
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.5",
-        "date": "02/10/2022 12:58:38",
-        "location": {
-          "latitude": -20.29734,
-          "longitude": -40.29402
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.0",
-        "date": "02/10/2022 12:58:39",
-        "location": {
-          "latitude": -20.29735,
-          "longitude": -40.29401
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.5",
-        "date": "02/10/2022 12:58:41",
-        "location": {
-          "latitude": -20.29736,
-          "longitude": -40.294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.0",
-        "date": "02/10/2022 12:58:42",
-        "location": {
-          "latitude": -20.29737,
-          "longitude": -40.29399
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.5",
-        "date": "02/10/2022 12:58:43",
-        "location": {
-          "latitude": -20.29737,
-          "longitude": -40.29398
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.0",
-        "date": "02/10/2022 12:58:44",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.29398
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.5",
-        "date": "02/10/2022 12:58:45",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.29397
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.0",
-        "date": "02/10/2022 12:58:47",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.29396
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.5",
-        "date": "02/10/2022 12:58:48",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.29395
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.0",
-        "date": "02/10/2022 12:58:49",
-        "location": {
-          "latitude": -20.29739,
-          "longitude": -40.29395
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-79.5",
-        "date": "02/10/2022 12:58:50",
-        "location": {
-          "latitude": -20.29739,
-          "longitude": -40.29394
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-79.0",
-        "date": "02/10/2022 12:58:52",
-        "location": {
-          "latitude": -20.29739,
-          "longitude": -40.29393
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-79.5",
-        "date": "02/10/2022 12:58:53",
-        "location": {
-          "latitude": -20.29739,
-          "longitude": -40.29392
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.0",
-        "date": "02/10/2022 12:58:54",
-        "location": {
-          "latitude": -20.29739,
-          "longitude": -40.29391
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.5",
-        "date": "02/10/2022 12:58:56",
-        "location": {
-          "latitude": -20.29739,
-          "longitude": -40.2939
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.0",
-        "date": "02/10/2022 12:58:57",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.2939
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.5",
-        "date": "02/10/2022 12:58:58",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.29389
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.0",
-        "date": "02/10/2022 12:58:59",
-        "location": {
-          "latitude": -20.29738,
-          "longitude": -40.29388
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.5",
-        "date": "02/10/2022 12:59:00",
-        "location": {
-          "latitude": -20.29737,
-          "longitude": -40.29387
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.0",
-        "date": "02/10/2022 12:59:02",
-        "location": {
-          "latitude": -20.29737,
-          "longitude": -40.29386
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.5",
-        "date": "02/10/2022 12:59:03",
-        "location": {
-          "latitude": -20.29736,
-          "longitude": -40.29385
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.0",
-        "date": "02/10/2022 12:59:04",
-        "location": {
-          "latitude": -20.29735,
-          "longitude": -40.29384
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.5",
-        "date": "02/10/2022 12:59:05",
-        "location": {
-          "latitude": -20.29734,
-          "longitude": -40.29384
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.0",
-        "date": "02/10/2022 12:59:07",
-        "location": {
-          "latitude": -20.29734,
-          "longitude": -40.29383
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.5",
-        "date": "02/10/2022 12:59:08",
-        "location": {
-          "latitude": -20.2978,
-          "longitude": -40.29306
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.0",
-        "date": "02/10/2022 12:59:09",
-        "location": {
-          "latitude": -20.29781,
-          "longitude": -40.29306
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.5",
-        "date": "02/10/2022 12:59:10",
-        "location": {
-          "latitude": -20.29781,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.0",
-        "date": "02/10/2022 12:59:12",
-        "location": {
-          "latitude": -20.29782,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.5",
-        "date": "02/10/2022 12:59:13",
-        "location": {
-          "latitude": -20.29783,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.0",
-        "date": "02/10/2022 12:59:14",
-        "location": {
-          "latitude": -20.29784,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.5",
-        "date": "02/10/2022 12:59:15",
-        "location": {
-          "latitude": -20.29785,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.0",
-        "date": "02/10/2022 12:59:17",
-        "location": {
-          "latitude": -20.29786,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.5",
-        "date": "02/10/2022 12:59:18",
-        "location": {
-          "latitude": -20.29787,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-90.0",
-        "date": "02/10/2022 12:59:19",
-        "location": {
-          "latitude": -20.29788,
-          "longitude": -40.29307
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.5",
-        "date": "02/10/2022 12:59:20",
-        "location": {
-          "latitude": -20.29788,
-          "longitude": -40.29306
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.5",
-        "date": "02/10/2022 12:59:22",
-        "location": {
-          "latitude": -20.29789,
-          "longitude": -40.29306
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-89.0",
-        "date": "02/10/2022 12:59:23",
-        "location": {
-          "latitude": -20.29789,
-          "longitude": -40.29305
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.5",
-        "date": "02/10/2022 12:59:24",
-        "location": {
-          "latitude": -20.2979,
-          "longitude": -40.29305
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-88.0",
-        "date": "02/10/2022 12:59:25",
-        "location": {
-          "latitude": -20.2979,
-          "longitude": -40.29304
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.5",
-        "date": "02/10/2022 12:59:26",
-        "location": {
-          "latitude": -20.2979,
-          "longitude": -40.29303
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-87.0",
-        "date": "02/10/2022 12:59:28",
-        "location": {
-          "latitude": -20.29791,
-          "longitude": -40.29302
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.5",
-        "date": "02/10/2022 12:59:29",
-        "location": {
-          "latitude": -20.29791,
-          "longitude": -40.29301
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-86.0",
-        "date": "02/10/2022 12:59:30",
-        "location": {
-          "latitude": -20.29791,
-          "longitude": -40.293
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.5",
-        "date": "02/10/2022 12:59:31",
-        "location": {
-          "latitude": -20.29791,
-          "longitude": -40.29299
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-85.0",
-        "date": "02/10/2022 12:59:33",
-        "location": {
-          "latitude": -20.2979,
-          "longitude": -40.29299
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.5",
-        "date": "02/10/2022 12:59:34",
-        "location": {
-          "latitude": -20.2979,
-          "longitude": -40.29298
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-84.0",
-        "date": "02/10/2022 12:59:35",
-        "location": {
-          "latitude": -20.2979,
-          "longitude": -40.29297
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.5",
-        "date": "02/10/2022 12:59:36",
-        "location": {
-          "latitude": -20.29789,
-          "longitude": -40.29297
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-83.0",
-        "date": "02/10/2022 12:59:38",
-        "location": {
-          "latitude": -20.29789,
-          "longitude": -40.29296
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.5",
-        "date": "02/10/2022 12:59:39",
-        "location": {
-          "latitude": -20.29788,
-          "longitude": -40.29295
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-82.0",
-        "date": "02/10/2022 12:59:40",
-        "location": {
-          "latitude": -20.29787,
-          "longitude": -40.29295
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.5",
-        "date": "02/10/2022 12:59:41",
-        "location": {
-          "latitude": -20.29787,
-          "longitude": -40.29294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-81.0",
-        "date": "02/10/2022 12:59:43",
-        "location": {
-          "latitude": -20.29786,
-          "longitude": -40.29294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.5",
-        "date": "02/10/2022 12:59:44",
-        "location": {
-          "latitude": -20.29785,
-          "longitude": -40.29294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-80.0",
-        "date": "02/10/2022 12:59:45",
-        "location": {
-          "latitude": -20.29784,
-          "longitude": -40.29294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-79.5",
-        "date": "02/10/2022 12:59:46",
-        "location": {
-          "latitude": -20.29783,
-          "longitude": -40.29294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-79.0",
-        "date": "02/10/2022 12:59:48",
-        "location": {
-          "latitude": -20.29782,
-          "longitude": -40.29294
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-78.5",
-        "date": "02/10/2022 12:59:49",
-        "location": {
-          "latitude": -20.29782,
-          "longitude": -40.29295
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-78.0",
-        "date": "02/10/2022 12:59:50",
-        "location": {
-          "latitude": -20.29781,
-          "longitude": -40.29295
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-77.5",
-        "date": "02/10/2022 12:59:51",
-        "location": {
-          "latitude": -20.2978,
-          "longitude": -40.29295
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-77.0",
-        "date": "02/10/2022 12:59:52",
-        "location": {
-          "latitude": -20.2978,
-          "longitude": -40.29296
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-76.5",
-        "date": "02/10/2022 12:59:54",
-        "location": {
-          "latitude": -20.29779,
-          "longitude": -40.29296
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "-76.0",
-        "date": "02/10/2022 12:59:55",
-        "location": {
-          "latitude": -20.29779,
-          "longitude": -40.29297
         }
       }
     ]
@@ -910,504 +910,9 @@
     "id": 1,
     "datasSaved": [
       {
-        "status": 0,
-        "temperature": "2.0",
-        "date": "02/10/2022 12:57:52",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.1",
-        "date": "02/10/2022 12:57:54",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.1999998",
-        "date": "02/10/2022 12:57:55",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.2999997",
-        "date": "02/10/2022 12:57:56",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.3999996",
-        "date": "02/10/2022 12:57:57",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.4999995",
-        "date": "02/10/2022 12:57:58",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.5999994",
-        "date": "02/10/2022 12:58:00",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.6999993",
-        "date": "02/10/2022 12:58:01",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.7999992",
-        "date": "02/10/2022 12:58:02",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.8999991",
-        "date": "02/10/2022 12:58:03",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.999999",
-        "date": "02/10/2022 12:58:05",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.099999",
-        "date": "02/10/2022 12:58:06",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.1999989",
-        "date": "02/10/2022 12:58:07",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.2999988",
-        "date": "02/10/2022 12:58:08",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.3999987",
-        "date": "02/10/2022 12:58:10",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.4999986",
-        "date": "02/10/2022 12:58:11",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.5999985",
-        "date": "02/10/2022 12:58:12",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.6999984",
-        "date": "02/10/2022 12:58:13",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.7999983",
-        "date": "02/10/2022 12:58:15",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.8999982",
-        "date": "02/10/2022 12:58:16",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.999998",
-        "date": "02/10/2022 12:58:17",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.099998",
-        "date": "02/10/2022 12:58:18",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.199998",
-        "date": "02/10/2022 12:58:19",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.299998",
-        "date": "02/10/2022 12:58:21",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.3999977",
-        "date": "02/10/2022 12:58:22",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.4999976",
-        "date": "02/10/2022 12:58:23",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.5999975",
-        "date": "02/10/2022 12:58:24",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.6999974",
-        "date": "02/10/2022 12:58:26",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.7999973",
-        "date": "02/10/2022 12:58:27",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.899997",
-        "date": "02/10/2022 12:58:28",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.999997",
-        "date": "02/10/2022 12:58:29",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.099997",
-        "date": "02/10/2022 12:58:31",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.199997",
-        "date": "02/10/2022 12:58:32",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.299997",
-        "date": "02/10/2022 12:58:33",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.3999968",
-        "date": "02/10/2022 12:58:34",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.4999967",
-        "date": "02/10/2022 12:58:36",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.5999966",
-        "date": "02/10/2022 12:58:37",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.6999965",
-        "date": "02/10/2022 12:58:38",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.7999964",
-        "date": "02/10/2022 12:58:39",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.8999963",
-        "date": "02/10/2022 12:58:41",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.999996",
-        "date": "02/10/2022 12:58:42",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.099996",
-        "date": "02/10/2022 12:58:43",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.199996",
-        "date": "02/10/2022 12:58:44",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.299996",
-        "date": "02/10/2022 12:58:45",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.399996",
-        "date": "02/10/2022 12:58:47",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.4999957",
-        "date": "02/10/2022 12:58:48",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.5999956",
-        "date": "02/10/2022 12:58:49",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.6999955",
-        "date": "02/10/2022 12:58:50",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.7999954",
-        "date": "02/10/2022 12:58:52",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.8999953",
-        "date": "02/10/2022 12:58:53",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "6.999995",
-        "date": "02/10/2022 12:58:54",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "7.099995",
-        "date": "02/10/2022 12:58:56",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "7.199995",
-        "date": "02/10/2022 12:58:57",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "7.299995",
-        "date": "02/10/2022 12:58:58",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "7.399995",
-        "date": "02/10/2022 12:58:59",
-        "location": {
-          "latitude": -20.29978,
-          "longitude": -40.30711
-        }
-      },
-      {
         "status": 1,
         "temperature": "7.4999948",
-        "date": "02/10/2022 12:59:00",
+        "date": "02/10/2022 19:52:42",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1416,7 +921,7 @@
       {
         "status": 1,
         "temperature": "7.5999947",
-        "date": "02/10/2022 12:59:02",
+        "date": "02/10/2022 19:52:44",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1425,7 +930,7 @@
       {
         "status": 1,
         "temperature": "7.6999946",
-        "date": "02/10/2022 12:59:03",
+        "date": "02/10/2022 19:52:45",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1434,7 +939,7 @@
       {
         "status": 1,
         "temperature": "7.7999945",
-        "date": "02/10/2022 12:59:04",
+        "date": "02/10/2022 19:52:46",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1443,7 +948,7 @@
       {
         "status": 1,
         "temperature": "7.8999944",
-        "date": "02/10/2022 12:59:05",
+        "date": "02/10/2022 19:52:47",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1452,7 +957,7 @@
       {
         "status": 1,
         "temperature": "7.9999943",
-        "date": "02/10/2022 12:59:07",
+        "date": "02/10/2022 19:52:49",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1461,7 +966,7 @@
       {
         "status": 2,
         "temperature": "8.099995",
-        "date": "02/10/2022 12:59:08",
+        "date": "02/10/2022 19:52:50",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1470,7 +975,7 @@
       {
         "status": 2,
         "temperature": "8.199995",
-        "date": "02/10/2022 12:59:09",
+        "date": "02/10/2022 19:52:51",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1479,7 +984,7 @@
       {
         "status": 2,
         "temperature": "8.299995",
-        "date": "02/10/2022 12:59:10",
+        "date": "02/10/2022 19:52:52",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1488,7 +993,7 @@
       {
         "status": 2,
         "temperature": "8.399996",
-        "date": "02/10/2022 12:59:12",
+        "date": "02/10/2022 19:52:54",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1497,7 +1002,7 @@
       {
         "status": 2,
         "temperature": "8.499996",
-        "date": "02/10/2022 12:59:13",
+        "date": "02/10/2022 19:52:55",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1506,7 +1011,7 @@
       {
         "status": 2,
         "temperature": "8.599997",
-        "date": "02/10/2022 12:59:14",
+        "date": "02/10/2022 19:52:56",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1515,7 +1020,7 @@
       {
         "status": 2,
         "temperature": "8.699997",
-        "date": "02/10/2022 12:59:15",
+        "date": "02/10/2022 19:52:57",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1524,7 +1029,7 @@
       {
         "status": 3,
         "temperature": "8.799997",
-        "date": "02/10/2022 12:59:17",
+        "date": "02/10/2022 19:52:59",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1533,7 +1038,7 @@
       {
         "status": 3,
         "temperature": "8.899998",
-        "date": "02/10/2022 12:59:18",
+        "date": "02/10/2022 19:53:00",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1542,7 +1047,7 @@
       {
         "status": 3,
         "temperature": "8.999998",
-        "date": "02/10/2022 12:59:19",
+        "date": "02/10/2022 19:53:01",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1551,7 +1056,7 @@
       {
         "status": 3,
         "temperature": "9.099998",
-        "date": "02/10/2022 12:59:20",
+        "date": "02/10/2022 19:53:02",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1560,7 +1065,7 @@
       {
         "status": 3,
         "temperature": "9.199999",
-        "date": "02/10/2022 12:59:22",
+        "date": "02/10/2022 19:53:04",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1569,7 +1074,7 @@
       {
         "status": 3,
         "temperature": "9.299999",
-        "date": "02/10/2022 12:59:23",
+        "date": "02/10/2022 19:53:05",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1578,7 +1083,7 @@
       {
         "status": 3,
         "temperature": "9.4",
-        "date": "02/10/2022 12:59:24",
+        "date": "02/10/2022 19:53:06",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1587,7 +1092,7 @@
       {
         "status": 3,
         "temperature": "9.5",
-        "date": "02/10/2022 12:59:25",
+        "date": "02/10/2022 19:53:07",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1596,7 +1101,7 @@
       {
         "status": 3,
         "temperature": "9.6",
-        "date": "02/10/2022 12:59:26",
+        "date": "02/10/2022 19:53:09",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1605,7 +1110,7 @@
       {
         "status": 3,
         "temperature": "9.700001",
-        "date": "02/10/2022 12:59:28",
+        "date": "02/10/2022 19:53:10",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1614,7 +1119,7 @@
       {
         "status": 3,
         "temperature": "9.800001",
-        "date": "02/10/2022 12:59:29",
+        "date": "02/10/2022 19:53:11",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1623,7 +1128,7 @@
       {
         "status": 3,
         "temperature": "9.900002",
-        "date": "02/10/2022 12:59:30",
+        "date": "02/10/2022 19:53:12",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1632,7 +1137,7 @@
       {
         "status": 3,
         "temperature": "10.000002",
-        "date": "02/10/2022 12:59:31",
+        "date": "02/10/2022 19:53:13",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1641,7 +1146,7 @@
       {
         "status": 3,
         "temperature": "10.100002",
-        "date": "02/10/2022 12:59:33",
+        "date": "02/10/2022 19:53:15",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1650,7 +1155,7 @@
       {
         "status": 3,
         "temperature": "10.200003",
-        "date": "02/10/2022 12:59:34",
+        "date": "02/10/2022 19:53:16",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1659,7 +1164,7 @@
       {
         "status": 3,
         "temperature": "10.300003",
-        "date": "02/10/2022 12:59:35",
+        "date": "02/10/2022 19:53:17",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1668,7 +1173,7 @@
       {
         "status": 3,
         "temperature": "10.400003",
-        "date": "02/10/2022 12:59:36",
+        "date": "02/10/2022 19:53:18",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1677,7 +1182,7 @@
       {
         "status": 3,
         "temperature": "10.300003",
-        "date": "02/10/2022 12:59:38",
+        "date": "02/10/2022 19:53:20",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1686,7 +1191,7 @@
       {
         "status": 3,
         "temperature": "10.200003",
-        "date": "02/10/2022 12:59:39",
+        "date": "02/10/2022 19:53:21",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1695,7 +1200,7 @@
       {
         "status": 3,
         "temperature": "10.100002",
-        "date": "02/10/2022 12:59:40",
+        "date": "02/10/2022 19:53:22",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1704,7 +1209,7 @@
       {
         "status": 3,
         "temperature": "10.000002",
-        "date": "02/10/2022 12:59:41",
+        "date": "02/10/2022 19:53:23",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1713,7 +1218,7 @@
       {
         "status": 3,
         "temperature": "9.900002",
-        "date": "02/10/2022 12:59:43",
+        "date": "02/10/2022 19:53:25",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1722,7 +1227,7 @@
       {
         "status": 3,
         "temperature": "9.800001",
-        "date": "02/10/2022 12:59:44",
+        "date": "02/10/2022 19:53:26",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1731,7 +1236,7 @@
       {
         "status": 3,
         "temperature": "9.700001",
-        "date": "02/10/2022 12:59:45",
+        "date": "02/10/2022 19:53:27",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1740,7 +1245,7 @@
       {
         "status": 3,
         "temperature": "9.6",
-        "date": "02/10/2022 12:59:46",
+        "date": "02/10/2022 19:53:28",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1749,7 +1254,7 @@
       {
         "status": 3,
         "temperature": "9.5",
-        "date": "02/10/2022 12:59:48",
+        "date": "02/10/2022 19:53:30",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1758,7 +1263,7 @@
       {
         "status": 3,
         "temperature": "9.4",
-        "date": "02/10/2022 12:59:49",
+        "date": "02/10/2022 19:53:31",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1767,7 +1272,7 @@
       {
         "status": 3,
         "temperature": "9.299999",
-        "date": "02/10/2022 12:59:50",
+        "date": "02/10/2022 19:53:32",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1776,7 +1281,7 @@
       {
         "status": 3,
         "temperature": "9.199999",
-        "date": "02/10/2022 12:59:51",
+        "date": "02/10/2022 19:53:33",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1785,7 +1290,7 @@
       {
         "status": 3,
         "temperature": "9.099998",
-        "date": "02/10/2022 12:59:52",
+        "date": "02/10/2022 19:53:35",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1794,7 +1299,7 @@
       {
         "status": 3,
         "temperature": "8.999998",
-        "date": "02/10/2022 12:59:54",
+        "date": "02/10/2022 19:53:36",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1803,7 +1308,502 @@
       {
         "status": 3,
         "temperature": "8.899998",
-        "date": "02/10/2022 12:59:55",
+        "date": "02/10/2022 19:53:37",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.799997",
+        "date": "02/10/2022 19:53:38",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.699997",
+        "date": "02/10/2022 19:53:39",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.599997",
+        "date": "02/10/2022 19:53:41",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.499996",
+        "date": "02/10/2022 19:53:42",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.399996",
+        "date": "02/10/2022 19:53:43",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.299995",
+        "date": "02/10/2022 19:53:44",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.199995",
+        "date": "02/10/2022 19:53:46",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "8.099995",
+        "date": "02/10/2022 19:53:47",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.9999948",
+        "date": "02/10/2022 19:53:48",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.899995",
+        "date": "02/10/2022 19:53:49",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.799995",
+        "date": "02/10/2022 19:53:51",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.699995",
+        "date": "02/10/2022 19:53:52",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.599995",
+        "date": "02/10/2022 19:53:53",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.499995",
+        "date": "02/10/2022 19:53:54",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.3999953",
+        "date": "02/10/2022 19:53:55",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.2999954",
+        "date": "02/10/2022 19:53:57",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.1999955",
+        "date": "02/10/2022 19:53:58",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "7.0999956",
+        "date": "02/10/2022 19:53:59",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.9999957",
+        "date": "02/10/2022 19:54:00",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.899996",
+        "date": "02/10/2022 19:54:02",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.799996",
+        "date": "02/10/2022 19:54:03",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.699996",
+        "date": "02/10/2022 19:54:04",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.599996",
+        "date": "02/10/2022 19:54:05",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.499996",
+        "date": "02/10/2022 19:54:07",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.3999963",
+        "date": "02/10/2022 19:54:08",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.2999964",
+        "date": "02/10/2022 19:54:09",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.1999965",
+        "date": "02/10/2022 19:54:10",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "6.0999966",
+        "date": "02/10/2022 19:54:12",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.9999967",
+        "date": "02/10/2022 19:54:13",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.8999968",
+        "date": "02/10/2022 19:54:14",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.799997",
+        "date": "02/10/2022 19:54:15",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.699997",
+        "date": "02/10/2022 19:54:16",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.599997",
+        "date": "02/10/2022 19:54:18",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.499997",
+        "date": "02/10/2022 19:54:19",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.399997",
+        "date": "02/10/2022 19:54:20",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.2999973",
+        "date": "02/10/2022 19:54:21",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.1999974",
+        "date": "02/10/2022 19:54:23",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "5.0999975",
+        "date": "02/10/2022 19:54:24",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.9999976",
+        "date": "02/10/2022 19:54:25",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.8999977",
+        "date": "02/10/2022 19:54:26",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.799998",
+        "date": "02/10/2022 19:54:28",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.699998",
+        "date": "02/10/2022 19:54:29",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.599998",
+        "date": "02/10/2022 19:54:30",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.499998",
+        "date": "02/10/2022 19:54:31",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.399998",
+        "date": "02/10/2022 19:54:33",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.2999983",
+        "date": "02/10/2022 19:54:34",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.1999984",
+        "date": "02/10/2022 19:54:35",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.0999985",
+        "date": "02/10/2022 19:54:36",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.9999986",
+        "date": "02/10/2022 19:54:37",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.8999987",
+        "date": "02/10/2022 19:54:39",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.7999988",
+        "date": "02/10/2022 19:54:40",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.6999989",
+        "date": "02/10/2022 19:54:41",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.599999",
+        "date": "02/10/2022 19:54:42",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.499999",
+        "date": "02/10/2022 19:54:44",
+        "location": {
+          "latitude": -20.29978,
+          "longitude": -40.30711
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.3999991",
+        "date": "02/10/2022 19:54:45",
         "location": {
           "latitude": -20.29978,
           "longitude": -40.30711
@@ -1817,902 +1817,902 @@
     "datasSaved": [
       {
         "status": 0,
-        "temperature": "3.1999989",
-        "date": "02/10/2022 12:57:52",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29243
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.2999988",
-        "date": "02/10/2022 12:57:54",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29243
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.3999987",
-        "date": "02/10/2022 12:57:55",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29243
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.4999986",
-        "date": "02/10/2022 12:57:56",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29243
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.5999985",
-        "date": "02/10/2022 12:57:57",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29243
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.6999984",
-        "date": "02/10/2022 12:57:58",
-        "location": {
-          "latitude": -20.29526,
-          "longitude": -40.29242
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.7999983",
-        "date": "02/10/2022 12:58:00",
-        "location": {
-          "latitude": -20.29526,
-          "longitude": -40.29242
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.8999982",
-        "date": "02/10/2022 12:58:01",
-        "location": {
-          "latitude": -20.29526,
-          "longitude": -40.29242
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.999998",
-        "date": "02/10/2022 12:58:02",
-        "location": {
-          "latitude": -20.29526,
-          "longitude": -40.29242
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.099998",
-        "date": "02/10/2022 12:58:03",
-        "location": {
-          "latitude": -20.29526,
-          "longitude": -40.29242
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.199998",
-        "date": "02/10/2022 12:58:05",
-        "location": {
-          "latitude": -20.29526,
-          "longitude": -40.29242
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.299998",
-        "date": "02/10/2022 12:58:06",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.3999977",
-        "date": "02/10/2022 12:58:07",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.4999976",
-        "date": "02/10/2022 12:58:08",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.5999975",
-        "date": "02/10/2022 12:58:10",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.6999974",
-        "date": "02/10/2022 12:58:11",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.7999973",
-        "date": "02/10/2022 12:58:12",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.899997",
-        "date": "02/10/2022 12:58:13",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29241
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.999997",
-        "date": "02/10/2022 12:58:15",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.099997",
-        "date": "02/10/2022 12:58:16",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.199997",
-        "date": "02/10/2022 12:58:17",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.299997",
-        "date": "02/10/2022 12:58:18",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.3999968",
-        "date": "02/10/2022 12:58:19",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.299997",
-        "date": "02/10/2022 12:58:21",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.199997",
-        "date": "02/10/2022 12:58:22",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.2924
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "5.099997",
-        "date": "02/10/2022 12:58:23",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29239
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.999997",
-        "date": "02/10/2022 12:58:24",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29239
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.899997",
-        "date": "02/10/2022 12:58:26",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29239
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.7999973",
-        "date": "02/10/2022 12:58:27",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29239
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.6999974",
-        "date": "02/10/2022 12:58:28",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29239
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.5999975",
-        "date": "02/10/2022 12:58:29",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29239
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.4999976",
-        "date": "02/10/2022 12:58:31",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.3999977",
-        "date": "02/10/2022 12:58:32",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.299998",
-        "date": "02/10/2022 12:58:33",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.199998",
-        "date": "02/10/2022 12:58:34",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "4.099998",
-        "date": "02/10/2022 12:58:36",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.999998",
-        "date": "02/10/2022 12:58:37",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.8999982",
-        "date": "02/10/2022 12:58:38",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29238
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.7999983",
-        "date": "02/10/2022 12:58:39",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.6999984",
-        "date": "02/10/2022 12:58:41",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.5999985",
-        "date": "02/10/2022 12:58:42",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.4999986",
-        "date": "02/10/2022 12:58:43",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.3999987",
-        "date": "02/10/2022 12:58:44",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.2999988",
-        "date": "02/10/2022 12:58:45",
-        "location": {
-          "latitude": -20.29525,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.1999989",
-        "date": "02/10/2022 12:58:47",
-        "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "3.099999",
-        "date": "02/10/2022 12:58:48",
-        "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.999999",
-        "date": "02/10/2022 12:58:49",
-        "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.8999991",
-        "date": "02/10/2022 12:58:50",
-        "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.7999992",
-        "date": "02/10/2022 12:58:52",
-        "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
-        }
-      },
-      {
-        "status": 0,
         "temperature": "2.6999993",
-        "date": "02/10/2022 12:58:53",
+        "date": "02/10/2022 19:52:42",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
+          "latitude": -20.30578,
+          "longitude": -40.29832
         }
       },
       {
         "status": 0,
         "temperature": "2.5999994",
-        "date": "02/10/2022 12:58:54",
+        "date": "02/10/2022 19:52:44",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29237
+          "latitude": -20.30578,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.4999995",
-        "date": "02/10/2022 12:58:56",
+        "date": "02/10/2022 19:52:45",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30578,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.3999996",
-        "date": "02/10/2022 12:58:57",
+        "date": "02/10/2022 19:52:46",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30578,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.2999997",
-        "date": "02/10/2022 12:58:58",
+        "date": "02/10/2022 19:52:47",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30578,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.1999998",
-        "date": "02/10/2022 12:58:59",
+        "date": "02/10/2022 19:52:49",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30578,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.1",
-        "date": "02/10/2022 12:59:00",
+        "date": "02/10/2022 19:52:50",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30578,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "1.9999999",
-        "date": "02/10/2022 12:59:02",
+        "date": "02/10/2022 19:52:51",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30577,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.1",
-        "date": "02/10/2022 12:59:03",
+        "date": "02/10/2022 19:52:52",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29236
+          "latitude": -20.30577,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.1",
-        "date": "02/10/2022 12:59:04",
+        "date": "02/10/2022 19:52:54",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29235
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "2.1",
-        "date": "02/10/2022 12:59:05",
-        "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29235
+          "latitude": -20.30577,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.1999998",
-        "date": "02/10/2022 12:59:07",
+        "date": "02/10/2022 19:52:55",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29235
+          "latitude": -20.30577,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.2999997",
-        "date": "02/10/2022 12:59:08",
+        "date": "02/10/2022 19:52:56",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29235
+          "latitude": -20.30577,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.3999996",
-        "date": "02/10/2022 12:59:09",
+        "date": "02/10/2022 19:52:57",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29235
+          "latitude": -20.30577,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.4999995",
-        "date": "02/10/2022 12:59:10",
+        "date": "02/10/2022 19:52:59",
         "location": {
-          "latitude": -20.29524,
-          "longitude": -40.29235
+          "latitude": -20.30576,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.5999994",
-        "date": "02/10/2022 12:59:12",
+        "date": "02/10/2022 19:53:00",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30576,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.6999993",
-        "date": "02/10/2022 12:59:13",
+        "date": "02/10/2022 19:53:01",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30576,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.7999992",
-        "date": "02/10/2022 12:59:14",
+        "date": "02/10/2022 19:53:02",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30576,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.8999991",
-        "date": "02/10/2022 12:59:15",
+        "date": "02/10/2022 19:53:04",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30576,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "2.999999",
-        "date": "02/10/2022 12:59:17",
+        "date": "02/10/2022 19:53:05",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30576,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.099999",
-        "date": "02/10/2022 12:59:18",
+        "date": "02/10/2022 19:53:06",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30575,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.1999989",
-        "date": "02/10/2022 12:59:19",
+        "date": "02/10/2022 19:53:07",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29235
+          "latitude": -20.30575,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.2999988",
-        "date": "02/10/2022 12:59:20",
+        "date": "02/10/2022 19:53:09",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29234
+          "latitude": -20.30575,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.3999987",
-        "date": "02/10/2022 12:59:22",
+        "date": "02/10/2022 19:53:10",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29234
+          "latitude": -20.30575,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.4999986",
-        "date": "02/10/2022 12:59:23",
+        "date": "02/10/2022 19:53:11",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29234
+          "latitude": -20.30575,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.5999985",
-        "date": "02/10/2022 12:59:24",
+        "date": "02/10/2022 19:53:12",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29234
+          "latitude": -20.30575,
+          "longitude": -40.29831
         }
       },
       {
         "status": 0,
         "temperature": "3.6999984",
-        "date": "02/10/2022 12:59:25",
+        "date": "02/10/2022 19:53:13",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29234
+          "latitude": -20.30575,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.5999985",
+        "date": "02/10/2022 19:53:15",
+        "location": {
+          "latitude": -20.30575,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.4999986",
+        "date": "02/10/2022 19:53:16",
+        "location": {
+          "latitude": -20.30575,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.3999987",
+        "date": "02/10/2022 19:53:17",
+        "location": {
+          "latitude": -20.30575,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.2999988",
+        "date": "02/10/2022 19:53:18",
+        "location": {
+          "latitude": -20.30575,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.1999989",
+        "date": "02/10/2022 19:53:20",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.099999",
+        "date": "02/10/2022 19:53:21",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.999999",
+        "date": "02/10/2022 19:53:22",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.8999991",
+        "date": "02/10/2022 19:53:23",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.7999992",
+        "date": "02/10/2022 19:53:25",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.6999993",
+        "date": "02/10/2022 19:53:26",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29832
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.5999994",
+        "date": "02/10/2022 19:53:27",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.4999995",
+        "date": "02/10/2022 19:53:28",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.3999996",
+        "date": "02/10/2022 19:53:30",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.2999997",
+        "date": "02/10/2022 19:53:31",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.1999998",
+        "date": "02/10/2022 19:53:32",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.1",
+        "date": "02/10/2022 19:53:33",
+        "location": {
+          "latitude": -20.30574,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "1.9999999",
+        "date": "02/10/2022 19:53:35",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.1",
+        "date": "02/10/2022 19:53:36",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.1",
+        "date": "02/10/2022 19:53:37",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.1",
+        "date": "02/10/2022 19:53:38",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.1999998",
+        "date": "02/10/2022 19:53:40",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.2999997",
+        "date": "02/10/2022 19:53:41",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29833
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.3999996",
+        "date": "02/10/2022 19:53:42",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.4999995",
+        "date": "02/10/2022 19:53:43",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.5999994",
+        "date": "02/10/2022 19:53:44",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.6999993",
+        "date": "02/10/2022 19:53:46",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.7999992",
+        "date": "02/10/2022 19:53:47",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.8999991",
+        "date": "02/10/2022 19:53:48",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29834
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "2.999999",
+        "date": "02/10/2022 19:53:49",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.099999",
+        "date": "02/10/2022 19:53:51",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.1999989",
+        "date": "02/10/2022 19:53:52",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.2999988",
+        "date": "02/10/2022 19:53:53",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.3999987",
+        "date": "02/10/2022 19:53:54",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.4999986",
+        "date": "02/10/2022 19:53:55",
+        "location": {
+          "latitude": -20.30573,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.5999985",
+        "date": "02/10/2022 19:53:57",
+        "location": {
+          "latitude": -20.30572,
+          "longitude": -40.29835
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.6999984",
+        "date": "02/10/2022 19:53:58",
+        "location": {
+          "latitude": -20.30572,
+          "longitude": -40.29835
         }
       },
       {
         "status": 0,
         "temperature": "3.7999983",
-        "date": "02/10/2022 12:59:26",
+        "date": "02/10/2022 19:53:59",
         "location": {
-          "latitude": -20.29523,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29835
         }
       },
       {
         "status": 0,
         "temperature": "3.8999982",
-        "date": "02/10/2022 12:59:28",
+        "date": "02/10/2022 19:54:00",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29835
         }
       },
       {
         "status": 0,
         "temperature": "3.999998",
-        "date": "02/10/2022 12:59:29",
+        "date": "02/10/2022 19:54:02",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29835
         }
       },
       {
         "status": 0,
         "temperature": "4.099998",
-        "date": "02/10/2022 12:59:30",
+        "date": "02/10/2022 19:54:03",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29835
         }
       },
       {
         "status": 0,
         "temperature": "4.199998",
-        "date": "02/10/2022 12:59:31",
+        "date": "02/10/2022 19:54:04",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29836
         }
       },
       {
         "status": 0,
         "temperature": "4.299998",
-        "date": "02/10/2022 12:59:33",
+        "date": "02/10/2022 19:54:05",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29836
         }
       },
       {
         "status": 0,
         "temperature": "4.3999977",
-        "date": "02/10/2022 12:59:34",
+        "date": "02/10/2022 19:54:07",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29836
         }
       },
       {
         "status": 0,
         "temperature": "4.4999976",
-        "date": "02/10/2022 12:59:35",
+        "date": "02/10/2022 19:54:08",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29234
+          "latitude": -20.30572,
+          "longitude": -40.29836
         }
       },
       {
         "status": 0,
         "temperature": "4.5999975",
-        "date": "02/10/2022 12:59:36",
+        "date": "02/10/2022 19:54:09",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29233
+          "latitude": -20.30572,
+          "longitude": -40.29836
         }
       },
       {
         "status": 0,
         "temperature": "4.6999974",
-        "date": "02/10/2022 12:59:38",
+        "date": "02/10/2022 19:54:10",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29233
+          "latitude": -20.30572,
+          "longitude": -40.29836
         }
       },
       {
         "status": 0,
         "temperature": "4.7999973",
-        "date": "02/10/2022 12:59:39",
+        "date": "02/10/2022 19:54:12",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29233
+          "latitude": -20.30538,
+          "longitude": -40.29812
         }
       },
       {
         "status": 0,
         "temperature": "4.899997",
-        "date": "02/10/2022 12:59:40",
+        "date": "02/10/2022 19:54:13",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29233
+          "latitude": -20.30538,
+          "longitude": -40.29812
         }
       },
       {
         "status": 0,
         "temperature": "4.999997",
-        "date": "02/10/2022 12:59:41",
+        "date": "02/10/2022 19:54:14",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29233
+          "latitude": -20.30538,
+          "longitude": -40.29812
         }
       },
       {
         "status": 1,
         "temperature": "5.099997",
-        "date": "02/10/2022 12:59:43",
+        "date": "02/10/2022 19:54:15",
         "location": {
-          "latitude": -20.29522,
-          "longitude": -40.29233
+          "latitude": -20.30538,
+          "longitude": -40.29812
         }
       },
       {
         "status": 1,
         "temperature": "5.199997",
-        "date": "02/10/2022 12:59:44",
+        "date": "02/10/2022 19:54:16",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30538,
+          "longitude": -40.29812
         }
       },
       {
         "status": 1,
         "temperature": "5.299997",
-        "date": "02/10/2022 12:59:45",
+        "date": "02/10/2022 19:54:18",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30538,
+          "longitude": -40.29812
         }
       },
       {
         "status": 1,
         "temperature": "5.3999968",
-        "date": "02/10/2022 12:59:46",
+        "date": "02/10/2022 19:54:19",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30504,
+          "longitude": -40.29788
         }
       },
       {
         "status": 1,
         "temperature": "5.299997",
-        "date": "02/10/2022 12:59:48",
+        "date": "02/10/2022 19:54:20",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30504,
+          "longitude": -40.29788
         }
       },
       {
         "status": 1,
         "temperature": "5.199997",
-        "date": "02/10/2022 12:59:49",
+        "date": "02/10/2022 19:54:21",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30504,
+          "longitude": -40.29788
         }
       },
       {
         "status": 1,
         "temperature": "5.099997",
-        "date": "02/10/2022 12:59:50",
+        "date": "02/10/2022 19:54:23",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30504,
+          "longitude": -40.29788
         }
       },
       {
         "status": 0,
         "temperature": "4.999997",
-        "date": "02/10/2022 12:59:51",
+        "date": "02/10/2022 19:54:24",
         "location": {
-          "latitude": -20.29521,
-          "longitude": -40.29233
+          "latitude": -20.30504,
+          "longitude": -40.29788
         }
       },
       {
         "status": 0,
         "temperature": "4.899997",
-        "date": "02/10/2022 12:59:52",
+        "date": "02/10/2022 19:54:25",
         "location": {
-          "latitude": -20.29545,
-          "longitude": -40.29194
+          "latitude": -20.30504,
+          "longitude": -40.29788
         }
       },
       {
         "status": 0,
         "temperature": "4.7999973",
-        "date": "02/10/2022 12:59:54",
+        "date": "02/10/2022 19:54:26",
         "location": {
-          "latitude": -20.29545,
-          "longitude": -40.29194
+          "latitude": -20.30469,
+          "longitude": -40.29764
         }
       },
       {
         "status": 0,
         "temperature": "4.6999974",
-        "date": "02/10/2022 12:59:55",
+        "date": "02/10/2022 19:54:28",
         "location": {
-          "latitude": -20.29545,
-          "longitude": -40.29194
+          "latitude": -20.30469,
+          "longitude": -40.29764
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.5999975",
+        "date": "02/10/2022 19:54:29",
+        "location": {
+          "latitude": -20.30469,
+          "longitude": -40.29764
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.4999976",
+        "date": "02/10/2022 19:54:30",
+        "location": {
+          "latitude": -20.30469,
+          "longitude": -40.29764
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.3999977",
+        "date": "02/10/2022 19:54:31",
+        "location": {
+          "latitude": -20.30469,
+          "longitude": -40.29764
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.299998",
+        "date": "02/10/2022 19:54:33",
+        "location": {
+          "latitude": -20.30464,
+          "longitude": -40.29772
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.199998",
+        "date": "02/10/2022 19:54:34",
+        "location": {
+          "latitude": -20.30464,
+          "longitude": -40.29772
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "4.099998",
+        "date": "02/10/2022 19:54:35",
+        "location": {
+          "latitude": -20.30464,
+          "longitude": -40.29772
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.999998",
+        "date": "02/10/2022 19:54:36",
+        "location": {
+          "latitude": -20.30464,
+          "longitude": -40.29772
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.8999982",
+        "date": "02/10/2022 19:54:37",
+        "location": {
+          "latitude": -20.30464,
+          "longitude": -40.29772
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.7999983",
+        "date": "02/10/2022 19:54:39",
+        "location": {
+          "latitude": -20.30464,
+          "longitude": -40.29772
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.6999984",
+        "date": "02/10/2022 19:54:40",
+        "location": {
+          "latitude": -20.30402,
+          "longitude": -40.29868
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.5999985",
+        "date": "02/10/2022 19:54:41",
+        "location": {
+          "latitude": -20.30402,
+          "longitude": -40.29868
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.4999986",
+        "date": "02/10/2022 19:54:42",
+        "location": {
+          "latitude": -20.30402,
+          "longitude": -40.29868
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.3999987",
+        "date": "02/10/2022 19:54:44",
+        "location": {
+          "latitude": -20.30402,
+          "longitude": -40.29868
+        }
+      },
+      {
+        "status": 0,
+        "temperature": "3.2999988",
+        "date": "02/10/2022 19:54:45",
+        "location": {
+          "latitude": -20.30402,
+          "longitude": -40.29868
         }
       }
     ]
@@ -2723,902 +2723,902 @@
     "datasSaved": [
       {
         "status": 1,
-        "temperature": "18.16667",
-        "date": "02/10/2022 12:57:52",
-        "location": {
-          "latitude": -20.3324,
-          "longitude": -40.33851
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.333336",
-        "date": "02/10/2022 12:57:54",
-        "location": {
-          "latitude": -20.3324,
-          "longitude": -40.33859
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.500002",
-        "date": "02/10/2022 12:57:55",
-        "location": {
-          "latitude": -20.3324,
-          "longitude": -40.33859
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.666668",
-        "date": "02/10/2022 12:57:56",
-        "location": {
-          "latitude": -20.33234,
-          "longitude": -40.33903
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.833334",
-        "date": "02/10/2022 12:57:57",
-        "location": {
-          "latitude": -20.33234,
-          "longitude": -40.33903
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.0",
-        "date": "02/10/2022 12:57:58",
-        "location": {
-          "latitude": -20.33229,
-          "longitude": -40.33908
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.166666",
-        "date": "02/10/2022 12:58:00",
-        "location": {
-          "latitude": -20.33159,
-          "longitude": -40.33802
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.333332",
-        "date": "02/10/2022 12:58:01",
-        "location": {
-          "latitude": -20.33159,
-          "longitude": -40.33802
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.499998",
-        "date": "02/10/2022 12:58:02",
-        "location": {
-          "latitude": -20.33112,
-          "longitude": -40.33713
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.666664",
-        "date": "02/10/2022 12:58:03",
-        "location": {
-          "latitude": -20.33112,
-          "longitude": -40.33713
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.83333",
-        "date": "02/10/2022 12:58:05",
-        "location": {
-          "latitude": -20.33097,
-          "longitude": -40.3372
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.999996",
-        "date": "02/10/2022 12:58:06",
-        "location": {
-          "latitude": -20.33097,
-          "longitude": -40.3372
-        }
-      },
-      {
-        "status": 2,
-        "temperature": "20.166662",
-        "date": "02/10/2022 12:58:07",
-        "location": {
-          "latitude": -20.32976,
-          "longitude": -40.33786
-        }
-      },
-      {
-        "status": 2,
-        "temperature": "20.333328",
-        "date": "02/10/2022 12:58:08",
-        "location": {
-          "latitude": -20.32976,
-          "longitude": -40.33786
-        }
-      },
-      {
-        "status": 2,
-        "temperature": "20.499994",
-        "date": "02/10/2022 12:58:10",
-        "location": {
-          "latitude": -20.32935,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 2,
-        "temperature": "20.66666",
-        "date": "02/10/2022 12:58:11",
-        "location": {
-          "latitude": -20.32935,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 2,
-        "temperature": "20.833326",
-        "date": "02/10/2022 12:58:12",
-        "location": {
-          "latitude": -20.32927,
-          "longitude": -40.33805
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.999992",
-        "date": "02/10/2022 12:58:13",
-        "location": {
-          "latitude": -20.32927,
-          "longitude": -40.33805
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.166658",
-        "date": "02/10/2022 12:58:15",
-        "location": {
-          "latitude": -20.32925,
-          "longitude": -40.33806
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.333324",
-        "date": "02/10/2022 12:58:16",
-        "location": {
-          "latitude": -20.32925,
-          "longitude": -40.33806
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.49999",
-        "date": "02/10/2022 12:58:17",
-        "location": {
-          "latitude": -20.32887,
-          "longitude": -40.3381
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.666656",
-        "date": "02/10/2022 12:58:18",
-        "location": {
-          "latitude": -20.32887,
-          "longitude": -40.3381
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.833323",
-        "date": "02/10/2022 12:58:19",
-        "location": {
-          "latitude": -20.3287,
-          "longitude": -40.33809
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.999989",
-        "date": "02/10/2022 12:58:21",
-        "location": {
-          "latitude": -20.32852,
-          "longitude": -40.33805
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.166655",
-        "date": "02/10/2022 12:58:22",
-        "location": {
-          "latitude": -20.32852,
-          "longitude": -40.33805
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.33332",
-        "date": "02/10/2022 12:58:23",
-        "location": {
-          "latitude": -20.32852,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.499987",
-        "date": "02/10/2022 12:58:24",
-        "location": {
-          "latitude": -20.32852,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.666653",
-        "date": "02/10/2022 12:58:26",
-        "location": {
-          "latitude": -20.32851,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.499987",
-        "date": "02/10/2022 12:58:27",
-        "location": {
-          "latitude": -20.32851,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.33332",
-        "date": "02/10/2022 12:58:28",
-        "location": {
-          "latitude": -20.32851,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "22.166655",
-        "date": "02/10/2022 12:58:29",
-        "location": {
-          "latitude": -20.32851,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.999989",
-        "date": "02/10/2022 12:58:31",
-        "location": {
-          "latitude": -20.3285,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.833323",
-        "date": "02/10/2022 12:58:32",
-        "location": {
-          "latitude": -20.3285,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.666656",
-        "date": "02/10/2022 12:58:33",
-        "location": {
-          "latitude": -20.3285,
-          "longitude": -40.338
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.49999",
-        "date": "02/10/2022 12:58:34",
-        "location": {
-          "latitude": -20.3285,
-          "longitude": -40.338
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.333324",
-        "date": "02/10/2022 12:58:36",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.338
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "21.166658",
-        "date": "02/10/2022 12:58:37",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.338
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.999992",
-        "date": "02/10/2022 12:58:38",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.833326",
-        "date": "02/10/2022 12:58:39",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.66666",
-        "date": "02/10/2022 12:58:41",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.499994",
-        "date": "02/10/2022 12:58:42",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33801
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.333328",
-        "date": "02/10/2022 12:58:43",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33802
-        }
-      },
-      {
-        "status": 3,
-        "temperature": "20.166662",
-        "date": "02/10/2022 12:58:44",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33802
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.999996",
-        "date": "02/10/2022 12:58:45",
-        "location": {
-          "latitude": -20.32842,
-          "longitude": -40.33803
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.83333",
-        "date": "02/10/2022 12:58:47",
-        "location": {
-          "latitude": -20.32842,
-          "longitude": -40.33807
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.666664",
-        "date": "02/10/2022 12:58:48",
-        "location": {
-          "latitude": -20.32842,
-          "longitude": -40.33807
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.499998",
-        "date": "02/10/2022 12:58:49",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33807
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.333332",
-        "date": "02/10/2022 12:58:50",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33807
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.166666",
-        "date": "02/10/2022 12:58:52",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33808
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "19.0",
-        "date": "02/10/2022 12:58:53",
-        "location": {
-          "latitude": -20.32843,
-          "longitude": -40.33808
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.833334",
-        "date": "02/10/2022 12:58:54",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.33808
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.666668",
-        "date": "02/10/2022 12:58:56",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.33809
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.500002",
-        "date": "02/10/2022 12:58:57",
-        "location": {
-          "latitude": -20.32844,
-          "longitude": -40.33809
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.333336",
-        "date": "02/10/2022 12:58:58",
-        "location": {
-          "latitude": -20.32845,
-          "longitude": -40.33809
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.16667",
-        "date": "02/10/2022 12:58:59",
-        "location": {
-          "latitude": -20.32845,
-          "longitude": -40.33809
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "18.000004",
-        "date": "02/10/2022 12:59:00",
-        "location": {
-          "latitude": -20.32845,
-          "longitude": -40.3381
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "17.833338",
-        "date": "02/10/2022 12:59:02",
-        "location": {
-          "latitude": -20.32848,
-          "longitude": -40.3381
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "17.666672",
-        "date": "02/10/2022 12:59:03",
-        "location": {
-          "latitude": -20.32848,
-          "longitude": -40.3381
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "17.500006",
-        "date": "02/10/2022 12:59:04",
-        "location": {
-          "latitude": -20.32828,
-          "longitude": -40.33837
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "17.33334",
-        "date": "02/10/2022 12:59:05",
-        "location": {
-          "latitude": -20.32828,
-          "longitude": -40.33837
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "17.166674",
-        "date": "02/10/2022 12:59:07",
-        "location": {
-          "latitude": -20.32806,
-          "longitude": -40.33857
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "17.000008",
-        "date": "02/10/2022 12:59:08",
-        "location": {
-          "latitude": -20.32806,
-          "longitude": -40.33857
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "16.833342",
-        "date": "02/10/2022 12:59:09",
-        "location": {
-          "latitude": -20.32701,
-          "longitude": -40.33926
-        }
-      },
-      {
-        "status": 1,
-        "temperature": "16.666676",
-        "date": "02/10/2022 12:59:10",
-        "location": {
-          "latitude": -20.32701,
-          "longitude": -40.33926
+        "temperature": "16.333344",
+        "date": "02/10/2022 19:52:42",
+        "location": {
+          "latitude": -20.29749,
+          "longitude": -40.31883
         }
       },
       {
         "status": 1,
         "temperature": "16.50001",
-        "date": "02/10/2022 12:59:12",
+        "date": "02/10/2022 19:52:44",
         "location": {
-          "latitude": -20.32665,
-          "longitude": -40.33953
+          "latitude": -20.29708,
+          "longitude": -40.31777
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "16.666676",
+        "date": "02/10/2022 19:52:45",
+        "location": {
+          "latitude": -20.29706,
+          "longitude": -40.31763
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "16.833342",
+        "date": "02/10/2022 19:52:46",
+        "location": {
+          "latitude": -20.29707,
+          "longitude": -40.31757
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.000008",
+        "date": "02/10/2022 19:52:47",
+        "location": {
+          "latitude": -20.29709,
+          "longitude": -40.31751
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.166674",
+        "date": "02/10/2022 19:52:49",
+        "location": {
+          "latitude": -20.29719,
+          "longitude": -40.31737
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.33334",
+        "date": "02/10/2022 19:52:50",
+        "location": {
+          "latitude": -20.29728,
+          "longitude": -40.31728
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.500006",
+        "date": "02/10/2022 19:52:51",
+        "location": {
+          "latitude": -20.29736,
+          "longitude": -40.31722
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.666672",
+        "date": "02/10/2022 19:52:52",
+        "location": {
+          "latitude": -20.29738,
+          "longitude": -40.31705
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.833338",
+        "date": "02/10/2022 19:52:54",
+        "location": {
+          "latitude": -20.29738,
+          "longitude": -40.31693
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.000004",
+        "date": "02/10/2022 19:52:55",
+        "location": {
+          "latitude": -20.29736,
+          "longitude": -40.31687
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.16667",
+        "date": "02/10/2022 19:52:56",
+        "location": {
+          "latitude": -20.29718,
+          "longitude": -40.31657
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.333336",
+        "date": "02/10/2022 19:52:57",
+        "location": {
+          "latitude": -20.29701,
+          "longitude": -40.31623
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.500002",
+        "date": "02/10/2022 19:52:59",
+        "location": {
+          "latitude": -20.29695,
+          "longitude": -40.31616
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.666668",
+        "date": "02/10/2022 19:53:00",
+        "location": {
+          "latitude": -20.29664,
+          "longitude": -40.31568
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.833334",
+        "date": "02/10/2022 19:53:01",
+        "location": {
+          "latitude": -20.29649,
+          "longitude": -40.31537
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.0",
+        "date": "02/10/2022 19:53:02",
+        "location": {
+          "latitude": -20.29631,
+          "longitude": -40.31509
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.166666",
+        "date": "02/10/2022 19:53:04",
+        "location": {
+          "latitude": -20.29611,
+          "longitude": -40.31471
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.333332",
+        "date": "02/10/2022 19:53:05",
+        "location": {
+          "latitude": -20.29588,
+          "longitude": -40.31436
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.499998",
+        "date": "02/10/2022 19:53:06",
+        "location": {
+          "latitude": -20.29537,
+          "longitude": -40.31351
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.666664",
+        "date": "02/10/2022 19:53:07",
+        "location": {
+          "latitude": -20.29535,
+          "longitude": -40.31349
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.83333",
+        "date": "02/10/2022 19:53:09",
+        "location": {
+          "latitude": -20.29511,
+          "longitude": -40.313
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.999996",
+        "date": "02/10/2022 19:53:10",
+        "location": {
+          "latitude": -20.29501,
+          "longitude": -40.31255
+        }
+      },
+      {
+        "status": 2,
+        "temperature": "20.166662",
+        "date": "02/10/2022 19:53:11",
+        "location": {
+          "latitude": -20.29476,
+          "longitude": -40.31166
+        }
+      },
+      {
+        "status": 2,
+        "temperature": "20.333328",
+        "date": "02/10/2022 19:53:12",
+        "location": {
+          "latitude": -20.29451,
+          "longitude": -40.31116
+        }
+      },
+      {
+        "status": 2,
+        "temperature": "20.499994",
+        "date": "02/10/2022 19:53:13",
+        "location": {
+          "latitude": -20.294,
+          "longitude": -40.31045
+        }
+      },
+      {
+        "status": 2,
+        "temperature": "20.66666",
+        "date": "02/10/2022 19:53:15",
+        "location": {
+          "latitude": -20.29384,
+          "longitude": -40.31031
+        }
+      },
+      {
+        "status": 2,
+        "temperature": "20.833326",
+        "date": "02/10/2022 19:53:16",
+        "location": {
+          "latitude": -20.2936,
+          "longitude": -40.31013
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.999992",
+        "date": "02/10/2022 19:53:17",
+        "location": {
+          "latitude": -20.29355,
+          "longitude": -40.3101
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.166658",
+        "date": "02/10/2022 19:53:18",
+        "location": {
+          "latitude": -20.29348,
+          "longitude": -40.31001
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.333324",
+        "date": "02/10/2022 19:53:20",
+        "location": {
+          "latitude": -20.29339,
+          "longitude": -40.30994
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.49999",
+        "date": "02/10/2022 19:53:21",
+        "location": {
+          "latitude": -20.29329,
+          "longitude": -40.30984
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.666656",
+        "date": "02/10/2022 19:53:22",
+        "location": {
+          "latitude": -20.29318,
+          "longitude": -40.30969
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.833323",
+        "date": "02/10/2022 19:53:23",
+        "location": {
+          "latitude": -20.29299,
+          "longitude": -40.3093
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.999989",
+        "date": "02/10/2022 19:53:25",
+        "location": {
+          "latitude": -20.29294,
+          "longitude": -40.30922
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.166655",
+        "date": "02/10/2022 19:53:26",
+        "location": {
+          "latitude": -20.29274,
+          "longitude": -40.3087
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.33332",
+        "date": "02/10/2022 19:53:27",
+        "location": {
+          "latitude": -20.29265,
+          "longitude": -40.30842
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.499987",
+        "date": "02/10/2022 19:53:28",
+        "location": {
+          "latitude": -20.29262,
+          "longitude": -40.30837
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.666653",
+        "date": "02/10/2022 19:53:30",
+        "location": {
+          "latitude": -20.29258,
+          "longitude": -40.30826
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.499987",
+        "date": "02/10/2022 19:53:31",
+        "location": {
+          "latitude": -20.29242,
+          "longitude": -40.30791
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.33332",
+        "date": "02/10/2022 19:53:32",
+        "location": {
+          "latitude": -20.29239,
+          "longitude": -40.30779
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "22.166655",
+        "date": "02/10/2022 19:53:33",
+        "location": {
+          "latitude": -20.29238,
+          "longitude": -40.30779
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.999989",
+        "date": "02/10/2022 19:53:35",
+        "location": {
+          "latitude": -20.2923,
+          "longitude": -40.30749
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.833323",
+        "date": "02/10/2022 19:53:36",
+        "location": {
+          "latitude": -20.29229,
+          "longitude": -40.30742
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.666656",
+        "date": "02/10/2022 19:53:37",
+        "location": {
+          "latitude": -20.29165,
+          "longitude": -40.30523
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.49999",
+        "date": "02/10/2022 19:53:38",
+        "location": {
+          "latitude": -20.29163,
+          "longitude": -40.3051
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.333324",
+        "date": "02/10/2022 19:53:40",
+        "location": {
+          "latitude": -20.29104,
+          "longitude": -40.30291
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "21.166658",
+        "date": "02/10/2022 19:53:41",
+        "location": {
+          "latitude": -20.29103,
+          "longitude": -40.30285
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.999992",
+        "date": "02/10/2022 19:53:42",
+        "location": {
+          "latitude": -20.29101,
+          "longitude": -40.30279
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.833326",
+        "date": "02/10/2022 19:53:43",
+        "location": {
+          "latitude": -20.28976,
+          "longitude": -40.30333
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.66666",
+        "date": "02/10/2022 19:53:44",
+        "location": {
+          "latitude": -20.28792,
+          "longitude": -40.30404
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.499994",
+        "date": "02/10/2022 19:53:46",
+        "location": {
+          "latitude": -20.28757,
+          "longitude": -40.30411
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.333328",
+        "date": "02/10/2022 19:53:47",
+        "location": {
+          "latitude": -20.2874,
+          "longitude": -40.30413
+        }
+      },
+      {
+        "status": 3,
+        "temperature": "20.166662",
+        "date": "02/10/2022 19:53:48",
+        "location": {
+          "latitude": -20.28717,
+          "longitude": -40.30414
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.999996",
+        "date": "02/10/2022 19:53:49",
+        "location": {
+          "latitude": -20.2869,
+          "longitude": -40.30412
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.83333",
+        "date": "02/10/2022 19:53:51",
+        "location": {
+          "latitude": -20.28671,
+          "longitude": -40.30409
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.666664",
+        "date": "02/10/2022 19:53:52",
+        "location": {
+          "latitude": -20.28668,
+          "longitude": -40.30408
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.499998",
+        "date": "02/10/2022 19:53:53",
+        "location": {
+          "latitude": -20.28666,
+          "longitude": -40.30408
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.333332",
+        "date": "02/10/2022 19:53:54",
+        "location": {
+          "latitude": -20.28654,
+          "longitude": -40.30404
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.166666",
+        "date": "02/10/2022 19:53:55",
+        "location": {
+          "latitude": -20.2865,
+          "longitude": -40.30402
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "19.0",
+        "date": "02/10/2022 19:53:57",
+        "location": {
+          "latitude": -20.2864,
+          "longitude": -40.30399
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.833334",
+        "date": "02/10/2022 19:53:58",
+        "location": {
+          "latitude": -20.28609,
+          "longitude": -40.30383
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.666668",
+        "date": "02/10/2022 19:53:59",
+        "location": {
+          "latitude": -20.28591,
+          "longitude": -40.30371
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.500002",
+        "date": "02/10/2022 19:54:00",
+        "location": {
+          "latitude": -20.28475,
+          "longitude": -40.30281
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.333336",
+        "date": "02/10/2022 19:54:02",
+        "location": {
+          "latitude": -20.28458,
+          "longitude": -40.30273
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.16667",
+        "date": "02/10/2022 19:54:03",
+        "location": {
+          "latitude": -20.28452,
+          "longitude": -40.30269
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "18.000004",
+        "date": "02/10/2022 19:54:04",
+        "location": {
+          "latitude": -20.284,
+          "longitude": -40.30247
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.833338",
+        "date": "02/10/2022 19:54:05",
+        "location": {
+          "latitude": -20.28339,
+          "longitude": -40.30218
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.666672",
+        "date": "02/10/2022 19:54:07",
+        "location": {
+          "latitude": -20.28318,
+          "longitude": -40.30205
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.500006",
+        "date": "02/10/2022 19:54:08",
+        "location": {
+          "latitude": -20.28282,
+          "longitude": -40.30188
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.33334",
+        "date": "02/10/2022 19:54:09",
+        "location": {
+          "latitude": -20.28267,
+          "longitude": -40.30186
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.166674",
+        "date": "02/10/2022 19:54:10",
+        "location": {
+          "latitude": -20.28213,
+          "longitude": -40.30175
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "17.000008",
+        "date": "02/10/2022 19:54:12",
+        "location": {
+          "latitude": -20.27677,
+          "longitude": -40.30091
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "16.833342",
+        "date": "02/10/2022 19:54:13",
+        "location": {
+          "latitude": -20.2766,
+          "longitude": -40.3009
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "16.666676",
+        "date": "02/10/2022 19:54:14",
+        "location": {
+          "latitude": -20.27535,
+          "longitude": -40.30074
+        }
+      },
+      {
+        "status": 1,
+        "temperature": "16.50001",
+        "date": "02/10/2022 19:54:15",
+        "location": {
+          "latitude": -20.27482,
+          "longitude": -40.3007
         }
       },
       {
         "status": 1,
         "temperature": "16.333344",
-        "date": "02/10/2022 12:59:13",
+        "date": "02/10/2022 19:54:16",
         "location": {
-          "latitude": -20.32665,
-          "longitude": -40.33953
+          "latitude": -20.27397,
+          "longitude": -40.3007
         }
       },
       {
         "status": 1,
         "temperature": "16.166677",
-        "date": "02/10/2022 12:59:14",
+        "date": "02/10/2022 19:54:18",
         "location": {
-          "latitude": -20.32627,
-          "longitude": -40.3399
+          "latitude": -20.27358,
+          "longitude": -40.30072
         }
       },
       {
         "status": 1,
         "temperature": "16.000011",
-        "date": "02/10/2022 12:59:15",
+        "date": "02/10/2022 19:54:19",
         "location": {
-          "latitude": -20.32627,
-          "longitude": -40.3399
+          "latitude": -20.27281,
+          "longitude": -40.30083
         }
       },
       {
         "status": 1,
         "temperature": "15.833344",
-        "date": "02/10/2022 12:59:17",
+        "date": "02/10/2022 19:54:20",
         "location": {
-          "latitude": -20.32619,
-          "longitude": -40.34
+          "latitude": -20.27108,
+          "longitude": -40.30116
         }
       },
       {
         "status": 1,
         "temperature": "15.666677",
-        "date": "02/10/2022 12:59:18",
+        "date": "02/10/2022 19:54:21",
         "location": {
-          "latitude": -20.32619,
-          "longitude": -40.34
+          "latitude": -20.27073,
+          "longitude": -40.30117
         }
       },
       {
         "status": 1,
         "temperature": "15.5000105",
-        "date": "02/10/2022 12:59:19",
+        "date": "02/10/2022 19:54:23",
         "location": {
-          "latitude": -20.326,
-          "longitude": -40.34029
+          "latitude": -20.27057,
+          "longitude": -40.30114
         }
       },
       {
         "status": 1,
         "temperature": "15.3333435",
-        "date": "02/10/2022 12:59:20",
+        "date": "02/10/2022 19:54:24",
         "location": {
-          "latitude": -20.326,
-          "longitude": -40.34029
+          "latitude": -20.27041,
+          "longitude": -40.30109
         }
       },
       {
         "status": 1,
         "temperature": "15.1666765",
-        "date": "02/10/2022 12:59:22",
+        "date": "02/10/2022 19:54:25",
         "location": {
-          "latitude": -20.32595,
-          "longitude": -40.34039
+          "latitude": -20.27026,
+          "longitude": -40.30103
         }
       },
       {
         "status": 1,
         "temperature": "15.00001",
-        "date": "02/10/2022 12:59:23",
+        "date": "02/10/2022 19:54:26",
         "location": {
-          "latitude": -20.32595,
-          "longitude": -40.34039
+          "latitude": -20.26998,
+          "longitude": -40.30086
         }
       },
       {
         "status": 0,
         "temperature": "14.833343",
-        "date": "02/10/2022 12:59:24",
+        "date": "02/10/2022 19:54:28",
         "location": {
-          "latitude": -20.32592,
-          "longitude": -40.34048
+          "latitude": -20.26587,
+          "longitude": -40.29732
         }
       },
       {
         "status": 0,
         "temperature": "14.666676",
-        "date": "02/10/2022 12:59:25",
+        "date": "02/10/2022 19:54:29",
         "location": {
-          "latitude": -20.32592,
-          "longitude": -40.34048
+          "latitude": -20.26582,
+          "longitude": -40.2972
         }
       },
       {
         "status": 0,
         "temperature": "14.500009",
-        "date": "02/10/2022 12:59:26",
+        "date": "02/10/2022 19:54:30",
         "location": {
-          "latitude": -20.32591,
-          "longitude": -40.34049
+          "latitude": -20.26582,
+          "longitude": -40.29718
         }
       },
       {
         "status": 0,
         "temperature": "14.333342",
-        "date": "02/10/2022 12:59:28",
+        "date": "02/10/2022 19:54:31",
         "location": {
-          "latitude": -20.32585,
-          "longitude": -40.34073
+          "latitude": -20.26581,
+          "longitude": -40.29716
         }
       },
       {
         "status": 0,
         "temperature": "14.166675",
-        "date": "02/10/2022 12:59:29",
+        "date": "02/10/2022 19:54:33",
         "location": {
-          "latitude": -20.32585,
-          "longitude": -40.34073
+          "latitude": -20.26581,
+          "longitude": -40.29709
         }
       },
       {
         "status": 0,
         "temperature": "14.000008",
-        "date": "02/10/2022 12:59:30",
+        "date": "02/10/2022 19:54:34",
         "location": {
-          "latitude": -20.32581,
-          "longitude": -40.34097
+          "latitude": -20.26582,
+          "longitude": -40.29707
         }
       },
       {
         "status": 0,
         "temperature": "13.833341",
-        "date": "02/10/2022 12:59:31",
+        "date": "02/10/2022 19:54:35",
         "location": {
-          "latitude": -20.32581,
-          "longitude": -40.34097
+          "latitude": -20.26582,
+          "longitude": -40.29705
         }
       },
       {
         "status": 0,
         "temperature": "13.666674",
-        "date": "02/10/2022 12:59:33",
+        "date": "02/10/2022 19:54:36",
         "location": {
-          "latitude": -20.32588,
-          "longitude": -40.34276
+          "latitude": -20.26583,
+          "longitude": -40.29703
         }
       },
       {
         "status": 0,
         "temperature": "13.500007",
-        "date": "02/10/2022 12:59:34",
+        "date": "02/10/2022 19:54:37",
         "location": {
-          "latitude": -20.32588,
-          "longitude": -40.34276
+          "latitude": -20.26583,
+          "longitude": -40.29701
         }
       },
       {
         "status": 0,
         "temperature": "13.33334",
-        "date": "02/10/2022 12:59:35",
+        "date": "02/10/2022 19:54:39",
         "location": {
-          "latitude": -20.32593,
-          "longitude": -40.34305
+          "latitude": -20.26584,
+          "longitude": -40.29699
         }
       },
       {
         "status": 0,
         "temperature": "13.166673",
-        "date": "02/10/2022 12:59:36",
+        "date": "02/10/2022 19:54:40",
         "location": {
-          "latitude": -20.32593,
-          "longitude": -40.34305
+          "latitude": -20.26597,
+          "longitude": -40.29682
         }
       },
       {
         "status": 0,
         "temperature": "13.000006",
-        "date": "02/10/2022 12:59:38",
+        "date": "02/10/2022 19:54:41",
         "location": {
-          "latitude": -20.32605,
-          "longitude": -40.34344
+          "latitude": -20.26603,
+          "longitude": -40.29677
         }
       },
       {
         "status": 0,
         "temperature": "12.833339",
-        "date": "02/10/2022 12:59:39",
+        "date": "02/10/2022 19:54:42",
         "location": {
-          "latitude": -20.32605,
-          "longitude": -40.34344
+          "latitude": -20.26619,
+          "longitude": -40.2966
         }
       },
       {
         "status": 0,
         "temperature": "12.666672",
-        "date": "02/10/2022 12:59:40",
+        "date": "02/10/2022 19:54:44",
         "location": {
-          "latitude": -20.32616,
-          "longitude": -40.34366
+          "latitude": -20.2669,
+          "longitude": -40.29548
         }
       },
       {
         "status": 0,
         "temperature": "12.500005",
-        "date": "02/10/2022 12:59:41",
+        "date": "02/10/2022 19:54:45",
         "location": {
-          "latitude": -20.32616,
-          "longitude": -40.34366
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "12.333338",
-        "date": "02/10/2022 12:59:43",
-        "location": {
-          "latitude": -20.32627,
-          "longitude": -40.34382
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "12.166671",
-        "date": "02/10/2022 12:59:44",
-        "location": {
-          "latitude": -20.32627,
-          "longitude": -40.34382
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "12.000004",
-        "date": "02/10/2022 12:59:45",
-        "location": {
-          "latitude": -20.32824,
-          "longitude": -40.34609
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "11.833337",
-        "date": "02/10/2022 12:59:46",
-        "location": {
-          "latitude": -20.32824,
-          "longitude": -40.34609
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "11.66667",
-        "date": "02/10/2022 12:59:48",
-        "location": {
-          "latitude": -20.32836,
-          "longitude": -40.34631
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "11.500003",
-        "date": "02/10/2022 12:59:49",
-        "location": {
-          "latitude": -20.32836,
-          "longitude": -40.34631
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "11.333336",
-        "date": "02/10/2022 12:59:50",
-        "location": {
-          "latitude": -20.3286,
-          "longitude": -40.34684
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "11.166669",
-        "date": "02/10/2022 12:59:51",
-        "location": {
-          "latitude": -20.3286,
-          "longitude": -40.34684
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "11.000002",
-        "date": "02/10/2022 12:59:52",
-        "location": {
-          "latitude": -20.32886,
-          "longitude": -40.34752
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "10.833335",
-        "date": "02/10/2022 12:59:54",
-        "location": {
-          "latitude": -20.32886,
-          "longitude": -40.34755
-        }
-      },
-      {
-        "status": 0,
-        "temperature": "10.666668",
-        "date": "02/10/2022 12:59:55",
-        "location": {
-          "latitude": -20.32886,
-          "longitude": -40.34755
+          "latitude": -20.26692,
+          "longitude": -40.29531
         }
       }
     ]

@@ -22,11 +22,13 @@ function App() {
   const [timeOut, setTimeOut] = useState(false);
   const [vaccinesStatusNotify,setVaccinesStatusNotify] = useGlobalState('status')
   const [emailSend,setEmailSend] = useState(false);
+  const [ownerKey,setOwnerKey] = useState("mikaella");
   const {
     sendMessage,
     lastMessage,
     readyState
   } = useWebSocket('ws://localhost:3001/api/vacina/status');
+
   useEffect( ()=>{
     async function fetchData(){
       await getVaccinesInformation();
@@ -34,7 +36,6 @@ function App() {
 
       if(lastMessage!==null){
         setVaccineDatasToControl(JSON.parse(lastMessage.data));
-
       }     
     }
     fetchData();
@@ -56,13 +57,20 @@ function App() {
   
   useEffect(()=>{
     if(emailSend){
-    localStorage.setItem("sendEmail",'true');
+      localStorage.setItem("sendEmail",'true');
     }
     else{
       localStorage.setItem("sendEmail",'false');
     }
   },[emailSend])
-
+  useEffect(()=>{
+    if(ownerKey==='mikaella'){
+      localStorage.setItem("keySendGrid",'0');
+    }
+    else{
+      localStorage.setItem("keySendGrid",'1');
+    }
+  },[ownerKey])
   const handleColorVaccine = (colors)=>{
     setColorsVaccine(colors);
   }
@@ -103,17 +111,33 @@ function App() {
   const handleSendemail = async ()=>{
       setEmailSend(!emailSend);
   }
-
+  const handleChangeAPIKEY = async ()=>{
+    if(ownerKey === 'mikaella'){
+      setOwnerKey('gabriel');
+    }
+    else{
+      setOwnerKey('mikaella');
+    }
+  }
   return (
     <div className="App">
       <Presentation/>
       <Notify/>
-      <div className={emailSend?'div-button-sendemail active':'div-button-sendemail'}>
-        <div onClick={handleSendemail} className='button-sendemail'>
-          SendEmail
-        </div>
-        Status: {String(emailSend)}
-      </div> 
+      <div style={{display:'flex',flexDirection:'row',width:'100%',justifyContent:'space-around',marginTop:'5%'}}>
+      <div className={ownerKey==='mikaella'?'div-button-changeKey':'div-button-changeKey gabriel'}>
+          <div onClick={handleChangeAPIKEY} className='button-changerKey'>
+            Troca KEY
+          </div>
+          Owner Key: {ownerKey}
+        </div> 
+
+        <div className={emailSend?'div-button-sendemail active':'div-button-sendemail'}>
+          <div onClick={handleSendemail} className='button-sendemail'>
+            SendEmail
+          </div>
+          Status: {String(emailSend)}
+        </div> 
+      </div>
       <div className='data-row'>
         <TemperatureGraph updateColorVaccine={handleColorVaccine} datas={vaccineDatasToControl} vaccines={vaccines}/>
         <Map colorsToVaccine={colorsVaccine} datas={vaccineDatasToControl} vaccines={vaccines} managers={managers} datasToManagers={managerData}/>

@@ -10,10 +10,12 @@ dotenv.config({
 
 const axios = require('axios')
 const emailSendUrl = 'https://api.sendgrid.com/v3/mail/send'
-const sendgridApiKey = process.env.SENDGRID_API_KEY
+
 
 export const sendEmail= async (email: EmailMessage) => {
-
+    const sendgridApiKey = email.key===0?process.env.SENDGRID_API_KEY:process.env.SENDGRID_API_KEY2
+    const dangerId = email.key===0?"d-5e77f1ed29fd4e16a0f39e3b5853eb9e" :'d-7896e840032c4c2b8e6c57c2119ced2c'
+    const warningId = email.key===0?"d-6463b62cb655495ebf3fff00eefc7ebf":"d-537ac74b7c2048d1ad122d08e96273dd"
     try{
         const message = {
                             'personalizations': [
@@ -36,13 +38,13 @@ export const sendEmail= async (email: EmailMessage) => {
                             'from': {
                                 'email': email.from
                             },
-                            "template_id":email.vaccine.status===Status.warning?"d-6463b62cb655495ebf3fff00eefc7ebf"
-                                                                                :"d-5e77f1ed29fd4e16a0f39e3b5853eb9e" 
+                            "template_id":email.vaccine.status===Status.warning?warningId
+                                                                                :dangerId
                             // 'content': [
                             //     {
                             //         'type': 'text/html',
-                            //         'value': email.html
-                            //     },
+                            //         'value': email.text
+                            //     }
                             
                             // ]
 
