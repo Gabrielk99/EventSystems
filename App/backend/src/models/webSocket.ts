@@ -49,7 +49,7 @@ const whileSend = async (ws:any,caseRequest:Number) =>{
         else {
             continue;
         }
-        await delay(700);
+        await delay(1500);
     }
 }
 const delay = (time:number)=>{

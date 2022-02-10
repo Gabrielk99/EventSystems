@@ -13,3 +13,23 @@
     margin-bottom: 10%;
     margin-top: 5%;
 }
+.div-button-sendemail{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-self: flex-end;
+    align-items: center;
+    margin-right: 5%;
+    color:rgb(192, 101, 101);
+}
+.button-sendemail{
+    color: white;
+    padding: 10px;
+    border-radius: 99px;
+    background-color: rgb(80, 29, 128);
+    cursor: pointer;
+}
+.active{
+    color:rgb(139, 224, 139)
+}
+

@@ -12,25 +12,36 @@ export const checkAndSendNotification = async (vacina: VaccineStatus) => {
     case Status.ok:
         localStorage.setItem(`vaccineWarning${vacina.id}`,'true');
         localStorage.setItem(`vaccineDanger${vacina.id}`,'true');
-        return {status:Status.ok, message:"lote em estado normal"};
+        localStorage.setItem(`vaccineGameOver${vacina.id}`,'true');
+        return {status:Status.ok,alert:false, message:"lote em estado normal",vacina:vacina};
     case Status.warning:
         var itsSend:any = localStorage.getItem(`vaccineWarning${vacina.id}`)
         itsSend = itsSend===null?true:itsSend==='false'?false:true;
         if(itsSend){
             await processWarningStatus(vacina)
             localStorage.setItem(`vaccineWarning${vacina.id}`,'false')
+            localStorage.setItem(`vaccineAlert${vacina.id}`,'true')
         }
-        return {status:Status.warning,message:`lote em perigo, todos gestores avisados`};
+        return {status:Status.warning,message:`lote em perigo, todos gestores avisados`,vacina:vacina};
     case Status.danger:
         var itsSendDanger:any = (localStorage.getItem(`vaccineDanger${vacina.id}`))
         itsSendDanger = itsSendDanger===null?true:itsSendDanger==='false'?false:true;
         if(itsSendDanger){
             localStorage.setItem(`vaccineDanger${vacina.id}`,'false')
+            localStorage.setItem(`vaccineAlert${vacina.id}`,'true')
             return await processDangerStatus(vacina)
         }
-        return {status:Status.danger, message:"lote em perigo o gestor mais próximo ja foi avisado."}
+        const manager: Manager = await getNearestManager(vacina.location)
+        return {status:Status.danger, message:"lote em perigo o gestor mais próximo ja foi avisado.",manager:manager,vacina:vacina}
     case Status.gameover:
-        return {status:Status.gameover,message:'descarte do lote de vacina urgente.'}
+        var itsSendGameOver:any=(localStorage.getItem(`vaccineGameOver${vacina.id}`))
+        itsSendGameOver = itsSendGameOver===null?true:itsSendGameOver==='false'?false:true;
+        if(itsSendGameOver){
+            localStorage.setItem(`vaccineGameOver${vacina.id}`,'false')
+            localStorage.setItem(`vaccineAlert${vacina.id}`,'true')
+        }
+        return {status:Status.gameover,message:'descarte do lote de vacina urgente.',vacina:vacina}
+
     }
 }
 
@@ -52,10 +63,11 @@ const processWarningStatus = async (vaccine:VaccineStatus) => {
 
     managers.forEach( async (manager) => {
         const message = await generateMessage(manager, vaccine)
-        var send:any = process.env.REACT_APP_SEND_EMAIL==='true'?true:false;
+        var send:any = localStorage.getItem('sendEmail')==='true'?true:false;
  
-        if(send)
+        if(send){
             var res = await sendEmail(message);
+        }
     })
 }
 
@@ -63,11 +75,11 @@ const processDangerStatus = async (vaccine:VaccineStatus) => {
     const manager: Manager = await getNearestManager(vaccine.location)
 
     const message = await generateMessage(manager, vaccine)
-    const send = process.env.REACT_APP_SEND_EMAIL==='true'?true:false
+    const send = localStorage.getItem("sendEmail")==='true'?true:false
 
     if(send)
         var res = await sendEmail(message);
-    return {status:Status.danger,message:"lote em perigo o gestor mais perto foi avisado", manager:manager}
+    return {status:Status.danger,message:"lote em perigo o gestor mais perto foi avisado", manager:manager,vacina:vaccine}
 }
 
 export const getNearestManager = async (location: Location) => {
