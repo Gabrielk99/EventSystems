@@ -88,7 +88,7 @@ var whileSend = function (ws, caseRequest) { return __awaiter(void 0, void 0, vo
                 else {
                     return [3 /*break*/, 1];
                 }
-                return [4 /*yield*/, delay(700)];
+                return [4 /*yield*/, delay(1500)];
             case 2:
                 _a.sent();
                 return [3 /*break*/, 1];

@@ -1,0 +1,56 @@
+.alert-message{
+    width: 750px;
+    height: 300px;
+    padding: 2%;
+    color: white;
+    position: fixed;
+    top:15%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(111, 150, 151);
+    z-index: 100;
+}
+.body-alert{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+}
+.message{
+    padding: 5px;
+    width: 95%;
+    margin-top: 10px;
+    background-color: rgb(41, 63, 126);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+.message img{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.div-notify{
+    display: flex;
+    justify-content: center;
+}
+.button-confirm-notify{
+    margin-top: 5%;
+    width: 200px;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(147, 214, 147);
+    border-radius: 99px;
+    transition: color 250ms ease-in;
+}
+.button-confirm-notify:hover{
+    color:rgb(147, 214, 147);
+    background-color: white;
+}
