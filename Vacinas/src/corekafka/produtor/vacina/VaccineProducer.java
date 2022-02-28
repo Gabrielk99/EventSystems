@@ -72,6 +72,7 @@ public class VaccineProducer extends Producer {
     /**
      * Envia mensagem para o topico vacina
      */
+    @Override
     public void sendMessage(){
         
         String message = this.generateMessage(this._vaccine.getCurrentLocation(),
