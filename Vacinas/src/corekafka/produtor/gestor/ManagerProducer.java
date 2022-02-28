@@ -55,7 +55,8 @@ public class ManagerProducer extends Producer {
     /**
      * Função que envia a localização atual do gestor para o tópico "gestor"
      */
-    public void sendLocation() {
+    @Override
+    public void sendMessage() {
         // Pega localização atual e cria string do json
         Coordinates currentLocation = manager.getCurrentPosition();
         String message = generateJsonMessage(currentLocation);
