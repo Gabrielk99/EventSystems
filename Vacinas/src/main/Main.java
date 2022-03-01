@@ -1,6 +1,7 @@
 package src.main;
 import src.corekafka.produtor.gestor.*;
 import src.corekafka.produtor.vacina.*;
+import src.corekafka.stream.*;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +31,12 @@ public class Main{
         createConsumersProducersVaccine(consumersToVaccine,producersToVaccine);
         createConsumersProducersManager(consumersToManagers,producersToManagers);
 
+        SmartStream streamController = new SmartStream("localhost:9092","vacina");
+        SmartStream streamController1 = new SmartStream("localhost:9092","vacina");
+        SmartStream streamController2 = new SmartStream("localhost:9092","vacina");
+        streamController.run();
+        streamController1.run();
+        streamController2.run();
         while(true){
 
             for(VaccineProducer producerVaccine:producersToVaccine){
@@ -40,12 +47,12 @@ public class Main{
                 producerManager.sendLocation();
             }
           
-            for(VaccineConsumer consumerVaccine:consumersToVaccine){
-                System.out.println("CONSUMIDOR VACINA X LENDO X");
-                consumerVaccine.consumeMessages();
-            }
+            // for(VaccineConsumer consumerVaccine:consumersToVaccine){
+            //     // System.out.println("CONSUMIDOR VACINA X LENDO X");
+            //     consumerVaccine.consumeMessages();
+            // }
             for(ManagerConsumer consumerManager:consumersToManagers){
-                System.out.println("CONSUMIDOR GESTOR X LENDO X ");
+                // System.out.println("CONSUMIDOR GESTOR X LENDO X ");
                 consumerManager.consumeMessages();
             }
             

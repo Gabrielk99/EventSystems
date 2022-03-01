@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.time.Duration;
 import java.util.Calendar;
 import java.util.stream.Stream;
+import src.models.VaccineStatus;
 
 import src.types.SavedMessageVaccine;
 /**
@@ -32,6 +33,7 @@ import src.types.SavedMessageVaccine;
 public class VaccineConsumer extends Consumer {
     private HashMap<Integer, Vaccine> vacinas;
     private HashMap<Integer, Double> timeWhenReachedMaxTemp;
+
 
     /**
      * Construtor da classe
