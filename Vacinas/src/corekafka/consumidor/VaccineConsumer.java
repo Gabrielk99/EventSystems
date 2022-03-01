@@ -31,10 +31,6 @@ import src.types.SavedMessageVaccine;
  * Classe que representa o consumidor das informações que os produtores de vacina enviam
  */
 public class VaccineConsumer extends Consumer {
-    private HashMap<Integer, Vaccine> vacinas;
-    private HashMap<Integer, Double> timeWhenReachedMaxTemp;
-
-
     /**
      * Construtor da classe
      * @param BootstrapServer   server onde o kafka está rodando
@@ -44,38 +40,6 @@ public class VaccineConsumer extends Consumer {
      */
     public VaccineConsumer (String BootstrapServer, String consumerGroupName, String topicToConsume, Path pathToVaccinesFolder) {
         super(BootstrapServer,consumerGroupName,topicToConsume);
-
-        this.timeWhenReachedMaxTemp = new HashMap<Integer, Double>();
-        this.vacinas = searchForVaccines(pathToVaccinesFolder);
-    }
-
-    /**
-     *  Função responsável por buscar os arquivos de configurações das vacinas
-     * @param path  caminho até a pasta onde se encontram os arquivos de configuração das vacinas
-     * @return  Um hashmap com as informações das vacinas
-     */
-    private HashMap<Integer, Vaccine> searchForVaccines(Path path) {
-        HashMap<Integer, Vaccine> vaccinesFound = new HashMap<Integer, Vaccine>();
-
-        try {
-            // lendo o conteudo json
-            String content = String.join("",Files.readAllLines(path));
-        
-            // pegando o json da string como um objeto json
-            JsonObject vaccinesData = new JsonParser().parse(content).getAsJsonObject();
-            JsonArray vaccinesDataList = vaccinesData.get("vacinas").getAsJsonArray();
-
-            for(JsonElement vaccine_json:vaccinesDataList){
-                Vaccine vaccine = new Vaccine(vaccine_json.getAsJsonObject());
-                vaccinesFound.put(vaccine.getId(),vaccine);
-                this.timeWhenReachedMaxTemp.put(vaccine.getId(), (double) 0.0);
-            }
-           
-        }catch (Exception e) {
-            System.out.printf("error %s ",e.getMessage());
-            System.exit(e.hashCode());
-        }
-        return vaccinesFound;
     }
 
     /**
@@ -151,35 +115,6 @@ public class VaccineConsumer extends Consumer {
     }
 
     /**
-     * Função responsável por checar o status da vacina dada a temperatura atual e o tempo atual
-     * @param id
-     * @param currentTime
-     * @param temperature
-     * @return
-     */
-    private VaccineStatus checkVaccineStatus(Integer id, double currentTime, float temperature) {
-        Vaccine vacina = vacinas.get(id);
-        Double timeMaxTemp = timeWhenReachedMaxTemp.get(id);
-        float maxTemperatureLim = vacina.getMaxTemperatureLim();
-
-        // Se a temperatura está abaixo do limite, seta o marcador de quando a vacina
-        // atingiu o max para o tempo atual para que currentTime - timeMaxTemp seja igual a 0.
-        if (temperature <= maxTemperatureLim) {
-            timeMaxTemp = currentTime;
-            timeWhenReachedMaxTemp.put(id, timeMaxTemp);
-        }
-
-        // System.out.println("Time que passou: " + (currentTime - timeMaxTemp) + " -> " + vacina.getTimeWaitMax());
-        return VaccineStatus.checkStatus(
-            temperature,
-            vacina.getMidleTemperatureLim(),
-            maxTemperatureLim,
-            currentTime - timeMaxTemp,  // tempo que passou acima da temperatura maxima limite
-            vacina.getTimeWaitMax()
-        );
-    }
-
-    /**
      * Função responsável por consumir mensagens enviadas no tópico em que está inscrito e tratá-las
      */
     @Override
@@ -188,15 +123,10 @@ public class VaccineConsumer extends Consumer {
         double now = Calendar.getInstance().getTime().getTime()/1000; // Pega tempo atual
         for (ConsumerRecord<String, String> record : records) {
             JsonObject vaccineMessage = new JsonParser().parse(record.value()).getAsJsonObject(); // Faz o parse do record recebido para objeto Json
-            VaccineStatus status = this.checkVaccineStatus(   // Checa o status da vacina
-                    Integer.parseInt(vaccineMessage.get("id").getAsString()),
-                    now,
-                    Float.parseFloat(vaccineMessage.get("temperatura").getAsString())
-            );
 
             generateAndSaveJSON(
                     vaccineMessage.get("id").getAsInt(),
-                    status.ordinal(),
+                    vaccineMessage.get("status").getAsInt(),
                     vaccineMessage.get("temperatura").getAsString(),        // Gera o Json com, principalmente, id e status da vacina num arquivo
                     vaccineMessage.get("localizacao"),
                     vaccineMessage.get("data").getAsString()
