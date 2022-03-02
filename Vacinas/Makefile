@@ -6,7 +6,9 @@ KAFKA_PATH=kafka-clients-3.0.0.jar
 slf4jAPI_PATH=slf4j-api-1.7.25.jar
 GSON_PATH=gson-2.8.2.jar
 slf4jSIMPLE_PATH=slf4j-simple-1.7.25.jar
-CLASS_PATH_OPTION=-cp .:$(KAFKA_PATH):$(slf4jAPI_PATH):$(GSON_PATH):$(slf4jSIMPLE_PATH)
+httpclient_ṔATH=httpclient5-5.1.3.jar
+httpcore_PATH=httpcore5-5.1.3.jar
+CLASS_PATH_OPTION=-cp .:$(KAFKA_PATH):$(slf4jAPI_PATH):$(GSON_PATH):$(slf4jSIMPLE_PATH):$(httpclient_ṔATH):$(httpcore_ṔATH)
 
 MAIN_PATH= src/main
 # Diretório para os arquivos .class
@@ -22,7 +24,7 @@ all: javac
 javac:
 	rm -fr $(BIN_PATH)
 	mkdir $(BIN_PATH)
-	$(JAVAC) $(CLASS_PATH_OPTION) -d $(BIN_PATH) src/corekafka/produtor/vacina/*.java src/corekafka/simulacao/*.java src/types/*.java src/corekafka/produtor/gestor/*.java src/corekafka/produtor/*.java src/corekafka/consumidor/*.java src/main/*.java 
+	$(JAVAC) $(CLASS_PATH_OPTION) -d $(BIN_PATH) src/corekafka/produtor/vacina/*.java src/corekafka/simulacao/*.java src/types/*.java src/corekafka/produtor/gestor/*.java src/corekafka/produtor/*.java src/corekafka/consumidor/*.java src/api/*.java src/main/*.java
 
 run:
 	$(JAVA) $(CLASS_PATH_OPTION):$(BIN_PATH) $(MAIN_PATH)/Main $(FILE)

@@ -24,7 +24,7 @@ public class Producer {
         producer = new KafkaProducer<String, String>(prop);
     }
 
-    public sendMessage() {}
+    public void sendMessage() {}
 
     public KafkaProducer<String, String> getProducer() { return this.producer; }
 }
