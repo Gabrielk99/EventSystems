@@ -28,8 +28,8 @@ export const sendEmail= async (email: EmailMessage) => {
                                     'subject': email.subject,
                                     "dynamic_template_data":{
                                         "name":email.vaccine.name,
-                                        "lat":email.vaccine.location.latitude,
-                                        "long":email.vaccine.location.longitude,
+                                        "lat":email.location.latitude,
+                                        "long":email.location.longitude,
                                         "manager":email.manager,                                  
                                         "address":email.address
                                     }
@@ -38,7 +38,7 @@ export const sendEmail= async (email: EmailMessage) => {
                             'from': {
                                 'email': email.from
                             },
-                            "template_id":email.vaccine.status===Status.warning?warningId
+                            "template_id":email.status===Status.warning?warningId
                                                                                 :dangerId
                             // 'content': [
                             //     {

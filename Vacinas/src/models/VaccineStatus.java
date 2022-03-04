@@ -1,4 +1,4 @@
-package src.corekafka.consumidor;
+package src.models;
 
 /**
  * Status da vacina: Ok, warning e danger segundo os critérios estabelecidos

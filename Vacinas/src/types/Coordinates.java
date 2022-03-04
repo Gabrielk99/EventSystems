@@ -14,8 +14,8 @@ import java.util.Arrays;
  */
 public class Coordinates{
     
-    private double _latitude;
-    private double _longitude;
+    private double latitude;
+    private double longitude;
 
     /**
      * 
@@ -24,8 +24,8 @@ public class Coordinates{
      */
     public Coordinates (double longi, double lat){
 
-        this._latitude=lat;
-        this._longitude=longi;
+        this.latitude=lat;
+        this.longitude=longi;
 
     }
 
@@ -34,17 +34,17 @@ public class Coordinates{
      * @return a latitude da coordenada
      */
     public double getLatitude(){
-        return this._latitude;
+        return this.latitude;
     }
     /**
      * 
      * @return a longitude da coordenada
      */
     public double getLongitude(){
-        return this._longitude;
+        return this.longitude;
     }
     public String toString(){
-        return "(" + String.valueOf(this._latitude)+","+String.valueOf(this._longitude)+")"; 
+        return "(" + String.valueOf(this.latitude)+","+String.valueOf(this.longitude)+")";
     }
     
     /**

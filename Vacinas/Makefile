@@ -22,7 +22,7 @@ all: javac
 javac:
 	rm -fr $(BIN_PATH)
 	mkdir $(BIN_PATH)
-	$(JAVAC) $(CLASS_PATH_OPTION) -d $(BIN_PATH) src/corekafka/produtor/vacina/*.java src/corekafka/simulacao/*.java src/types/*.java src/corekafka/produtor/gestor/*.java src/corekafka/produtor/*.java src/corekafka/consumidor/*.java src/main/*.java 
+	$(JAVAC) $(CLASS_PATH_OPTION) -d $(BIN_PATH) src/corekafka/produtor/vacina/*.java src/corekafka/simulacao/*.java src/types/*.java src/corekafka/produtor/gestor/*.java src/corekafka/produtor/*.java src/corekafka/consumidor/*.java src/api/*.java src/main/*.java
 
 run:
 	$(JAVA) $(CLASS_PATH_OPTION):$(BIN_PATH) $(MAIN_PATH)/Main $(FILE)

@@ -12,14 +12,11 @@ export enum Status {
     gameover,
 }
 
-
 export interface VaccineStatus {
     status: number;
     temperature: number;
     date: String;
-    location: Location,
-    id:number,
-    name:string
+    location: Location;
 }
 
 export interface VaccineListStatus {
