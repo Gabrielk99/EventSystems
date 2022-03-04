@@ -6,8 +6,13 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class ApiManager {
-    private static HttpURLConnection prepareRequest(ManagerRouter router) throws MalformedURLException, IOException, ProtocolException {
+/**
+ * Classe que faz chamadas da api sobre dados de gestores e vacinas
+ *
+ * @author mikaella
+ */
+public class ApiManagerVaccine {
+    private static HttpURLConnection prepareRequest(ManagerVaccineRouter router) throws MalformedURLException, IOException, ProtocolException {
         URL url = new URL(router.getURL());
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod(router.getMethod());
@@ -31,7 +36,7 @@ public class ApiManager {
     }
 
     public static JsonObject getManagerInfo(int id) {
-        ManagerRouter router = ManagerRouter.MANAGER_INFO;
+        ManagerVaccineRouter router = ManagerVaccineRouter.MANAGER_INFO;
         router.setId(id);
         String responseContent = null;
         HttpURLConnection connection = null;
@@ -52,7 +57,7 @@ public class ApiManager {
     }
 
     public static JsonArray getAllManagerInfo() {
-        ManagerRouter router = ManagerRouter.MANAGERS_INFO;
+        ManagerVaccineRouter router = ManagerVaccineRouter.MANAGERS_INFO;
         String responseContent = null;
         HttpURLConnection connection = null;
 
@@ -69,6 +74,27 @@ public class ApiManager {
         }
 
         return new JsonParser().parse(responseContent).getAsJsonArray();
+    }
+
+    public static JsonObject getVaccineInfo(int id) {
+        ManagerVaccineRouter router = ManagerVaccineRouter.VACCINE_INFO;
+        router.setId(id);
+        String responseContent = null;
+        HttpURLConnection connection = null;
+
+        try {
+            connection = prepareRequest(router);
+            responseContent = processRequestResponse(connection, router.getURL());
+        } catch (IOException exception) {
+            System.out.println("[ERROR]: Erro ao ler resposta da requição");
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
+        } finally {
+            if (connection != null)
+                connection.disconnect();
+        }
+
+        return new JsonParser().parse(responseContent).getAsJsonObject();
     }
 
     // Utils

@@ -12,6 +12,11 @@ import java.time.Duration;
 
 import src.models.EmailMessage;
 
+/**
+ * Classe que faz chamada de api para envio de email
+ *
+ * @author mikaella
+ */
 public class ApiEmail {
     private static HttpURLConnection prepareRequest(EmailRouter router) throws MalformedURLException, IOException, ProtocolException {
         URL url = new URL(router.getURL());

@@ -5,7 +5,6 @@ import src.types.*;
 public class EmailMessage {
     String to;
     String from;
-    String subject;
     VaccineInfo vaccine;
     int status;
     Coordinates location;
@@ -13,11 +12,10 @@ public class EmailMessage {
     String address;
     int key;
 
-    public EmailMessage(String to, String from, String subject, VaccineInfo vaccine, int status,
+    public EmailMessage(String to, String from, VaccineInfo vaccine, int status,
                         Coordinates location, String manager, String address, int key) {
         this.to = to;
         this.from = from;
-        this.subject = subject;
         this.vaccine = vaccine;
         this.status = status;
         this.location = location;

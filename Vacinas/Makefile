@@ -6,9 +6,7 @@ KAFKA_PATH=kafka-clients-3.0.0.jar
 slf4jAPI_PATH=slf4j-api-1.7.25.jar
 GSON_PATH=gson-2.8.2.jar
 slf4jSIMPLE_PATH=slf4j-simple-1.7.25.jar
-httpclient_ṔATH=httpclient5-5.1.3.jar
-httpcore_PATH=httpcore5-5.1.3.jar
-CLASS_PATH_OPTION=-cp .:$(KAFKA_PATH):$(slf4jAPI_PATH):$(GSON_PATH):$(slf4jSIMPLE_PATH):$(httpclient_ṔATH):$(httpcore_ṔATH)
+CLASS_PATH_OPTION=-cp .:$(KAFKA_PATH):$(slf4jAPI_PATH):$(GSON_PATH):$(slf4jSIMPLE_PATH)
 
 MAIN_PATH= src/main
 # Diretório para os arquivos .class

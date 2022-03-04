@@ -1,10 +1,17 @@
 package src.api;
 
-public enum ManagerRouter {
-    MANAGER_INFO,
-    MANAGERS_INFO;
+/**
+ * Enum com rotas de gestor
+ *
+ * @author mikaella
+ */
 
-    private String urlBase = "http://localhost:3001/api/gestor/";
+public enum ManagerVaccineRouter {
+    MANAGER_INFO,
+    MANAGERS_INFO,
+    VACCINE_INFO;
+
+    private String urlBase = "http://localhost:3001/api/";
     Integer id = null;
 
     protected String getMethod() {
@@ -14,9 +21,11 @@ public enum ManagerRouter {
     protected String getPath() {
         switch (this) {
             case MANAGER_INFO:
-                return "" + id;
+                return "gestor/" + id;
             case MANAGERS_INFO:
-                return "";
+                return "gestor/";
+            case VACCINE_INFO:
+                return "vacina/" + id;
         }
         return "";
     }
