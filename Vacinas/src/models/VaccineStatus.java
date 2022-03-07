@@ -2,6 +2,7 @@ package src.models;
 
 /**
  * Status da vacina: Ok, warning e danger segundo os critérios estabelecidos
+ * @author mikaella
  */
 public enum VaccineStatus {
     OK {

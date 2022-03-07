@@ -63,7 +63,8 @@ public class NotificationConsumer extends Consumer {
                         location,
                         managerJson.get("name").getAsString(),
                         "Rua Clara de Assis, 123", // Isso vai ser retirado depois, pois a api fará a conversao para localização descrita
-                        0 // Isso também vai ser retirado
+                        0, // Isso também vai ser retirado
+                        false
                 );
 
                 ApiEmail.postEmail(email);
@@ -79,7 +80,8 @@ public class NotificationConsumer extends Consumer {
                     location,
                     managerJson.get("name").getAsString(),
                     "Rua Clara de Assis, 123", // Isso vai ser retirado depois, pois a api fará a conversao para localização descrita
-                    0 // Isso também vai ser retirado
+                    0, // Isso também vai ser retirado
+                    false
             );
 
             ApiEmail.postEmail(email);

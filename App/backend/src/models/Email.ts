@@ -10,5 +10,6 @@ export interface EmailMessage {
     location: Location,
     manager:string,
     address:string,
-    key:number
+    key:number,
+    isFrequentAlert: boolean
 }
