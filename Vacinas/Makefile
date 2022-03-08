@@ -2,12 +2,14 @@ JAVA=java
 JAVAC=javac
 
 
-KAFKA_PATH=kafka-clients-3.0.0.jar
+KAFKA_PATH=kafka-clients-3.1.0.jar:lz4-java-1.8.0.jar:snappy-java-1.1.8.4.jar:zstd-jni-1.5.-4.jar
 slf4jAPI_PATH=slf4j-api-1.7.25.jar
 GSON_PATH=gson-2.8.2.jar
 slf4jSIMPLE_PATH=slf4j-simple-1.7.25.jar
 KAFKA_STREAMS=kafka-streams-3.1.0.jar
-CLASS_PATH_OPTION=-cp .:$(KAFKA_PATH):$(slf4jAPI_PATH):$(GSON_PATH):$(slf4jSIMPLE_PATH):$(KAFKA_STREAMS)
+ROCKDB_PATH=rocksdbjni-6.28.2.jar
+JACKSON=:jackson-annotations-2.13.1.jar:jackson-core-2.13.1.jar:jackson-databind-2.13.1.jar
+CLASS_PATH_OPTION=-cp .:$(KAFKA_PATH):$(slf4jAPI_PATH):$(GSON_PATH):$(slf4jSIMPLE_PATH):$(KAFKA_STREAMS):$(ROCKDB_PATH):$(JACKSON)
 
 MAIN_PATH= src/main
 # Diretório para os arquivos .class

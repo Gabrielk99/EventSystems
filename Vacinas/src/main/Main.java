@@ -31,12 +31,9 @@ public class Main{
         createConsumersProducersVaccine(consumersToVaccine,producersToVaccine);
         createConsumersProducersManager(consumersToManagers,producersToManagers);
 
-        SmartStream streamController = new SmartStream("localhost:9092","vacina");
-        SmartStream streamController1 = new SmartStream("localhost:9092","vacina");
-        SmartStream streamController2 = new SmartStream("localhost:9092","vacina");
+        SmartStream streamController = new SmartStream("localhost:9092","vacina","gestor");
         streamController.run();
-        streamController1.run();
-        streamController2.run();
+        
         while(true){
 
             for(VaccineProducer producerVaccine:producersToVaccine){
@@ -44,7 +41,7 @@ public class Main{
             }
             
             for(ManagerProducer producerManager:producersToManagers){
-                producerManager.sendLocation();
+                producerManager.sendMessage();
             }
           
             // for(VaccineConsumer consumerVaccine:consumersToVaccine){

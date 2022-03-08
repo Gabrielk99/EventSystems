@@ -7,6 +7,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 import src.models.Vaccine;
 import src.models.VaccineStatus;
+import src.models.MessageToNotifications;
+import src.models.CustomSerdes;
+import src.models.VaccineMessage;
+import src.models.GestorMessage;
+import src.models.DangerJoinManagers;
+import src.models.ManagersMap;
+import src.models.VaccinesMap;
+import src.types.Coordinates;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serde;
@@ -16,6 +24,8 @@ import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.common.utils.Bytes;
+import org.apache.kafka.streams.state.KeyValueStore;
 import src.models.VaccineStatus.*;
 
 import java.io.IOException;
@@ -24,6 +34,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Calendar;
+import java.util.ArrayList;
+
+
 /**
  * Classe que representa um processamento inteligente dos dados 
  * da vacina, capaz de interpretar as devidas situações e regras
@@ -32,19 +45,22 @@ import java.util.Calendar;
  */
 public class SmartStream {
 
-    private KStream<String,String> mainStream;
+    private KStream<String,VaccineMessage> mainStream;
+    private KStream<String,GestorMessage> managersInfo;
     private KafkaStreams streamsController;
     private StreamsBuilder builder; 
-    private HashMap<Integer,Vaccine> vaccinesDefaultInfos;
-    private HashMap<Integer, Double> timeWhenReachedMaxTemp;
+    private HashMap<Integer,Vaccine> vaccinesDefaultInfos = new HashMap<Integer,Vaccine>();
+    private HashMap<Integer, Double> timeWhenReachedMaxTemp  = new HashMap<Integer,Double>();
     private Properties config;
     
+    
+    int i = 0;
     /**
      * 
      * @param BootstrapServer string do servidor Bootstrap
      * @param initTopic nome do topico de entrada default dos dados
      */
-    public SmartStream (String BootstrapServer,String initTopic){
+    public SmartStream (String BootstrapServer,String initTopic,String secondaryTopic){
         
         // definindo as propriedades do stream
         Properties config = new Properties();
@@ -53,10 +69,12 @@ public class SmartStream {
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+        config.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, "0");
 
         StreamsBuilder StreamBuilder = new StreamsBuilder();
 
-        this.mainStream =  StreamBuilder.stream(initTopic);
+        this.mainStream =  StreamBuilder.stream(initTopic,Consumed.with(Serdes.String(),CustomSerdes.VaccineMessage()));
+        this.managersInfo = StreamBuilder.stream(secondaryTopic,Consumed.with(Serdes.String(),CustomSerdes.GestorMessage()));
         this.config = config;
         this.builder = StreamBuilder;
     }
@@ -139,12 +157,11 @@ public class SmartStream {
      * @param message mensagem do produtor de vacinas
      * @return status da vacina
      */
-    public VaccineStatus getStatus(String message){
-        JsonObject vaccineMessage = new JsonParser().parse(message).getAsJsonObject();
+    public VaccineStatus getStatus(VaccineMessage message){
         double now = Calendar.getInstance().getTime().getTime()/1000; // Pega tempo atual
-        VaccineStatus status = this.checkVaccineStatus(vaccineMessage.get("id").getAsInt(),
+        VaccineStatus status = this.checkVaccineStatus(message.getId(),
                                                         now,
-                                                        vaccineMessage.get("temperatura").getAsFloat());
+                                                        message.getTemperatura());
         return status;
     }
 
@@ -155,11 +172,23 @@ public class SmartStream {
      * @return boolean, true para vacinas que estao na situacao de warning
      *         false caso contrario.
      */
-    public boolean filterWarning(String key,String message){
+    public boolean filterWarning(String key,VaccineMessage message){
         VaccineStatus status = this.getStatus(message);
         return status == VaccineStatus.WARNING;
     }
-
+    /**
+     *
+     * @param message mensagem do KSTREAM que apenas pega os WARNINGS
+     * @return mensagem formatada para situações de warning pro topico notificacao
+     * 
+     */
+    public MessageToNotifications messageWarningToNotifications(VaccineMessage message){
+        // JsonObject messageJson = new JsonParser().parse(message).getAsJsonObject();
+        // JsonObject locationJson = messageJson.get("localizacao").getAsJsonObject();
+        // Coordinates location = new Coordinates(locationJson.get("longitude").getAsDouble(),locationJson.get("latitude").getAsDouble());
+        MessageToNotifications messageToSend = new MessageToNotifications(message.getLocalizacao(),message.getId(),VaccineStatus.WARNING.ordinal(),-1);
+        return  messageToSend;
+    }
 
     /**
      *
@@ -168,10 +197,32 @@ public class SmartStream {
      * @return boolean,true para vacinas que estao na situacao de danger
      *          false caso contrario.
      */
-    public boolean filterDanger(String key,String message){
-        VaccineStatus status = this.getStatus(message);
+    public boolean filterDanger(String key, DangerJoinManagers message){
+        VaccineStatus status = this.getStatus(message.getVaccines());
         return status == VaccineStatus.DANGER;
     }
+    public Double calculateDistance (GestorMessage managerData,Coordinates locationVaccine){
+        Coordinates locationManager = managerData.getLocalizacao();
+        return Coordinates.calculateDistance(locationManager,locationVaccine);
+    }
+
+    public MessageToNotifications messageDangerToNotifications(DangerJoinManagers message){
+        Coordinates locationVaccine = message.getVaccines().getLocalizacao();
+
+        int id = 0;
+        Double min_dist = Double.MAX_VALUE;
+        for(GestorMessage manager:message.getManagers().getMapManagers().values()){
+            Double distance = calculateDistance(manager,locationVaccine);
+            if(distance< min_dist){
+                id=manager.getId();
+                min_dist = distance;
+            }
+        }
+        
+        MessageToNotifications messageToSend = new MessageToNotifications(locationVaccine,message.getVaccines().getId(),VaccineStatus.DANGER.ordinal(),id);
+        return messageToSend;
+    }
+    
 
     /**
      *
@@ -180,7 +231,7 @@ public class SmartStream {
      * @return boolean, true para vacinas que estao na situacao de gameover
      *          false caso contrario.
      */
-    public boolean filterGameOver(String key, String message){
+    public boolean filterGameOver(String key, VaccineMessage message){
         VaccineStatus status = this.getStatus(message);
         return status == VaccineStatus.GAMEOVER;
     }
@@ -192,7 +243,7 @@ public class SmartStream {
      * @return boolean, true para vacinas que estao na situacao de normalizacao
      *          false caso contrario.
      */
-    public boolean filterOk(String key, String message){
+    public boolean filterOk(String key, VaccineMessage message){
         VaccineStatus status = this.getStatus(message);
         return status == VaccineStatus.OK;
     }
@@ -202,17 +253,50 @@ public class SmartStream {
      * @return nothing
      */
     public void run(){
-        System.out.println("STREAM PROCESS");
-        this.mainStream.peek((key,value)->System.out.println("MENSAGEM : "+value));
-        // KStream <String,String> warningVaccines = this.mainStream.filter((key,message)->this.filterWarning(key,message));
-        // KStream <String,String> dangerVaccines = this.mainStream.filter((key,message)->this.filterDanger(key,message));
-        // KStream <String,String> gameOverVaccines = this.mainStream.filter((key,message)->this.filterGameOver(key,message));
-        // KStream <String,String> okVaccines = this.mainStream.filter((key,message)->this.filterOk(key,message));
+       //Filtrando as situações dos lotes
+        KStream <String,VaccineMessage> warningVaccines = this.mainStream.filter((key,message)->this.filterWarning(key,message));       
+        KStream <String,VaccineMessage> gameOverVaccines = this.mainStream.filter((key,message)->this.filterGameOver(key,message));
+        KStream <String,VaccineMessage> okVaccines = this.mainStream.filter((key,message)->this.filterOk(key,message));
 
-        // warningVaccines.peek((key,value)->System.out.println("Filtro warning key: "+key+" valor: "+value));
+        // manda as mensagens de warning para notificacao
+        warningVaccines.mapValues(message->messageWarningToNotifications(message))
+                       .to("notificacao",Produced.with(Serdes.String(),CustomSerdes.MessageToNotifications()));
 
+        /*
+         * Processo de gerar as mensagens do status danger 
+         * 
+         */
+        //Aglomerando todos os gestores em um map para manter a ultima mensagem
+        //Forçando a chave deles ser 0 e iguais para poder bater com as vacinas 
+        Aggregator<String, GestorMessage, ManagersMap> gestorAgg = (id, gestor,  gestores) -> {
+                                                                    gestores.addManager(gestor);
+                                                                    return gestores;
+                                                                };
+
+        KTable <String,ManagersMap> newGestorMessages = managersInfo.selectKey((key,value)->"0")
+                                                                    .groupByKey()
+                                                                    .aggregate(ManagersMap::new
+                                                                    ,gestorAgg,
+                                                                    Materialized.with(Serdes.String(),CustomSerdes.ManagersMap())
+                                                                    );
+
+        // força a chave ser 0, vai sempre pegar a informacao mais atual da vacina X e mapeia a todos os gestores
+        KTable <String,DangerJoinManagers> dangerWithManager = mainStream.selectKey((key,value)->"0").toTable().mapValues((v)->new DangerJoinManagers(v,null),Materialized.with(Serdes.String(),CustomSerdes.DangerJoinManagers()));
+        // realiza o join antes do filtro (join depois do filtro gera lixo)
+        dangerWithManager = dangerWithManager.join(newGestorMessages,
+                                            (dangersManagers,mapGestor)->{
+                                                dangersManagers.setManagers(mapGestor);
+                                                return dangersManagers;
+                                            },Materialized.with(Serdes.String(),CustomSerdes.DangerJoinManagers()));
+        // filtra as vacinas que estao no status danger
+        KTable <String,DangerJoinManagers> dangerVaccines = dangerWithManager.filter((key,message)->this.filterDanger(key,message));
+        // limpa as mensagens nulas, gera a mensagem final e envia para notificação
+        dangerVaccines.toStream().filter((key,message)->message!=null).mapValues((value)->messageDangerToNotifications(value))
+                    .to("notificacao",Produced.with(Serdes.String(),CustomSerdes.MessageToNotifications()));
+        
         this.streamsController = new KafkaStreams(this.builder.build(),this.config);
 
+        this.streamsController.cleanUp();
         this.streamsController.start();
 
         // shutdown hook to correctly close the streams application

@@ -63,7 +63,7 @@ var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, func
                         {
                             'to': [
                                 {
-                                    'email': 'gabsreivax@gmail.com'
+                                    'email': email.to
                                 }
                             ],
                             'subject': email.subject,
