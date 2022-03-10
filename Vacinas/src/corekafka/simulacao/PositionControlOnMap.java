@@ -1,9 +1,9 @@
 package src.corekafka.simulacao;
 
-import src.types.Coordinates;
 import java.util.Random;
 import java.util.Calendar;
 import java.util.ArrayList;
+import src.types.*;
 
 /**
  * Classe responsável por controlar o caminhamento da entidade no mapa

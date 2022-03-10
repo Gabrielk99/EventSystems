@@ -18,18 +18,23 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import src.corekafka.consumidor.*;
+import src.models.*;
+import src.types.*;
+import com.google.gson.*;
+
 public class Main{
     public static void main(String args[]) {
-        // vaccines controllers
-        ArrayList<VaccineConsumer> consumersToVaccine = new ArrayList<VaccineConsumer>();
-        ArrayList<VaccineProducer> producersToVaccine = new ArrayList<VaccineProducer>();
+       // vaccines controllers
+       ArrayList<VaccineConsumer> consumersToVaccine = new ArrayList<VaccineConsumer>();
+       ArrayList<VaccineProducer> producersToVaccine = new ArrayList<VaccineProducer>();
 
-        //managers controllers
-        ArrayList<ManagerConsumer> consumersToManagers = new ArrayList<ManagerConsumer>();
-        ArrayList<ManagerProducer> producersToManagers = new ArrayList<ManagerProducer>();
+       //managers controllers
+       ArrayList<ManagerConsumer> consumersToManagers = new ArrayList<ManagerConsumer>();
+       ArrayList<ManagerProducer> producersToManagers = new ArrayList<ManagerProducer>();
 
-        createConsumersProducersVaccine(consumersToVaccine,producersToVaccine);
-        createConsumersProducersManager(consumersToManagers,producersToManagers);
+       createConsumersProducersVaccine(consumersToVaccine,producersToVaccine);
+       createConsumersProducersManager(consumersToManagers,producersToManagers);
 
         SmartStream streamController = new SmartStream("localhost:9092","vacina","gestor");
         streamController.run();
@@ -78,31 +83,7 @@ public class Main{
                  producersToVaccine.add(new VaccineProducer("localhost:9092",vaccineData.getAsJsonObject()));
              }
              for(int i=0;i<3;i++){
-                 consumersToVaccine.add( new VaccineConsumer("localhost:9092", "consumerVacina", "vacina", path_to_vaccine_json));
-             }
- 
-        }
-        catch(IOException err){
-            System.out.printf("error %s ",err.getMessage());
-            System.exit(err.hashCode());
-        }
-    }
-    public static void createConsumersProducersManager(ArrayList<ManagerConsumer> consumersToManager,  ArrayList<ManagerProducer> producersToManager ){
- 
-        Path path_to_manager_json= Paths.get("../Database/data_for_kafka/Gestores/gestores.json");
-        try{
-             // lendo o conteudo json
-             String content = String.join("",Files.readAllLines(path_to_manager_json));
-            
-             // pegando o json da string como um objeto json
-             JsonObject managersData = new JsonParser().parse(content).getAsJsonObject();
-             JsonArray managersDataList = managersData.get("gestores").getAsJsonArray();
-         
-             for(JsonElement managerData:managersDataList){
-                 producersToManager.add(new ManagerProducer("localhost:9092",managerData.getAsJsonObject()));
-             }
-             for(int i=0;i<3;i++){
-                 consumersToManager.add( new ManagerConsumer("localhost:9092", "consumerGestor", "gestor"));
+                 consumersToVaccine.add( new VaccineConsumer("localhost:9092", "consumerVacina", "frontend-vaccine", path_to_vaccine_json));
              }
  
         }
@@ -112,5 +93,28 @@ public class Main{
         }
     }
 
+   public static void createConsumersProducersManager(ArrayList<ManagerConsumer> consumersToManager,  ArrayList<ManagerProducer> producersToManager ){
 
+       Path path_to_manager_json= Paths.get("../Database/data_for_kafka/Gestores/gestores.json");
+       try{
+            // lendo o conteudo json
+            String content = String.join("",Files.readAllLines(path_to_manager_json));
+
+            // pegando o json da string como um objeto json
+            JsonObject managersData = new JsonParser().parse(content).getAsJsonObject();
+            JsonArray managersDataList = managersData.get("gestores").getAsJsonArray();
+
+            for(JsonElement managerData:managersDataList){
+                producersToManager.add(new ManagerProducer("localhost:9092",managerData.getAsJsonObject()));
+            }
+            for(int i=0;i<3;i++){
+                consumersToManager.add( new ManagerConsumer("localhost:9092", "consumerGestor", "gestor"));
+            }
+
+       }
+       catch(IOException err){
+           System.out.printf("error %s ",err.getMessage());
+           System.exit(err.hashCode());
+       }
+   }
 }
