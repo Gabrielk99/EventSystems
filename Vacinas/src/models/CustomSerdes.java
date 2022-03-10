@@ -48,4 +48,15 @@ public final class CustomSerdes {
         JsonDeserializer<VaccinesMap> deserializer = new JsonDeserializer<>(VaccinesMap.class);
         return Serdes.serdeFrom(serializer, deserializer);
     }
+    public static Serde<MessageToAlert> MessageToAlert(){
+        JsonSerializer<MessageToAlert> serializer = new JsonSerializer<>();
+        JsonDeserializer<MessageToAlert> deserializer = new JsonDeserializer<>(MessageToAlert.class);
+        return Serdes.serdeFrom(serializer, deserializer);
+    }
+
+    public static Serde<Occurence> Occurence(){
+        JsonSerializer<Occurence> serializer = new JsonSerializer<>();
+        JsonDeserializer<Occurence> deserializer = new JsonDeserializer<>(Occurence.class);
+        return Serdes.serdeFrom(serializer, deserializer);
+    }
 }

@@ -14,9 +14,7 @@ import java.util.ArrayList;
     private float danger_temperature;//temperatura considerada perigosa
     private float game_over_time; //tempo máximo suportado pela vacina após atingir
                                 //a temperatura máxima (danger_temperature)
-    private float janela_de_problema; //janela de tempo em segundos, em que serah
-                                    //inspecionado as ocorrencias de problemas 
-    private ArrayList<Integer> id_gestores = new ArrayList<Integer>(); //lista de ids de gestores
+                                  
     private int id;
 
     /**
@@ -34,15 +32,6 @@ import java.util.ArrayList;
         this.game_over_time=Float.parseFloat(vaccine.get("time_max").getAsString());
         // Pegando o id do lote de vacina
         this.id = Integer.parseInt(vaccine.get("id").getAsString());
-        // Pegando a janela de tempo para avaliar as ocorrencias
-        this.janela_de_problema = vaccine.get("janela_de_problemas").getAsFloat();
-
-        JsonArray arrayGestor = vaccine.get("id_gestores").getAsJsonArray();
-
-        for (JsonElement idG: arrayGestor){
-            this.id_gestores.add(idG.getAsInt());
-        }
-
     }
 
     
@@ -66,7 +55,4 @@ import java.util.ArrayList;
         return this.id;
     }
 
-    public float getJanelaDeProblema(){
-        return this.janela_de_problema;
-    }
 }
