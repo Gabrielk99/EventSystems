@@ -3,15 +3,18 @@ import dotenv from 'dotenv';
 import fs from 'fs'
 import { Status } from '../models/Vaccine';
 import ManagerController from '../controllers/ManagerController';
+import { getAddressFromLatLong } from './Geocoding'
+
 dotenv.config({
   path: '.env'
 });
 
-
 const axios = require('axios')
 const emailSendUrl = 'https://api.sendgrid.com/v3/mail/send'
 
-const getTemplateId = (status: number, isFrequentAlert: boolean, key: number) => {
+let key = 0
+
+const getTemplateId = (status: number, isFrequentAlert: boolean) => {
     let templateId = 'batata'
 
     //TODO: colocar id do template pra alerta frequente
@@ -39,8 +42,16 @@ const getTemplateId = (status: number, isFrequentAlert: boolean, key: number) =>
     return templateId
 }
 
+export const setEmailSender = (value: number) => {
+    console.log("antes: " + key)
+    key = value
+    console.log("depois: " + key)
+    console.log("===================")
+}
+
 export const sendEmail= async (email: EmailMessage) => {
-    const sendgridApiKey = email.key===0?process.env.SENDGRID_API_KEY:process.env.SENDGRID_API_KEY2
+    const sendgridApiKey = key===0? process.env.SENDGRID_API_KEY : process.env.SENDGRID_API_KEY2
+    const sender = key ===0? process.env.EMAIL_SENDER : process.env.EMAIL_SENDER2
     try{
         const message = {
                             'personalizations': [
@@ -55,15 +66,15 @@ export const sendEmail= async (email: EmailMessage) => {
                                         "name":email.vaccine.name,
                                         "lat":email.location.latitude,
                                         "long":email.location.longitude,
-                                        "manager":email.manager,                                  
-                                        "address":email.address
+                                        "manager":email.manager,
+                                        "address": await getAddressFromLatLong(email.location.latitude, email.location.longitude)
                                     }
                                 }
                             ],
                             'from': {
-                                'email': email.from
+                                'email': sender
                             },
-                            "template_id": getTemplateId(email.status, email.isFrequentAlert, email.key)
+                            "template_id": getTemplateId(email.status, email.isFrequentAlert)
                             // 'content': [
                             //     {
                             //         'type': 'text/html',

@@ -73,13 +73,10 @@ public class FrequentAlertConsumer extends Consumer {
 
             EmailMessage email = new EmailMessage(
                     managerJson.get("email").getAsString(),
-                    "mikaellaferreira.s@gmail.com", // Isso vai ser retirado depois
                     vaccineInfo,
                     vaccineStatus,
                     location,
                     managerJson.get("name").getAsString(),
-                    "Rua Clara de Assis, 123", // Isso vai ser retirado depois, pois a api fará a conversao para localização descrita
-                    0, // Isso também vai ser retirado,
                     true
             );
 

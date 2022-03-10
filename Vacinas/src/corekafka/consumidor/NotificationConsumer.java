@@ -57,13 +57,10 @@ public class NotificationConsumer extends Consumer {
 
                 EmailMessage email = new EmailMessage(
                         managerJson.get("email").getAsString(),
-                        "mikaellaferreira.s@gmail.com", // Isso vai ser retirado depois
                         vaccineInfo,
                         VaccineStatus.WARNING.ordinal(),
                         location,
                         managerJson.get("name").getAsString(),
-                        "Rua Clara de Assis, 123", // Isso vai ser retirado depois, pois a api fará a conversao para localização descrita
-                        0, // Isso também vai ser retirado
                         false
                 );
 
@@ -74,13 +71,10 @@ public class NotificationConsumer extends Consumer {
 
             EmailMessage email = new EmailMessage(
                     managerJson.get("email").getAsString(),
-                    "mikaellaferreira.s@gmail.com", // Isso vai ser retirado depois
                     vaccineInfo,
                     VaccineStatus.DANGER.ordinal(),
                     location,
                     managerJson.get("name").getAsString(),
-                    "Rua Clara de Assis, 123", // Isso vai ser retirado depois, pois a api fará a conversao para localização descrita
-                    0, // Isso também vai ser retirado
                     false
             );
 

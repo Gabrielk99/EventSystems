@@ -2,7 +2,6 @@ import React from "react";
 import "./Presentation.css";
 import { useEffect } from 'react'
 
-import { checkAndSendNotification } from '../../logic/VaccineStatusChecker';
 import { getStatusVaccineByID } from '../../controllers/vacinas/vacinaController';
 
 function Presentation (){
