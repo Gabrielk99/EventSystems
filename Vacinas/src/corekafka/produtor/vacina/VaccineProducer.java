@@ -33,7 +33,7 @@ public class VaccineProducer extends Producer {
     /**
      * 
      * @param BootstrapServer servidor no qual o kafka vai rodar
-     * @param pathToJson    caminho para o arquivo de configuração do lote
+     * @param vaccine    json do lote de vacina
      */
     public VaccineProducer(String BootstrapServer, JsonObject vaccine){
         super(BootstrapServer);

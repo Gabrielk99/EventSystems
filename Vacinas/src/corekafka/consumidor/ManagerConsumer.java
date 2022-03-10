@@ -102,9 +102,9 @@ public class ManagerConsumer extends Consumer {
                     managerMessage.get("localizacao")
             );
 
-            System.out.println("[ManagerConsumer] Info received: " +
-                    " Manager Id: " + managerMessage.get("id")+
-                    " location: " + managerMessage.get("localizacao"));
+            // System.out.println("[ManagerConsumer] Info received: " +
+            //         " Manager Id: " + managerMessage.get("id")+
+            //         " location: " + managerMessage.get("localizacao"));
         }
     }
     

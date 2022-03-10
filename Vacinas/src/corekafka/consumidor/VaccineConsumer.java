@@ -24,6 +24,7 @@ import java.util.Arrays;
 import java.time.Duration;
 import java.util.Calendar;
 import java.util.stream.Stream;
+import src.models.VaccineStatus;
 
 import src.types.SavedMessageVaccine;
 /**
