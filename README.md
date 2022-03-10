@@ -30,3 +30,8 @@ Info dos consumidores:
 ```
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group consumerGestor --describe
 ```
+Limpa a aplicação stream (pode dar problema de metadados, importante usar)
+
+```
+kafka-streams-application-reset.sh --application-id vaccine-monitoring
+```
