@@ -1,26 +1,26 @@
 package src.main;
-//import src.corekafka.produtor.gestor.*;
-//import src.corekafka.produtor.vacina.*;
-//
-//import java.util.ArrayList;
-//import java.util.concurrent.TimeUnit;
-import com.google.gson.*;
-//
-//import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-//
-//import src.corekafka.consumidor.*;
-//
-//import java.io.File;
-//import java.nio.file.Files;
-//import java.io.FilenameFilter;
-//import java.io.IOException;
-//import java.nio.file.Path;
-//import java.nio.file.Paths;
+import src.corekafka.produtor.gestor.*;
+import src.corekafka.produtor.vacina.*;
 
-import src.api.ApiManagerVaccine;
-import src.api.ApiEmail;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+import com.google.gson.*;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
+import src.corekafka.consumidor.*;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import src.corekafka.consumidor.*;
 import src.models.*;
 import src.types.*;
+import com.google.gson.*;
 
 public class Main{
     public static void main(String args[]) {
@@ -62,28 +62,11 @@ public class Main{
 //            }
 //        }
 
-        VaccineInfo vaccine = new VaccineInfo(
-                1,
-                "batatinha-vac"
-        );
+        String json = "{ \"id_lote\": 0, \"location\": {\"latitude\": 0.0, \"longitude\": 1.0},  \"status\": 1}";
+        JsonObject message = new JsonParser().parse(json).getAsJsonObject();
+        System.out.println(message);
 
-        Coordinates location = new Coordinates(
-                1.00,
-                0.00
-        );
-
-        EmailMessage message = new EmailMessage(
-                "mikaellaferreira0@gmail.com",
-                "mikaellaferreira.s@gmail.com",
-                vaccine,
-                1,
-                location,
-                "Geraldo Jaqueline",
-                "Rua Clara de Assis, 123",
-                0
-        );
-
-        ApiEmail.postEmail(message);
+        FrequentAlertConsumer.processMessage(message);
     }
 
 //    public static void createConsumersProducersVaccine(ArrayList<VaccineConsumer> consumersToVaccine,  ArrayList<VaccineProducer> producersToVaccine ){
@@ -134,6 +117,4 @@ public class Main{
 //            System.exit(err.hashCode());
 //        }
 //    }
-//
-
 }

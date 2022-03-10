@@ -6,12 +6,11 @@ import { useEffect, useState } from 'react';
 import { getAllVaccineInformation,getAllStatusVaccines} from './controllers/vacinas/vacinaController';
 import {getAllManagerLocation,getAllManagerInformation} from './controllers/gestores/gestorController';
 import useWebSocket  from 'react-use-websocket';
-import { checkAndSendNotification } from './logic/VaccineStatusChecker';
 import{ HtmlBody, getHTMLBODY } from './logic/Geocoding';
 import { Status } from './models/Vaccine';
 import { useGlobalState } from './logic/GlobalHook';
 import Notify from './components/notifications/Notify';
-import { sendEmail } from './controllers/email/emailController';
+import { setEmailSender } from './controllers/email/emailController';
 function App() {
 
   const [colorsVaccine,setColorsVaccine] = useState({});
@@ -41,19 +40,19 @@ function App() {
     fetchData();
   },[lastMessage])
 
-  useEffect(()=>{
-    async function verifyStatus(){
-      var statusFromNotification=[];
-      for(var i=0;i<vaccineDatasToControl.length;i++){
-        const vaccine = vaccineDatasToControl[i];
-        const vaccineNowData =  {...vaccine.datasSaved[vaccine.datasSaved.length-1],id:vaccine.id,name:vaccines[vaccine.id]+vaccine.id};
-        const res = await checkAndSendNotification(vaccineNowData);
-        statusFromNotification = [...statusFromNotification,res]
-      }
-      setVaccinesStatusNotify(statusFromNotification);
-    }
-    verifyStatus();
-  },[vaccineDatasToControl])
+//  useEffect(()=>{
+//    async function verifyStatus(){
+//      var statusFromNotification=[];
+//      for(var i=0;i<vaccineDatasToControl.length;i++){
+//        const vaccine = vaccineDatasToControl[i];
+//        const vaccineNowData =  {...vaccine.datasSaved[vaccine.datasSaved.length-1],id:vaccine.id,name:vaccines[vaccine.id]+vaccine.id};
+////        const res = await checkAndSendNotification(vaccineNowData);
+////        statusFromNotification = [...statusFromNotification,res]
+//      }
+//      setVaccinesStatusNotify(statusFromNotification);
+//    }
+//    verifyStatus();
+//  },[vaccineDatasToControl])
   
   useEffect(()=>{
     if(emailSend){
@@ -66,9 +65,12 @@ function App() {
   useEffect(()=>{
     if(ownerKey==='mikaella'){
       localStorage.setItem("keySendGrid",'0');
+
+      setEmailSender(0)
     }
     else{
       localStorage.setItem("keySendGrid",'1');
+      setEmailSender(1)
     }
   },[ownerKey])
   const handleColorVaccine = (colors)=>{
