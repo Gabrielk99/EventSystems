@@ -31,7 +31,7 @@ Info dos consumidores:
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group consumerGestor --describe
 ```
 Limpa a aplicação stream (pode dar problema de metadados, importante usar)
-
+Se começou dar erro **SEM MOTIVO** e é algo de metados, partições erradas, reinicie o pc e rode:
 ```
 kafka-streams-application-reset.sh --application-id vaccine-monitoring
 ```
