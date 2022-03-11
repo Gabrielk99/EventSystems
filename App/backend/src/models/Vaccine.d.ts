@@ -14,8 +14,6 @@ export interface VaccineStatus {
     temperature: number;
     date: String;
     location: Location;
-    id: number;
-    name: string;
 }
 export interface VaccineListStatus {
     id: number;

@@ -39,55 +39,91 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendEmail = void 0;
+exports.sendEmail = exports.setEmailSender = void 0;
 var dotenv_1 = __importDefault(require("dotenv"));
 var Vaccine_1 = require("../models/Vaccine");
+var Geocoding_1 = require("./Geocoding");
 dotenv_1.default.config({
     path: '.env'
 });
 var axios = require('axios');
 var emailSendUrl = 'https://api.sendgrid.com/v3/mail/send';
+var key = 0;
+var getTemplateId = function (status, isFrequentAlert) {
+    var templateId = 'batata';
+    //TODO: colocar id do template pra alerta frequente
+    switch (status) {
+        case Vaccine_1.Status.warning:
+            if (key === 0) {
+                templateId = isFrequentAlert ? "d-6463b62cb655495ebf3fff00eefc7ebf" : "d-6463b62cb655495ebf3fff00eefc7ebf";
+            }
+            else {
+                templateId = isFrequentAlert ? "d-537ac74b7c2048d1ad122d08e96273dd" : "d-537ac74b7c2048d1ad122d08e96273dd";
+            }
+            break;
+        case Vaccine_1.Status.danger:
+            if (key === 0) {
+                templateId = isFrequentAlert ? "d-5e77f1ed29fd4e16a0f39e3b5853eb9e" : "d-5e77f1ed29fd4e16a0f39e3b5853eb9e";
+            }
+            else {
+                templateId = isFrequentAlert ? 'd-7896e840032c4c2b8e6c57c2119ced2c' : 'd-7896e840032c4c2b8e6c57c2119ced2c';
+            }
+            break;
+        case Vaccine_1.Status.gameover:
+            templateId = 'aaaaa'; // Só aparece pra alerta frequente, colocar id do template aqui
+        default:
+            break;
+    }
+    return templateId;
+};
+var setEmailSender = function (value) {
+    console.log("antes: " + key);
+    key = value;
+    console.log("depois: " + key);
+    console.log("===================");
+};
+exports.setEmailSender = setEmailSender;
 var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, function () {
-    var sendgridApiKey, dangerId, warningId, message, res, err_1;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
+    var sendgridApiKey, sender, message, _a, _b, _c, res, err_1;
+    var _d, _e, _f;
+    return __generator(this, function (_g) {
+        switch (_g.label) {
             case 0:
-                sendgridApiKey = email.key === 0 ? process.env.SENDGRID_API_KEY : process.env.SENDGRID_API_KEY2;
-                dangerId = email.key === 0 ? "d-5e77f1ed29fd4e16a0f39e3b5853eb9e" : 'd-7896e840032c4c2b8e6c57c2119ced2c';
-                warningId = email.key === 0 ? "d-6463b62cb655495ebf3fff00eefc7ebf" : "d-537ac74b7c2048d1ad122d08e96273dd";
-                _a.label = 1;
+                sendgridApiKey = key === 0 ? process.env.SENDGRID_API_KEY : process.env.SENDGRID_API_KEY2;
+                sender = key === 0 ? process.env.EMAIL_SENDER : process.env.EMAIL_SENDER2;
+                _g.label = 1;
             case 1:
-                _a.trys.push([1, 3, , 4]);
-                message = {
-                    'personalizations': [
+                _g.trys.push([1, 4, , 5]);
+                _d = {};
+                _a = 'personalizations';
+                _e = {
+                    'to': [
                         {
-                            'to': [
-                                {
-                                    'email': email.to
-                                }
-                            ],
-                            'subject': email.subject,
-                            "dynamic_template_data": {
-                                "name": email.vaccine.name,
-                                "lat": email.vaccine.location.latitude,
-                                "long": email.vaccine.location.longitude,
-                                "manager": email.manager,
-                                "address": email.address
-                            }
+                            'email': email.to
                         }
                     ],
-                    'from': {
-                        'email': email.from
-                    },
-                    "template_id": email.vaccine.status === Vaccine_1.Status.warning ? warningId
-                        : dangerId
-                    // 'content': [
-                    //     {
-                    //         'type': 'text/html',
-                    //         'value': email.text
-                    //     }
-                    // ]
+                    'subject': email.subject
                 };
+                _b = "dynamic_template_data";
+                _f = {
+                    "name": email.vaccine.name,
+                    "lat": email.location.latitude,
+                    "long": email.location.longitude,
+                    "manager": email.manager
+                };
+                _c = "address";
+                return [4 /*yield*/, (0, Geocoding_1.getAddressFromLatLong)(email.location.latitude, email.location.longitude)];
+            case 2:
+                message = (_d[_a] = [
+                    (_e[_b] = (_f[_c] = _g.sent(),
+                        _f),
+                        _e)
+                ],
+                    _d['from'] = {
+                        'email': sender
+                    },
+                    _d["template_id"] = getTemplateId(email.status, email.isFrequentAlert),
+                    _d);
                 return [4 /*yield*/, axios({
                         method: 'post',
                         url: emailSendUrl,
@@ -96,14 +132,14 @@ var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, func
                         },
                         data: message,
                     })];
-            case 2:
-                res = _a.sent();
-                return [2 /*return*/, res];
             case 3:
-                err_1 = _a.sent();
+                res = _g.sent();
+                return [2 /*return*/, res];
+            case 4:
+                err_1 = _g.sent();
                 console.log(err_1);
                 return [2 /*return*/, { status: 'error', message: "limite de email batido" }];
-            case 4: return [2 /*return*/];
+            case 5: return [2 /*return*/];
         }
     });
 }); };

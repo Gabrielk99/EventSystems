@@ -29,6 +29,7 @@
     margin-left: 7%;
     content: '';
     background-color: white;
+    z-index: -9;
 }
 .graph-container::after{
     content:'';
@@ -41,4 +42,11 @@
     margin-right: 20%;
     z-index: -10;
     
+}
+
+.graph-line{
+    margin-top: 10%;
+    display: flex;
+    margin-left: 5%;
+    width: 85%;
 }

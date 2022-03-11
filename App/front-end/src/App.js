@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { getAllVaccineInformation,getAllStatusVaccines} from './controllers/vacinas/vacinaController';
 import {getAllManagerLocation,getAllManagerInformation} from './controllers/gestores/gestorController';
 import useWebSocket  from 'react-use-websocket';
-import{ HtmlBody, getHTMLBODY } from './logic/Geocoding';
+import{ HtmlBody, getHTMLBODY, getAddressFromLatLong } from './logic/Geocoding';
 import { Status } from './models/Vaccine';
 import { useGlobalState } from './logic/GlobalHook';
 import Notify from './components/notifications/Notify';
@@ -40,19 +40,20 @@ function App() {
     fetchData();
   },[lastMessage])
 
-//  useEffect(()=>{
-//    async function verifyStatus(){
-//      var statusFromNotification=[];
-//      for(var i=0;i<vaccineDatasToControl.length;i++){
-//        const vaccine = vaccineDatasToControl[i];
-//        const vaccineNowData =  {...vaccine.datasSaved[vaccine.datasSaved.length-1],id:vaccine.id,name:vaccines[vaccine.id]+vaccine.id};
-////        const res = await checkAndSendNotification(vaccineNowData);
-////        statusFromNotification = [...statusFromNotification,res]
-//      }
-//      setVaccinesStatusNotify(statusFromNotification);
-//    }
-//    verifyStatus();
-//  },[vaccineDatasToControl])
+  useEffect(()=>{
+    if(vaccineDatasToControl!==null){
+      const vaccinesToNotify = vaccineDatasToControl.map((vaccineData)=>{
+        const vaccine = {id:vaccineData.id,...vaccineData.datasSaved[vaccineData.datasSaved.length-1]};
+        return {
+          name:vaccines[vaccine.id],
+          location:vaccine.location,
+          status:vaccine.status,
+          id:vaccine.id
+        }
+      })
+      setVaccinesStatusNotify(vaccinesToNotify)
+    }
+  },[vaccineDatasToControl])
   
   useEffect(()=>{
     if(emailSend){
@@ -124,22 +125,22 @@ function App() {
   return (
     <div className="App">
       <Presentation/>
-      <Notify/>
-      <div style={{display:'flex',flexDirection:'row',width:'100%',justifyContent:'space-around',marginTop:'5%'}}>
-      <div className={ownerKey==='mikaella'?'div-button-changeKey':'div-button-changeKey gabriel'}>
+      <div style={{display:'flex',flexDirection:'row',width:'100%',justifyContent:'space-around',marginTop:'5%',marginBottom:'5%'}}>
+        <div className={ownerKey==='mikaella'?'div-button-changeKey':'div-button-changeKey gabriel'}>
           <div onClick={handleChangeAPIKEY} className='button-changerKey'>
             Troca KEY
           </div>
-          Owner Key: {ownerKey}
+            Owner Key: {ownerKey}
         </div> 
 
         <div className={emailSend?'div-button-sendemail active':'div-button-sendemail'}>
           <div onClick={handleSendemail} className='button-sendemail'>
-            SendEmail
+              SendEmail
           </div>
-          Status: {String(emailSend)}
+            Status: {String(emailSend)}
         </div> 
       </div>
+      <Notify/>
       <div className='data-row'>
         <TemperatureGraph updateColorVaccine={handleColorVaccine} datas={vaccineDatasToControl} vaccines={vaccines}/>
         <Map colorsToVaccine={colorsVaccine} datas={vaccineDatasToControl} vaccines={vaccines} managers={managers} datasToManagers={managerData}/>
