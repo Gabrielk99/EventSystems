@@ -49,10 +49,10 @@ public class Main{
                 producerManager.sendMessage();
             }
           
-            // for(VaccineConsumer consumerVaccine:consumersToVaccine){
-            //     // System.out.println("CONSUMIDOR VACINA X LENDO X");
-            //     consumerVaccine.consumeMessages();
-            // }
+            for(VaccineConsumer consumerVaccine:consumersToVaccine){
+                // System.out.println("CONSUMIDOR VACINA X LENDO X");
+                consumerVaccine.consumeMessages();
+            }
             for(ManagerConsumer consumerManager:consumersToManagers){
                 // System.out.println("CONSUMIDOR GESTOR X LENDO X ");
                 consumerManager.consumeMessages();
