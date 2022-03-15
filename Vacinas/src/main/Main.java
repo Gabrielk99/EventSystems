@@ -33,8 +33,14 @@ public class Main{
        ArrayList<ManagerConsumer> consumersToManagers = new ArrayList<ManagerConsumer>();
        ArrayList<ManagerProducer> producersToManagers = new ArrayList<ManagerProducer>();
 
+       // Email consumers
+        ArrayList<NotificationConsumer> notificationConsumers = new ArrayList<NotificationConsumer>();
+        ArrayList<FrequentAlertConsumer> frequentAlertConsumers = new ArrayList<FrequentAlertConsumer>();
+
        createConsumersProducersVaccine(consumersToVaccine,producersToVaccine);
        createConsumersProducersManager(consumersToManagers,producersToManagers);
+       createNotificationConsumers(notificationConsumers);
+       createFrequentAlertConsumers(frequentAlertConsumers);
 
         SmartStream streamController = new SmartStream("localhost:9092","vacina","gestor");
         streamController.run();
@@ -56,6 +62,14 @@ public class Main{
             for(ManagerConsumer consumerManager:consumersToManagers){
                 // System.out.println("CONSUMIDOR GESTOR X LENDO X ");
                 consumerManager.consumeMessages();
+            }
+
+            for(NotificationConsumer consumerNotification:notificationConsumers){
+                consumerNotification.consumeMessages();
+            }
+
+            for(FrequentAlertConsumer consumerFrequentAlert:frequentAlertConsumers){
+                consumerFrequentAlert.consumeMessages();
             }
             
             try{
@@ -115,6 +129,18 @@ public class Main{
        catch(IOException err){
            System.out.printf("error %s ",err.getMessage());
            System.exit(err.hashCode());
+       }
+   }
+
+   public static void createNotificationConsumers(ArrayList<NotificationConsumer> consumers) {
+       for(int i=0;i<3;i++){
+           consumers.add( new NotificationConsumer("localhost:9092", "consumerNotification", "notificacao"));
+       }
+   }
+
+   public static void createFrequentAlertConsumers(ArrayList<FrequentAlertConsumer> consumers) {
+       for(int i=0;i<3;i++){
+           consumers.add( new FrequentAlertConsumer("localhost:9092", "consumerFrequentAlert", "alertas"));
        }
    }
 }
