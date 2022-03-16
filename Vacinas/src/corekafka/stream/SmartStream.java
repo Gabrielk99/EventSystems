@@ -393,7 +393,7 @@ public class SmartStream {
         message.addProperty("status",status.ordinal());
         message.addProperty("id",vaccine.getId());
         message.addProperty("temperatura",vaccine.getTemperatura());
-        message.add("localizacao",localizacao);
+        message.add("location",localizacao);
         message.addProperty("data",vaccine.getData());
 
         return new Gson().toJson(message);
