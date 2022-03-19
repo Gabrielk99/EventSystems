@@ -35,6 +35,10 @@ public class NotificationConsumer extends Consumer {
         }
     }
 
+    private void sendEmail(EmailMessage emailMessage) {
+        ApiEmail.postEmail(emailMessage);
+    }
+
     private void processMessage(JsonObject notificationMessage) {
         JsonObject vaccineInfoJson = ApiManagerVaccine.getVaccineInfo(notificationMessage.get("id_lote").getAsInt());
         VaccineInfo vaccineInfo = new VaccineInfo(vaccineInfoJson.get("id").getAsInt(), vaccineInfoJson.get("name").getAsString());
@@ -64,7 +68,7 @@ public class NotificationConsumer extends Consumer {
                         false
                 );
 
-                ApiEmail.postEmail(email);
+                sendEmail(email);
             }
         } else if (status == VaccineStatus.DANGER.ordinal()) {
             JsonObject managerJson = ApiManagerVaccine.getManagerInfo(notificationMessage.get("id_gestor").getAsInt());
@@ -78,7 +82,7 @@ public class NotificationConsumer extends Consumer {
                     false
             );
 
-            ApiEmail.postEmail(email);
+            sendEmail(email);
         } else {
             return;
         }
