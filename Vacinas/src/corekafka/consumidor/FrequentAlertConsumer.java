@@ -52,7 +52,7 @@ public class FrequentAlertConsumer extends Consumer {
                     + " está tendo muitos GAMEOVER");
         }
 
-        VaccineInfo vaccineInfo = new VaccineInfo(vaccineInfoJson.get("id").getAsInt(), vaccineInfoJson.get("name").getAsString());
+        VaccineInfo vaccineInfo = new VaccineInfo(vaccineInfoJson.get("id").getAsInt(), vaccineInfoJson.get("name").getAsString()+"_"+vaccineInfoJson.get("id").getAsString());
 
         JsonObject locationJson = message.get("location").getAsJsonObject();
         Coordinates location = new Coordinates(

@@ -13,9 +13,9 @@ function Notify (props){
             if(vaccineStatus!==null){
                 var messages = []
                 var vaccinesIds = []
-                console.log(vaccineStatus.length)
                 for(var i =0;i<vaccineStatus.length;i++){
                     const vacina = vaccineStatus[i]
+                    console.log(vacina)
                     const temp_messages =  
                     `Vacina ${vacina.name}_${vacina.id}, localização ${await getAddressFromLatLong(vacina.location.latitude,vacina.location.longitude)},
                     ${

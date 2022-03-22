@@ -11,3 +11,8 @@ export const setEmailSender = async (key) => {
     const request = axios.post(`${baseUrl}/setKey/${key}`);
     return await request.then(response=>response.data).catch(error=>{return {status:'error',message:error.message}})
 }
+
+export const setSendEmail = async (value)=>{
+    const request = axios.post(`${baseUrl}/setSend `,{send:value});
+    return await request.then(response=>response.data).catch(error=>{return {status:'error',message:error.message}})
+}

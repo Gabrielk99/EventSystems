@@ -3,7 +3,7 @@
         {
             "name":"Patricia",
             "id":0,
-            "email":"patriciadockhorncosta@gmail.com",
+            "email":"gabsreivax@gmail.com",
             "celular":"+55 27 99238-7870",
             "img":"patricia.jpeg"
         },
@@ -20,8 +20,6 @@
             "email":"gabriel.s.xavier@edu.ufes.br",
             "celular":"+55 27 99662-8655",
             "img":"geraldo.jpeg"
-        }
-        
-        
+        }       
     ]
 }

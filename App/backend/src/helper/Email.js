@@ -39,7 +39,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendEmail = exports.setEmailSender = void 0;
+exports.sendEmail = exports.setSendEmail = exports.setEmailSender = void 0;
 var dotenv_1 = __importDefault(require("dotenv"));
 var Vaccine_1 = require("../models/Vaccine");
 var Geocoding_1 = require("./Geocoding");
@@ -49,28 +49,35 @@ dotenv_1.default.config({
 var axios = require('axios');
 var emailSendUrl = 'https://api.sendgrid.com/v3/mail/send';
 var key = 0;
+var send = false;
 var getTemplateId = function (status, isFrequentAlert) {
     var templateId = 'batata';
     //TODO: colocar id do template pra alerta frequente
     switch (status) {
         case Vaccine_1.Status.warning:
             if (key === 0) {
-                templateId = isFrequentAlert ? "d-6463b62cb655495ebf3fff00eefc7ebf" : "d-6463b62cb655495ebf3fff00eefc7ebf";
+                templateId = isFrequentAlert ? "d-607f444d07d34fc68af45d6016698a21" : "d-6463b62cb655495ebf3fff00eefc7ebf";
             }
             else {
-                templateId = isFrequentAlert ? "d-537ac74b7c2048d1ad122d08e96273dd" : "d-537ac74b7c2048d1ad122d08e96273dd";
+                templateId = isFrequentAlert ? "d-d833e21be95b498a96d11e36a967d1b5" : "d-537ac74b7c2048d1ad122d08e96273dd";
             }
             break;
         case Vaccine_1.Status.danger:
             if (key === 0) {
-                templateId = isFrequentAlert ? "d-5e77f1ed29fd4e16a0f39e3b5853eb9e" : "d-5e77f1ed29fd4e16a0f39e3b5853eb9e";
+                templateId = isFrequentAlert ? "d-a289ccd851c940dc885cd1ab5e666ace" : "d-5e77f1ed29fd4e16a0f39e3b5853eb9e";
             }
             else {
-                templateId = isFrequentAlert ? 'd-7896e840032c4c2b8e6c57c2119ced2c' : 'd-7896e840032c4c2b8e6c57c2119ced2c';
+                templateId = isFrequentAlert ? 'd-09b7ee5a44c148e9a667db506ec5ba52' : 'd-7896e840032c4c2b8e6c57c2119ced2c';
             }
             break;
         case Vaccine_1.Status.gameover:
-            templateId = 'aaaaa'; // Só aparece pra alerta frequente, colocar id do template aqui
+            if (key === 0) {
+                templateId = "d-fb176167feb94e569aaf3934b6e3e84d";
+            }
+            else {
+                templateId = "d-5f90e91b9b4e40d294c7781f6087c296";
+            }
+            break;
         default:
             break;
     }
@@ -83,12 +90,20 @@ var setEmailSender = function (value) {
     console.log("===================");
 };
 exports.setEmailSender = setEmailSender;
+var setSendEmail = function (value) {
+    console.log("old: ", send);
+    console.log(value);
+    send = value;
+    console.log("new: ", send);
+};
+exports.setSendEmail = setSendEmail;
 var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, function () {
     var sendgridApiKey, sender, message, _a, _b, _c, res, err_1;
     var _d, _e, _f;
     return __generator(this, function (_g) {
         switch (_g.label) {
             case 0:
+                if (!send) return [3 /*break*/, 6];
                 sendgridApiKey = key === 0 ? process.env.SENDGRID_API_KEY : process.env.SENDGRID_API_KEY2;
                 sender = key === 0 ? process.env.EMAIL_SENDER : process.env.EMAIL_SENDER2;
                 _g.label = 1;
@@ -139,7 +154,9 @@ var sendEmail = function (email) { return __awaiter(void 0, void 0, void 0, func
                 err_1 = _g.sent();
                 console.log(err_1);
                 return [2 /*return*/, { status: 'error', message: "limite de email batido" }];
-            case 5: return [2 /*return*/];
+            case 5: return [3 /*break*/, 7];
+            case 6: return [2 /*return*/, { status: "success", message: "nenhum email foi enviado, o envio está bloqueado." }];
+            case 7: return [2 /*return*/];
         }
     });
 }); };
