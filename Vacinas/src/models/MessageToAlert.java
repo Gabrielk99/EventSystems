@@ -12,12 +12,12 @@ public class MessageToAlert{
 
     private int id_lote;
     private int status;
-    private Coordinates localizacao;
+    private Coordinates location;
 
     public MessageToAlert(int id, int status, Coordinates localizacao){
         this.id_lote = id;
         this.status = status;
-        this.localizacao = localizacao;
+        this.location = localizacao;
     }
 
     /**
@@ -51,15 +51,15 @@ public class MessageToAlert{
     /**
      * @return Coordinates return the localizacao
      */
-    public Coordinates getLocalizacao() {
-        return localizacao;
+    public Coordinates getLocation() {
+        return location;
     }
 
     /**
      * @param localizacao the localizacao to set
      */
-    public void setLocalizacao(Coordinates localizacao) {
-        this.localizacao = localizacao;
+    public void setLocation(Coordinates localizacao) {
+        this.location = localizacao;
     }
 
 }

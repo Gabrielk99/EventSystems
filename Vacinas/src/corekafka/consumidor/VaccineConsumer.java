@@ -128,7 +128,7 @@ public class VaccineConsumer extends Consumer {
                     vaccineMessage.get("id").getAsInt(),
                     vaccineMessage.get("status").getAsInt(),
                     vaccineMessage.get("temperatura").getAsString(),        // Gera o Json com, principalmente, id e status da vacina num arquivo
-                    vaccineMessage.get("localizacao"),
+                    vaccineMessage.get("location"),
                     vaccineMessage.get("data").getAsString()
                     );
 

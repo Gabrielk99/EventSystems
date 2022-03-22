@@ -3,8 +3,8 @@
     "id": 0,
     "dataSaved": {
       "location": {
-        "latitude": -20.28459,
-        "longitude": -40.30255
+        "latitude": -20.28286,
+        "longitude": -40.29424
       }
     }
   },
@@ -12,8 +12,8 @@
     "id": 1,
     "dataSaved": {
       "location": {
-        "latitude": -20.28375,
-        "longitude": -40.30203
+        "latitude": -20.27499,
+        "longitude": -40.30103
       }
     }
   },
@@ -21,8 +21,8 @@
     "id": 2,
     "dataSaved": {
       "location": {
-        "latitude": -20.29798,
-        "longitude": -40.31534
+        "latitude": -20.30039,
+        "longitude": -40.29611
       }
     }
   }

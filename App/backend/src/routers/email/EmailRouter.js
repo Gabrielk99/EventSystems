@@ -19,8 +19,11 @@ var EmailRouter = /** @class */ (function () {
             res.status(200).json(result);
         });
         this._router.post('/setKey/:key', function (req, res, next) {
-            console.log("aaaa");
             (0, Email_1.setEmailSender)(Number(req.params.key));
+            res.status(200);
+        });
+        this._router.post('/setSend', function (req, res, next) {
+            (0, Email_1.setSendEmail)(JSON.parse(req.body.send));
             res.status(200);
         });
     };

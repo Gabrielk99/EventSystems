@@ -41,7 +41,7 @@ public class NotificationConsumer extends Consumer {
 
     private void processMessage(JsonObject notificationMessage) {
         JsonObject vaccineInfoJson = ApiManagerVaccine.getVaccineInfo(notificationMessage.get("id_lote").getAsInt());
-        VaccineInfo vaccineInfo = new VaccineInfo(vaccineInfoJson.get("id").getAsInt(), vaccineInfoJson.get("name").getAsString());
+        VaccineInfo vaccineInfo = new VaccineInfo(vaccineInfoJson.get("id").getAsInt(), vaccineInfoJson.get("name").getAsString()+"_"+vaccineInfoJson.get("id").getAsString());
 
         JsonObject locationJson = notificationMessage.get("location").getAsJsonObject();
         Coordinates location = new Coordinates(

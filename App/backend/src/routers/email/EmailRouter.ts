@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response, Router } from 'express';
-import { sendEmail, setEmailSender } from '../../helper/Email'
+import { sendEmail, setEmailSender, setSendEmail } from '../../helper/Email'
 
 class EmailRouter {
   private _router = Router();
@@ -19,9 +19,12 @@ class EmailRouter {
     });
 
     this._router.post('/setKey/:key', (req: Request, res: Response, next: NextFunction) => {
-        console.log("aaaa")
        setEmailSender(Number(req.params.key))
        res.status(200);
+    });
+    this._router.post('/setSend',(req: Request, res: Response, next: NextFunction) => {
+      setSendEmail(JSON.parse(req.body.send))
+      res.status(200);
     });
   }
 }

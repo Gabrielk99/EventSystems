@@ -10,7 +10,7 @@ import{ HtmlBody, getHTMLBODY, getAddressFromLatLong } from './logic/Geocoding';
 import { Status } from './models/Vaccine';
 import { useGlobalState } from './logic/GlobalHook';
 import Notify from './components/notifications/Notify';
-import { setEmailSender } from './controllers/email/emailController';
+import { setEmailSender, setSendEmail } from './controllers/email/emailController';
 function App() {
 
   const [colorsVaccine,setColorsVaccine] = useState({});
@@ -44,6 +44,7 @@ function App() {
     if(vaccineDatasToControl!==null){
       const vaccinesToNotify = vaccineDatasToControl.map((vaccineData)=>{
         const vaccine = {id:vaccineData.id,...vaccineData.datasSaved[vaccineData.datasSaved.length-1]};
+        // console.log(vaccineData)
         return {
           name:vaccines[vaccine.id],
           location:vaccine.location,
@@ -56,24 +57,18 @@ function App() {
   },[vaccineDatasToControl])
   
   useEffect(()=>{
-    if(emailSend){
-      localStorage.setItem("sendEmail",'true');
-    }
-    else{
-      localStorage.setItem("sendEmail",'false');
-    }
+    setSendEmail(emailSend)
   },[emailSend])
+
   useEffect(()=>{
     if(ownerKey==='mikaella'){
-      localStorage.setItem("keySendGrid",'0');
-
       setEmailSender(0)
     }
     else{
-      localStorage.setItem("keySendGrid",'1');
       setEmailSender(1)
     }
   },[ownerKey])
+  
   const handleColorVaccine = (colors)=>{
     setColorsVaccine(colors);
   }
