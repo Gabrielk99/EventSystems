@@ -39,6 +39,8 @@ import java.time.Duration;
 import java.util.Calendar;
 import java.util.ArrayList;
 
+import java.io.FileWriter;   // Import the FileWriter class
+import java.io.IOException;
 
 /**
  * Classe que representa um processamento inteligente dos dados 
@@ -137,7 +139,25 @@ public class SmartStream {
      */
     public void debugStream (){
         //printando a topologia
-        this.streamsController.metadataForLocalThreads().forEach(data -> System.out.println(data));
+        try{
+            FileWriter log = new FileWriter("topology.txt");
+            log.write("------------------TOPOLOGY DEFINITON-----------------\n");
+            this.streamsController.metadataForLocalThreads().forEach((data)-> {
+                try{
+                    log.write(data+"\n");
+                }
+                catch(IOException e){
+                    System.out.println("Error ao salvar topologia");
+                     e.printStackTrace();
+                }
+
+            });
+            log.close();
+        }
+        catch(IOException e){
+            System.out.println("Error ao salvar topologia");
+            e.printStackTrace();
+        }
     }
 
 
@@ -528,9 +548,10 @@ public class SmartStream {
         this.streamsController.cleanUp();
         this.streamsController.start();
 
+        this.debugStream();
         // shutdown hook to correctly close the streams application
         Runtime.getRuntime().addShutdownHook(new Thread(this.streamsController::close));
-        // this.debugStream();
+        
     }
 
 }
