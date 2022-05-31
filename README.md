@@ -8,26 +8,34 @@ Challenging project of the Rules and Events Based System discipline
 ### English Version
 
 1. From the command line:
-• Java -version (to check the Java version)
+  ```
+  Java -version (to check the Java version)
+  ```
 - If it's Java8, ok!
 - Otherwise, it is necessary to install...
 
 
 2. Kafka download, on google:
-• Download the latest version (binaries)
-• Unzip in some directory
-• From the command line, go to the directory and try: bin/kafka-topics.sh
+* Download the latest version (binaries)
+* Unzip in some directory
+* From the command line, go to the directory and try: 
+```
+bin/kafka-topics.sh
+```
 - If a list of options appears, installation is ok!
 - Otherwise check Java version
 
 
 3. Add Kafka to PATH (example)
-• Open the “bashrc” file for editing
-• Add at the end the line: export PATH=/your_path/Kafka_2XXXX/bin:$PATH
+* Open the “bashrc” file for editing
+* Add at the end the line: export PATH=/your_path/Kafka_2XXXX/bin:$PATH
 
 
 4. Open a new terminal
-• Try: kafka-topics.sh
+* Try: 
+  ```
+  kafka-topics.sh
+  ```
 - If a list of options appears, installation is ok!
 
 
@@ -35,39 +43,51 @@ Challenging project of the Rules and Events Based System discipline
 
 
 6. Edit Zookeeper and Kafka configs, using text editor
-• zookeeper.properties: dataDir=/your_path /data/zookeeper
-• server.properties: log.dirs=/your_path/data/kafka
+* zookeeper.properties: dataDir=/your_path /data/zookeeper
+* server.properties: log.dirs=/your_path/data/kafka
 
 
-7. Start Zookeeper in a terminal window: zookeeper-server-start.sh config/zookeeper.properties
+7. Start Zookeeper in a terminal window: 
+```
+zookeeper-server-start.sh config/zookeeper.properties
+```
 
-
-8. Start Kafka in another window: kafka-server-start.sh config/server.properties
-
+8. Start Kafka in another window: 
+```
+kafka-server-start.sh config/server.properties
+```
 
 ### Portuguese Version
 
 1. Na linha de comando:
-• Java -version (para verificar a versão de Java)
+``` 
+Java -version (para verificar a versão de Java)
+```
 - Se for Java8, ok!
 - Caso contrário, é necessário instalar...
 
 
 2. Kafka download, no google:
-• Faça download da última versão (binários)
-• Descompactar em algum diretório
-• Na linha de comando, vá para o diretório e tente: bin/kafka-topics.sh
+* Faça download da última versão (binários)
+* Descompactar em algum diretório
+* Na linha de comando, vá para o diretório e tente: 
+ ```
+ bin/kafka-topics.sh
+ ```
 - Se aparecer uma lista de opções, instalação está ok!
 - Caso contrário, verificar versão do Java
 
 
 3. Adicionar Kafka ao PATH (exemplo)
-• Abrir o arquivo “bashrc” para edição
-• Acrescentar ao final, a linha: export PATH=/seu_caminho/Kafka_2XXXX/bin:$PATH
+* Abrir o arquivo “bashrc” para edição
+* Acrescentar ao final, a linha: export PATH=/seu_caminho/Kafka_2XXXX/bin:$PATH
 
 
 4. Abra um novo terminal
-• Tente: kafka-topics.sh
+* Tente: 
+```
+kafka-topics.sh
+```
 - Se aparecer uma lista de opções, instalação está ok! 
 
 
@@ -75,15 +95,19 @@ Challenging project of the Rules and Events Based System discipline
 
 
 6. Editar Zookeeper e Kafka configs, usando editor de texto
-• zookeeper.properties: dataDir=/seu_caminho /data/zookeeper
-• server.properties: log.dirs=/seu_caminho/data/kafka
+* zookeeper.properties: dataDir=/seu_caminho /data/zookeeper
+* server.properties: log.dirs=/seu_caminho/data/kafka
 
 
-7. Start Zookeeper em uma janela de terminal: zookeeper-server-start.sh config/zookeeper.properties
+7. Start Zookeeper em uma janela de terminal: 
+```
+zookeeper-server-start.sh config/zookeeper.properties
+```
 
-
-8. Start Kafka em outra janela: kafka-server-start.sh config/server.properties
-
+8. Start Kafka em outra janela: 
+```
+kafka-server-start.sh config/server.properties
+```
 
 ## Application 
 ### back-end
@@ -91,9 +115,9 @@ go to App/backend and run
 ```
 npm install
 ```
-create a acount on google and get a google maps key and change de value on .env, the same thing have to be done to sengrid api, in this case two acounts is necessary and two keys, besides also replace emails senders to the email that correspond to the keys sendgrid.
+create a account on google and get a google maps key and change de value on .env, the same thing have to be done to sengrid api, in this case two accounts is necessary and two keys, besides also replace emails senders to the email that correspond to the keys sendgrid.
 
-Obs: in back end helper to send email, use a template id, that you can get when you create your only template to each acount sendgrid.
+Obs: in back end helper to send email, use a template id, that you can get when you create your only template to each account sendgrid.
 
 ### front-end
 go to App/front-end and run
