@@ -91,7 +91,7 @@ go to App/backend and run
 ```
 npm install
 ```
-create a acount on google and get a google maps key and change de value on .env, the same thing have to be done to sengrid api, in this case two acounts is necessary and two keys. 
+create a acount on google and get a google maps key and change de value on .env, the same thing have to be done to sengrid api, in this case two acounts is necessary and two keys, besides also replace emails senders to the email that correspond to the keys sendgrid.
 
 Obs: in back end helper to send email, use a template id, that you can get when you create your only template to each acount sendgrid.
 
@@ -166,6 +166,7 @@ The left graph show the history of temperature for each vaccine batches and the 
 Manages are the "managers" that manage the lots.
 <br><br>
 
+![2022-05-30 22-56-19](https://user-images.githubusercontent.com/34044829/171079554-e5c5129e-bb92-4a56-9fdf-56bcef657b05.gif)
 
 
 # Kafka Infos
