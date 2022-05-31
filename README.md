@@ -91,11 +91,16 @@ go to App/backend and run
 ```
 npm install
 ```
+create a acount on google and get a google maps key and change de value on .env, the same thing have to be done to sengrid api, in this case two acounts is necessary and two keys. 
+
+Obs: in back end helper to send email, use a template id, that you can get when you create your only template to each acount sendgrid.
+
 ### front-end
 go to App/front-end and run
 ```
 npm install
 ```
+
 
 # Run application
 
