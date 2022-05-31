@@ -163,24 +163,25 @@ This view shows the current situation from vaccine batches on system (normal, wa
 <br><br>
 The left graph show the history of temperature for each vaccine batches and the right graph show the maps and current position from batchs and managers.
 
-Manages are the "managers" that manage the lots.
+Managers are the "managers" that manage the lots.
 <br><br>
 
 ![2022-05-30 22-56-19](https://user-images.githubusercontent.com/34044829/171079554-e5c5129e-bb92-4a56-9fdf-56bcef657b05.gif)
 
 
 # Kafka Infos
-Info do topico:
+
+Topic info:
 
 ```
 kafka-topics.sh --bootstrap-server=localhost:9092 --describe --topic vacina
 ```
-Info dos consumidores:
+Consumer info:
 ```
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group consumerGestor --describe
 ```
-Limpa a aplicação stream (pode dar problema de metadados, importante usar)
-Se começou dar erro **SEM MOTIVO** e é algo de metados, partições erradas, reinicie o pc e rode:
+clear the stream application (can get problem with metadatas)
+
 ```
 kafka-streams-application-reset.sh --application-id vaccine-monitoring
 ```
